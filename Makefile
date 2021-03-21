@@ -20,9 +20,12 @@ else
 endif
 VERSION_ARG ?= $(VERSION)
 
-.PHONY: all build test tag_latest release ssh
+.PHONY: all vps build test tag_latest release ssh
 
-all: build
+all: vps
+
+vps: build
+	docker run --rm --name neoricalex $(NAME)
 
 build:
 	./build.sh
