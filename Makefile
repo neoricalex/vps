@@ -1,3 +1,5 @@
+QEMU_ARCH=amd64
+PLATFORM=amd64
 VERSION ?= latest
 ifdef BASE_IMAGE
 	BUILD_ARG = --build-arg BASE_IMAGE=$(BASE_IMAGE)
