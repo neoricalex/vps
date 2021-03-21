@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 	# boxes at https://atlas.hashicorp.com/search.
 	config.vm.box = "ubuntu/bionic64"
 	config.disksize.size = '50GB'
-	config.vm.define = 'VPS_DEV'
+	config.vm.define 'VPS_DEV'
   
 	# Disable automatic box update checking. If you disable this, then
 	# boxes will only be checked for updates when the user runs
