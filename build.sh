@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+export QEMU_ARCH=$(uname -m)
+export PLATFORM=$(uname -m)
+
 # # Prepare qemu
 # if [ '$QEMU_ARCH' != 'amd64' ]; then
 #     # docker run --rm --privileged multiarch/qemu-user-static:register --reset

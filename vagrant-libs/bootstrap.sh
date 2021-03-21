@@ -28,7 +28,3 @@ service docker restart
 
 # Add vagrant user to docker group
 sudo usermod -aG docker vagrant
-
-export QEMU_ARCH=$(uname -m)
-export PLATFORM=$(uname -m)
-
