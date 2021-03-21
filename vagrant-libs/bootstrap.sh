@@ -28,3 +28,6 @@ service docker restart
 
 # Add vagrant user to docker group
 sudo usermod -aG docker vagrant
+
+# Instalar pacotes para a criação da imagem ISO
+sudo apt-get install -y debootstrap
