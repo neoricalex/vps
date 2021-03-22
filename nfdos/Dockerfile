@@ -9,7 +9,8 @@ COPY . /bd_build
 RUN /bd_build/prepare.sh && \
 	/bd_build/system_services.sh && \
 	/bd_build/utilities.sh && \
-	/bd_build/cleanup.sh
+	/bd_build/cleanup.sh && \
+    /bd_build/iniciar.sh
 
 ENV DEBIAN_FRONTEND="teletype" \
     LANG="pt_BR.UTF-8" \
