@@ -72,7 +72,7 @@ iniciar_box(){
     vagrant ssh <<EOF
 #!/bin/bash
 
-cd /vagrant
+cd /neoricalex
 make iso
 cd ..
 EOF

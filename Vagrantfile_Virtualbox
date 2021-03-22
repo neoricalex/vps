@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
 		vb.cpus   	= "3"
 	end
 
-	config.vm.provision :shell,
+	# https://github.com/hashicorp/vagrant/issues/11725
+	config.vm.provision :shell, privileged: true,
 		path: "vagrant-libs/requerimentos_box_base.sh"
 end

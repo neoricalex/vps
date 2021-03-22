@@ -11,4 +11,5 @@ sudo apt-get install -y \
     dkms \
     autoconf \
     build-essential \
-    make 
+    make \
+    virtualbox virtualbox-guest-dkms virtualbox-guest-additions-iso
