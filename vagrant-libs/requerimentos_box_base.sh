@@ -1,7 +1,8 @@
 #!/bin/bash
 
-mkdir -p /pasta_compartilhada
-mount.vboxsf -o "uid=1000,gid=1000,dev,exec,rw" pasta_compartilhada /pasta_compartilhada
+echo "==> Criar a pasta compartilhada ..."
+mkdir -p /home/vagrant/src
+mount.vboxsf -o "uid=1000,gid=1000,dev,exec,rw" pasta_compartilhada /home/vagrant/src
 
 echo "==> Atualizar os repositórios do $HOSTNAME ..."
 sudo apt update && sudo apt upgrade -y
