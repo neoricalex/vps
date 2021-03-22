@@ -23,7 +23,11 @@ Vagrant.configure("2") do |config|
 	config.vm.provision :shell,
 		path: "vagrant-libs/bootstrap.sh"
 
-    config.vm.synced_folder './', '/vagrant'
+    config.vm.synced_folder './', '/vagrant', type: 'rsync', 
+    disabled: false, 
+    accessmode: "squash", 
+    mount: true,
+    owner: 1000
 
 	# Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
 	# such as FTP and Heroku are also available. See the documentation at
