@@ -1,9 +1,12 @@
 #!/bin/bash
 
+echo "==> Atualizar os repositórios..."
+sudo apt update
+
 echo "==> Instalar o VirtualBox"
-apt install -y virtualbox
-apt install -y virtualbox-guest-dkms virtualbox-guest-x11
-apt install -y virtualbox-guest-additions-iso
+sudo apt install -y virtualbox
+sudo apt install -y virtualbox-guest-dkms virtualbox-guest-x11
+sudo apt install -y virtualbox-guest-additions-iso
 
 echo "==> Instalar o Extension Pack do VirtualBox"
 wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
@@ -12,7 +15,7 @@ rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
 
 echo "==> Download Vagrant & Instalar"
 wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-dpkg -i vagrant_2.2.9_x86_64.deb
+sudo dpkg -i vagrant_2.2.9_x86_64.deb
 rm vagrant_2.2.9_x86_64.deb
 
 echo "==> Instalar plugins do Vagrant"
