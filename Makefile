@@ -27,6 +27,7 @@ all: vps
 vps: criar_box
 
 criar_box:
+	chmod +x compilar_box.sh
 	./compilar_box.sh
 
 build:
