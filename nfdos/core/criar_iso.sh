@@ -29,7 +29,7 @@ echo "Checkando se a $NFDOS_ROOTFS está montada"
 if grep -qs "$NFDOS_ROOTFS" /proc/mounts; then
     echo "A $NFDOS_ROOTFS está montada."
 else
-    sudo mount -t auto -o 'context=loop,exec,dev' $NFDOS_DISCO $NFDOS_ROOTFS  
+    sudo mount.vboxsf -t auto -o 'context=loop,exec,dev' $NFDOS_DISCO $NFDOS_ROOTFS  
 fi
 
 echo "Checkando se o ROOTFS existe"
