@@ -3,4 +3,4 @@
 *.swp
 *.tar.gz
 *.log
-nfdos/core/rootfs
+nfdos/core/rootfs/
