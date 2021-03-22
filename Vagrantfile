@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
   
-    config.vm.define :vps do |vps|
-		vps.vm.define 'VPS_DEV'
+    config.vm.define :VPS_DEV do |vps|
+		#vps.vm.define 'VPS_DEV'
 		vps.vm.box = "ubuntu/bionic64"
 
         vps.vm.provider :libvirt do |domain|
