@@ -71,10 +71,8 @@ provisionar_box(){
 iniciar_box(){
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant ssh <<EOF
 #!/bin/bash
-echo "ls /home/vagrant/"
-ls /home/vagrant
 
-cd /vagrant
+cd /home/vagrant/src
 make iso
 cd ..
 EOF
