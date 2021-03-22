@@ -25,7 +25,7 @@ VERSION_ARG ?= $(VERSION)
 all: vps
 
 vps: #build
-	@echo "Parece bom!"
+	./compilar.sh
 	#docker run --rm --name neoricalex $(NAME)
 
 build:
