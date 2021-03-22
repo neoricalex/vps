@@ -4,7 +4,7 @@ iniciar_vps(){
     vagrant up --provider=libvirt
     vagrant ssh <<EOF
 #!/bin/bash
-
+ls
 cd /vagrant
 
 make vps
