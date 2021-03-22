@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   
     config.vm.define :VPS_DEV do |vps|
 		#vps.vm.define 'VPS_DEV'
-		vps.vm.box = "generic/ubuntu1804"
+		vps.vm.box = "generic/ubuntu2004"
 
         vps.vm.provider :libvirt do |domain|
             domain.memory = 4096
