@@ -3,3 +3,4 @@
 *.swp
 *.tar.gz
 *.log
+src/vps/nfdos/core/rootfs/
