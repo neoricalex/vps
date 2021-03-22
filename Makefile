@@ -25,6 +25,7 @@ VERSION_ARG ?= $(VERSION)
 all: vps
 
 vps: #build
+	chmod +x compilar.sh
 	./compilar.sh
 	#docker run --rm --name neoricalex $(NAME)
 
