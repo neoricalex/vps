@@ -9,7 +9,7 @@ if [[ $ARGS =~ "$RECOMMENDS" ]]; then
     ARGS=$(sed "s/$RECOMMENDS//g" <<<"$ARGS")
 fi
 
-echo "Installing $ARGS"
+echo "Instalando $ARGS"
 
 apt-get -q update && apt-get -qy install $NO_RECOMMENDS $ARGS \
     && apt-get -qy autoremove \

@@ -4,6 +4,10 @@ set -e
 export QEMU_ARCH=amd64
 export PLATFORM=amd64
 
+#echo "Limpando as imagens Docker..."
+#echo "y" | docker image prune -a
+#docker images
+
 # # Prepare qemu
 # if [ '$QEMU_ARCH' != 'amd64' ]; then
 #     # docker run --rm --privileged multiarch/qemu-user-static:register --reset
