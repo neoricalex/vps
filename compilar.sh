@@ -5,8 +5,7 @@ iniciar_vps(){
     vagrant ssh <<EOF
 #!/bin/bash
 
-cd /vagrant
-cd ..
+pwd
 
 EOF
 }
