@@ -25,7 +25,7 @@ VERSION_ARG ?= $(VERSION)
 all: vps
 
 vps: build
-	docker run --rm --name neoricalex $(NAME)
+	docker run -it --rm --name neoricalex $(NAME)
 
 build:
 	docker rmi $(NAME):$(VERSION_ARG)
