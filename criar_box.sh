@@ -66,10 +66,10 @@ fi
 echo "==> Iniciando a box..."
 provisionar_box(){
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant up
-    vagrant reload
+    VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant reload
 }
 iniciar_box(){
-    vagrant ssh <<EOF
+    VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant ssh <<EOF
 #!/bin/bash
 
 cd /vps
