@@ -1,0 +1,185 @@
+{
+  "_comment": "# TODO: N/A",
+  "builders": [
+    {
+      "boot_command": [
+        "<tab><tab><tab><enter><wait30s>",
+        "<tab><tab><tab><tab><tab><tab><enter><wait30s>",
+        "<tab><tab><tab><tab><enter><wait10m>",
+        "<tab><tab><tab><tab><tab><tab><tab><enter><wait60s>",
+        "<tab><enter><wait30s>",
+        "<tab><tab><tab><enter><wait30s>",
+        "<tab><tab><tab><wait>neoricalex<tab><wait>neoricalex<tab><tab><enter><wait75m>"
+      ],
+      "boot_wait": "10m",
+      "disk_size": "{{user `disk_size`}}",
+      "guest_additions_mode": "attach",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_os_type": "{{user `virtualbox_guest_os_type`}}",
+      "headless": "{{user `headless`}}",
+      "http_directory": "http",
+      "iso_checksum": "{{user `iso_checksum_type`}}:{{user `iso_checksum`}}",
+      "iso_urls": [
+        "{{user `iso_path`}}/{{user `iso_name`}}",
+        "{{user `iso_url`}}"
+      ],
+      "name": "{{user `vm_name`}}",
+      "output_directory": "virtualbox",
+      "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -S shutdown -P now",
+      "ssh_pty": "true",
+      "ssh_password": "{{user `ssh_password`}}",
+      "ssh_timeout": "{{user `ssh_timeout`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--ioapic",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--graphicscontroller",
+          "vmsvga"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--rtcuseutc",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--audio",
+          "none"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--usb",
+          "off"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--vram",
+          "{{user `vram`}}"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--vrde",
+          "off"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "{{user `memory`}}"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--nestedpaging",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--largepages",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--vtxux",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--paravirtprovider",
+          "kvm"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--clipboard",
+          "bidirectional"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--draganddrop",
+          "bidirectional"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "{{user `cpus`}}"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "{{user `vm_name`}}"
+    }
+  ],
+  "post-processors": [
+    {
+      "compression_level": 9,
+      "keep_input_artifact": true,
+      "output": "vagrant/{{user `vm_name`}}-{{user `version`}}.box",
+      "type": "vagrant",
+      "vagrantfile_template": "{{user `vagrantfile_template`}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "environment_vars": [
+        "DEBIAN_FRONTEND=noninteractive",
+        "UPDATE={{user `update`}}",
+        "DISABLE_IPV6={{user `disable_ipv6`}}",
+        "SSH_USERNAME={{user `ssh_username`}}",
+        "SSH_PASSWORD={{user `ssh_password`}}",
+        "http_proxy={{user `http_proxy`}}",
+        "https_proxy={{user `https_proxy`}}",
+        "no_proxy={{user `no_proxy`}}"
+      ],
+      "execute_command": "echo '{{user `ssh_password`}}'|{{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "expect_disconnect": true,
+      "scripts": [
+        "homologacao.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "vm_name": "NFDOS",
+    "version": "0.4.4",
+    "cpus": "1",
+    "memory": "2048",
+    "vram": "32",
+    "disable_ipv6": "true",
+    "disk_size": "25600",
+    "headless": "true",
+    "hostname": "nfdos",
+    "http_proxy": "{{env `http_proxy`}}",
+    "https_proxy": "{{env `https_proxy`}}",
+    "iso_checksum": "445af88b589051d0fcfacefbfbc3ad4d480d82d7cca7fe5b14849af34f86f549",
+    "iso_checksum_type": "sha256",
+    "iso_name": "nfdos.iso",
+    "iso_path": "../core",
+    "iso_url": "../core/nfdos.iso",
+    "no_proxy": "{{env `no_proxy`}}",
+    "ssh_fullname": "Neo",
+    "ssh_username": "neo",
+    "ssh_password": "neoricalex",
+    "ssh_timeout": "30m",
+    "update": "true",
+    "vagrantfile_template": "",
+    "virtualbox_guest_os_type": "Ubuntu_64"
+  }
+}

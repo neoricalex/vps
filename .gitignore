@@ -3,4 +3,12 @@
 *.swp
 *.tar.gz
 *.log
-nfdos/core/rootfs/
+
+nfdos/core/image
+nfdos/core/rootfs
+nfdos/core/nfdos.img
+nfdos/core/nfdos.iso
+
+nfdos/desktop/packer_cache
+nfdos/desktop/vagrant
+nfdos/desktop/virtualbox
