@@ -12,8 +12,8 @@ RUN /bd_build/prepare.sh && \
 	/bd_build/cleanup.sh
 
 ENV DEBIAN_FRONTEND="teletype" \
-    LANG="en_US.UTF-8" \
-    LANGUAGE="en_US:en" \
-    LC_ALL="en_US.UTF-8"
+    LANG="pt_BR.UTF-8" \
+    LANGUAGE="pt_BR:br" \
+    LC_ALL="pt_BR.UTF-8"
 
 CMD ["/sbin/my_init"]

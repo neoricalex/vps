@@ -43,7 +43,8 @@ apt-get dist-upgrade -y --no-install-recommends -o Dpkg::Options::="--force-conf
 ## Fix locale.
 case $(lsb_release -is) in
   Ubuntu)
-    $minimal_apt_get_install language-pack-en
+    $minimal_apt_get_install language-pack-pt
+    $minimal_apt_get_install language-pack-pt-base
     ;;
   Debian)
     $minimal_apt_get_install locales locales-all
@@ -51,7 +52,7 @@ case $(lsb_release -is) in
   *)
     ;;
 esac
-locale-gen en_US
-update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
-echo -n en_US.UTF-8 > /etc/container_environment/LANG
-echo -n en_US.UTF-8 > /etc/container_environment/LC_CTYPE
+locale-gen pt_BR
+update-locale LANG=pt_BR.UTF-8 LC_CTYPE=pt_BR.UTF-8
+echo -n pt_BR.UTF-8 > /etc/container_environment/LANG
+echo -n pt_BR.UTF-8 > /etc/container_environment/LC_CTYPE
