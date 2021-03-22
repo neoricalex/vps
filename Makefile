@@ -20,13 +20,16 @@ else
 endif
 VERSION_ARG ?= $(VERSION)
 
-.PHONY: all vps criar_box build test tag_latest release ssh
+.PHONY: all vps iso box build test tag_latest release ssh
 
 all: vps
 
-vps: criar_box
+vps: 
 
-criar_box:
+iso:
+	@echo "Parece bom!"
+
+box:
 	chmod +x criar_box.sh
 	./criar_box.sh
 

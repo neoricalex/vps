@@ -32,7 +32,7 @@ vagrant ssh <<EOF
 #!/bin/bash
 
 cd /vagrant
-make vps
+make iso
 cd ..
 
 EOF
