@@ -29,12 +29,21 @@ then
     echo "==> Atualizar os repositórios..."
     sudo apt update
 
+    echo "==> Instalar Linux/Ubuntu base..."
+    sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
+
+    echo "==> Instalar libvrt & KVM (REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml)"
+    apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
+        libvirt-dev qemu-kvm qemu-utils qemu-user-static ruby-dev \
+        ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+
     if ! command -v vboxmanage &> /dev/null
     then
         instalar_virtualbox
     else
         sudo apt purge virtualbox* -y
-        apt autoremove -y
+        sudo rm -rf /usr/lib/virtualbox
+        sudo apt autoremove -y
         sleep 1
         instalar_virtualbox
     fi
@@ -44,13 +53,13 @@ then
         instalar_vagrant
     else
         sudo apt purge vagrant* -y
-        apt autoremove -y
+        sudo apt autoremove -y
         sleep 1
         instalar_vagrant
     fi
 
     echo "==> Removendo pacotes do Ubuntu desnecessários"
-    apt autoremove -y
+    sudo apt autoremove -y
 
     touch .requerimentos.box
 fi
