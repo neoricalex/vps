@@ -25,12 +25,11 @@ VERSION_ARG ?= $(VERSION)
 all: vps
 
 vps: build
-	docker run -it --rm --name neoricalex $(NAME)
+	docker run --rm --name neoricalex $(NAME)
 
 build:
-	docker rmi $(NAME):$(VERSION_ARG)
 	./build.sh
-	sudo docker build --no-cache -t $(NAME):$(VERSION_ARG) $(BUILD_ARG) --build-arg QEMU_ARCH=$(QEMU_ARCH) --platform $(PLATFORM) --rm nfdos
+	docker build --no-cache -t $(NAME):$(VERSION_ARG) $(BUILD_ARG) --build-arg QEMU_ARCH=$(QEMU_ARCH) --platform $(PLATFORM) --rm nfdos
 
 build_multiarch:
 	env NAME=$(NAME) VERSION=$(VERSION_ARG) ./build-multiarch.sh

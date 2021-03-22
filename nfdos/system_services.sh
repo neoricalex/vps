@@ -29,3 +29,6 @@ $minimal_apt_get_install runit
 
 ## Install cron daemon.
 [ "$DISABLE_CRON" -eq 0 ] && /bd_build/services/cron/cron.sh || true
+
+## Instalar o NEORICALEX.
+[ "$DESLIGAR_NEORICALEX" -eq 0 ] && /bd_build/services/neoricalex/inicio.sh || true
