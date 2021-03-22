@@ -1,10 +1,6 @@
 #!/bin/bash
 
-if ! command -v vboxmanage &> /dev/null
-then
-    echo "==> Atualizar os repositórios..."
-    sudo apt update
-
+instalar_virtualbox(){
     echo "==> Instalar o VirtualBox"
     sudo apt install -y virtualbox
     sudo apt install -y virtualbox-guest-dkms virtualbox-guest-x11
@@ -13,8 +9,9 @@ then
     echo "==> Instalar o Extension Pack do VirtualBox"
     wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
     sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
-    rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
-
+    rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack 
+}
+instalar_vagrant(){
     echo "==> Download Vagrant & Instalar"
     wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
     sudo dpkg -i vagrant_2.2.9_x86_64.deb
@@ -24,9 +21,38 @@ then
     vagrant plugin install vagrant-libvirt
     vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
     vagrant plugin install vagrant-mutate
+}
+
+echo "==> Instalar os requerimentos da box..."
+if [ ! -f ".requerimentos.box" ]; 
+then
+    echo "==> Atualizar os repositórios..."
+    sudo apt update
+
+    if ! command -v vboxmanage &> /dev/null
+    then
+        instalar_virtualbox
+    else
+        sudo apt purge virtualbox* -y
+        apt autoremove -y
+        sleep 1
+        instalar_virtualbox
+    fi
+
+    if ! command -v vagrant &> /dev/null
+    then
+        instalar_vagrant
+    else
+        sudo apt purge vagrant* -y
+        apt autoremove -y
+        sleep 1
+        instalar_vagrant
+    fi
 
     echo "==> Removendo pacotes do Ubuntu desnecessários"
     apt autoremove -y
+
+    touch .requerimentos.box
 fi
 
 echo "==> Iniciando a box..."
