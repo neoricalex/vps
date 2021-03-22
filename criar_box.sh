@@ -33,11 +33,11 @@ then
     sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
 
     echo "==> Instalar libvrt & KVM (REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml)"
-    apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
+    sudo apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
         libvirt-dev qemu-kvm qemu-utils qemu-user-static ruby-dev \
         ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
 
-    if ! command -v vboxmanage &> /dev/null
+    if ! command -v vboxmanage &> /dev/null;
     then
         instalar_virtualbox
     else
@@ -48,7 +48,7 @@ then
         instalar_virtualbox
     fi
 
-    if ! command -v vagrant &> /dev/null
+    if ! command -v vagrant &> /dev/null;
     then
         instalar_vagrant
     else
@@ -60,7 +60,6 @@ then
 
     echo "==> Removendo pacotes do Ubuntu desnecessários"
     sudo apt autoremove -y
-
     touch .requerimentos.box
 fi
 
