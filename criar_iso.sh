@@ -66,4 +66,3 @@ else
     echo "A $NFDOS_HOME/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box existe."
 
 fi
-

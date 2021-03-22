@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "==> Instalar o VirtualBox"
+apt install -y virtualbox
+apt install -y virtualbox-guest-dkms virtualbox-guest-x11
+apt install -y virtualbox-guest-additions-iso
+
+echo "==> Instalar o Extension Pack do VirtualBox"
+wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+
+echo "==> Download Vagrant & Instalar"
+wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
+dpkg -i vagrant_2.2.9_x86_64.deb
+rm vagrant_2.2.9_x86_64.deb
+
+echo "==> Instalar plugins do Vagrant"
+vagrant plugin install vagrant-libvirt
+vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+vagrant plugin install vagrant-mutate
+
+echo "==> Removendo pacotes do Ubuntu desnecessários"
+apt autoremove -y
+
+echo "==> Iniciando a box..."
+VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant up
+vagrant ssh <<EOF
+#!/bin/bash
+
+cd /vagrant
+make vps
+cd ..
+
+EOF
