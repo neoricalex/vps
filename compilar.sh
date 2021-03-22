@@ -1,5 +1,18 @@
 #!/bin/bash
 
+iniciar_vps(){
+    vagrant up --provider=libvirt
+    vagrant ssh <<EOF
+#!/bin/bash
+
+cd /vagrant
+
+make vps
+
+cd ..
+EOF
+}
+
 if ! vagrant box list | grep "libvirt" > /dev/null; then
     echo "[DEBUG] O ubuntu/bionic64 libvirt não existe. Criando ele..."
     vagrant box add ubuntu/bionic64
