@@ -38,8 +38,6 @@ instalar_vagrant(){
 }
 
 if [ ! -f ".requerimentos_ok" ]; then
-
-    echo "==> Instalando os requerimentos para a box do vagrant..."
     if ! command -v vboxmanage &> /dev/null
     then
         instalar_virtualbox
