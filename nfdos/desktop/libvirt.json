@@ -31,11 +31,11 @@
       "qemuargs": [
         [
           "-m",
-          "{{user `ram`}}M"
+          "{{user `memory`}}M"
         ],
         [
           "-smp",
-          "{{user `cpu`}}"
+          "{{user `cpus`}}"
         ]
       ],
       "output_directory": "libvirt",
