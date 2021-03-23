@@ -72,7 +72,7 @@ elif [ ! -f "$NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box" ]; the
     jq ".variables.iso_checksum = \"$checkar_sha256\"" $NFDOS_HOME/desktop/libvirt.json | sponge $NFDOS_HOME/desktop/libvirt.json
 
     cd $NFDOS_HOME/desktop
-    packer build libvirt.json #VBoxManage setextradata VM-name "VBoxInternal/TM/TSCTiedToExecution" 1
+    PACKER_LOG=1 packer build libvirt.json #VBoxManage setextradata VM-name "VBoxInternal/TM/TSCTiedToExecution" 1
     cd $NEORICALEX_HOME
 
 else
