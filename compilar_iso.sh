@@ -85,7 +85,7 @@ then
 		packer build libvirt.json # PACKER_LOG=1
 		cd $NEORICALEX_HOME
 	fi
-	echo "Checkando se a $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box existe."
+	echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box já existe."
 else
     echo "A versão $VERSAO_BOX_VAGRANT não é suportada."
 fi
