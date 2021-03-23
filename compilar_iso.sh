@@ -93,7 +93,6 @@ then
 		cd $NEORICALEX_HOME
 	fi
 	echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box já existe."
-	exit
 else
     echo "A versão $VERSAO_BOX_VAGRANT do vagrant não é suportada."
 fi
