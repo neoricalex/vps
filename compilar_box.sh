@@ -131,3 +131,6 @@ then
 		vagrant cloud auth logout
 	fi
 fi
+
+echo "Parece bom"
+exit
