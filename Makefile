@@ -27,8 +27,8 @@ all: vps
 vps: 
 
 iso:
-	chmod +x criar_iso.sh
-	./criar_iso.sh
+	chmod +x compilar_iso.sh
+	./compilar_iso.sh
 
 box:
 	chmod +x criar_box.sh

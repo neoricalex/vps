@@ -30,3 +30,5 @@ vagrant plugin install vagrant-mutate
 
 echo "==> Removendo pacotes do Ubuntu desnecessários"
 apt autoremove -y
+
+# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
