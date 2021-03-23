@@ -22,8 +22,6 @@ instalar_vagrant(){
     vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
     vagrant plugin install vagrant-mutate
 }
-checkar_vps(){
-}
 provisionar_vps(){
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant up
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant reload
@@ -92,9 +90,9 @@ instalar_requerimentos_para_rodar_vps(){
 			echo "==> O download da box já foi feito."
 
 			vagrant box add \
-				--provider virtualbox \
+				--provider "virtualbox" \
 				--box-version "0.0.1" \
-				--name neoricalex/ubuntu \
+				--name "neoricalex/ubuntu" \
 				../boxes/virtualbox.box
 
 		fi
@@ -108,7 +106,6 @@ instalar_requerimentos_para_rodar_vps
 echo "==> Iniciando o VPS_DEV..."
 
 if vagrant status | grep "not created" > /dev/null; then
-	checkar_vps
     provisionar_vps
     iniciar_vps
 elif vagrant status | grep "is running" > /dev/null; then
