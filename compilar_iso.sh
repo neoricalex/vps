@@ -10,7 +10,7 @@ export NFDOS_ROOT=$NFDOS_HOME/core
 export NFDOS_ROOTFS=$NFDOS_ROOT/rootfs
 export NFDOS_DISCO=$NFDOS_ROOT/nfdos.img
 # Vagrant
-export VERSAO_BOX_VAGRANT="libvirt"
+export VERSAO_BOX_VAGRANT="virtualbox"
 
 echo "Iniciando a criação da imagem ISO do NFDOS $NFDOS_VERSAO ..."
 
