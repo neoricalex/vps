@@ -22,48 +22,6 @@ instalar_vagrant(){
     vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
     vagrant plugin install vagrant-mutate
 }
-
-echo "==> Instalar os requerimentos da box..."
-if [ ! -f ".requerimentos.box" ]; 
-then
-    echo "==> Atualizar os repositórios..."
-    sudo apt update
-
-    echo "==> Instalar Linux/Ubuntu base..."
-    sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
-
-    echo "==> Instalar libvrt & KVM (REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml)"
-    sudo apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
-        libvirt-dev qemu-kvm qemu-utils qemu-user-static ruby-dev \
-        ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
-
-    if ! command -v vagrant &> /dev/null;
-    then
-        instalar_vagrant
-    else
-        sudo apt purge vagrant* -y
-        sudo apt autoremove -y
-        sleep 1
-        instalar_vagrant
-    fi
-
-    if ! command -v vboxmanage &> /dev/null;
-    then
-        instalar_virtualbox
-    else
-        sudo apt purge virtualbox* -y
-        sudo rm -rf /usr/lib/virtualbox
-        sudo apt autoremove -y
-        sleep 1
-        instalar_virtualbox
-    fi
-
-    echo "==> Removendo pacotes do Ubuntu desnecessários"
-    sudo apt autoremove -y
-    touch .requerimentos.box
-fi
-
-echo "==> Iniciando a box..."
 checkar_box(){
 	echo "==> Checkando se a box existe localmente..."
 	if vagrant cloud search neoricalex/ubuntu | grep "No results found" > /dev/null; then
@@ -94,6 +52,51 @@ make iso
 cd ..
 EOF
 }
+instalar_requerimentos_para_rodar_box(){
+	echo "==> Instalar os requerimentos da box..."
+	if [ ! -f ".requerimentos.box" ]; 
+	then
+		echo "==> Atualizar os repositórios..."
+		sudo apt update
+
+		echo "==> Instalar Linux/Ubuntu base..."
+		sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
+
+		echo "==> Instalar libvrt & KVM (REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml)"
+		sudo apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
+			libvirt-dev qemu-kvm qemu-utils qemu-user-static ruby-dev \
+			ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+
+		if ! command -v vagrant &> /dev/null;
+		then
+			instalar_vagrant
+		else
+			sudo apt purge vagrant* -y
+			sudo apt autoremove -y
+			sleep 1
+			instalar_vagrant
+		fi
+
+		if ! command -v vboxmanage &> /dev/null;
+		then
+			instalar_virtualbox
+		else
+			sudo apt purge virtualbox* -y
+			sudo rm -rf /usr/lib/virtualbox
+			sudo apt autoremove -y
+			sleep 1
+			instalar_virtualbox
+		fi
+
+		echo "==> Removendo pacotes do Ubuntu desnecessários"
+		sudo apt autoremove -y
+		touch .requerimentos.box
+	fi
+}
+
+instalar_requerimentos_para_rodar_box
+
+echo "==> Iniciando a box..."
 
 if vagrant status | grep "not created" > /dev/null; then
 	checkar_box
