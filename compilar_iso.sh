@@ -10,32 +10,39 @@ export NFDOS_ROOT=$NFDOS_HOME/core
 export NFDOS_ROOTFS=$NFDOS_ROOT/rootfs
 export NFDOS_DISCO=$NFDOS_ROOT/nfdos.img
 # Vagrant
-export VERSAO_BOX_VAGRANT="virtualbox1"
+export VERSAO_BOX_VAGRANT="libvirt"
 
-echo "Iniciando a criação da imagem ISO do NFDOS $NFDOS_VERSAO ..."
+echo "Iniciando a compilação da imagem ISO do NFDOS $NFDOS_VERSAO ..."
 
-echo "Atualizar repositórios e instalar requerimentos..."
-sudo apt update
-sudo apt install -y \
-    binutils \
-    debootstrap \
-    squashfs-tools \
-    xorriso \
-    grub-pc-bin \
-    grub-efi-amd64-bin \
-    unzip \
-    mtools \
-    whois \
-    jq \
-    moreutils
-
-if ! command -v packer &> /dev/null
+if [ ! -f ".requerimentos_iso.box" ]; 
 then
-    versao_packer="1.6.4"
-    wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
-    unzip packer_${versao_packer}_linux_amd64.zip
-    sudo mv packer /usr/local/bin 
-    rm packer_${versao_packer}_linux_amd64.zip
+	echo "Atualizar repositórios e instalar requerimentos..."
+	sudo apt update
+	sudo apt install -y \
+		binutils \
+		debootstrap \
+		squashfs-tools \
+		xorriso \
+		grub-pc-bin \
+		grub-efi-amd64-bin \
+		unzip \
+		mtools \
+		whois \
+		jq \
+		moreutils
+
+	if ! command -v packer &> /dev/null
+	then
+		versao_packer="1.6.4"
+		wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
+		unzip packer_${versao_packer}_linux_amd64.zip
+		sudo mv packer /usr/local/bin 
+		rm packer_${versao_packer}_linux_amd64.zip
+	fi
+
+    echo "==> Removendo pacotes desnecessários"
+    sudo apt autoremove -y
+    touch .requerimentos_iso.box
 fi
 
 echo "Checkando se a $NFDOS_HOME existe"
@@ -87,5 +94,5 @@ then
 	fi
 	echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box já existe."
 else
-    echo "A versão $VERSAO_BOX_VAGRANT não é suportada."
+    echo "A versão $VERSAO_BOX_VAGRANT do vagrant não é suportada."
 fi
