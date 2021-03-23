@@ -64,6 +64,18 @@ then
 fi
 
 echo "==> Iniciando a box..."
+checkar_box(){
+	echo "==> Checkando se a box existe localmente..."
+	if vagrant cloud search neoricalex/ubuntu | grep "No results found" > /dev/null; then
+		echo "==> Checkando se o download da box já foi feito..."
+		if [ ! -f "vagrant-libs/virtualbox.box" ]; 
+		then
+			wget https://vagrantcloud.com/ubuntu/boxes/focal64/versions/20210320.0.0/providers/virtualbox.box -o vagrant-libs/virtualbox.box
+		fi
+		echo "==> O download da box já foi feito!"
+	fi
+	echo "==> A box existe!"
+}
 provisionar_box(){
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant up
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant reload
@@ -79,6 +91,7 @@ EOF
 }
 
 if vagrant status | grep "not created" > /dev/null; then
+	checkar_box
     provisionar_box
     iniciar_box
 elif vagrant status | grep "is running" > /dev/null; then
@@ -104,4 +117,4 @@ if [ "$usuario" == "neo@desktop" ]; then
 		nfdos/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box # --force --debug
 		#vagrant cloud auth logout
 fi
-https://vagrantcloud.com/ubuntu/boxes/focal64/versions/20210320.0.0/providers/virtualbox.box
+
