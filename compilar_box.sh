@@ -71,10 +71,11 @@ checkar_box(){
 		if [ ! -f "vagrant-libs/virtualbox.box" ]; 
 		then
 			echo "Iniciando o download..."
+			cd vagrant-libs
 			wget https://vagrantcloud.com/ubuntu/boxes/focal64/versions/20210320.0.0/providers/virtualbox.box \
-				-o vagrant-libs/virtualbox.box \
 				-q --show-progress \
 				--progress=bar:force:noscroll
+			cd ..
 		fi
 		echo "==> O download da box já foi feito!"
 	fi
