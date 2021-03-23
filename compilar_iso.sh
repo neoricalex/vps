@@ -58,12 +58,23 @@ if [ ! -f "$NFDOS_HOME/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box" ]; then
 
     echo "Checkando o SHA256 da imagem ISO..."
     checkar_sha256=$(sha256sum $NFDOS_ROOT/nfdos.iso | awk '{ print $1 }')
+    jq ".variables.iso_checksum = \"$checkar_sha256\"" $NFDOS_HOME/desktop/virtualbox.json | sponge $NFDOS_HOME/desktop/virtualbox.json
+
+    cd $NFDOS_HOME/desktop
+    packer build virtualbox.json #VBoxManage setextradata VM-name "VBoxInternal/TM/TSCTiedToExecution" 1
+    cd $NEORICALEX_HOME
+elif [ ! -f "$NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box" ]; then
+
+    echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box não existe. Criando ela..."
+
+    echo "Checkando o SHA256 da imagem ISO..."
+    checkar_sha256=$(sha256sum $NFDOS_ROOT/nfdos.iso | awk '{ print $1 }')
     jq ".variables.iso_checksum = \"$checkar_sha256\"" $NFDOS_HOME/desktop/libvirt.json | sponge $NFDOS_HOME/desktop/libvirt.json
 
     cd $NFDOS_HOME/desktop
-    packer build desktop.json #VBoxManage setextradata VM-name "VBoxInternal/TM/TSCTiedToExecution" 1
+    packer build libvirt.json #VBoxManage setextradata VM-name "VBoxInternal/TM/TSCTiedToExecution" 1
     cd $NEORICALEX_HOME
-    
+
 else
     echo "A $NFDOS_HOME/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box existe."
 
