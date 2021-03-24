@@ -90,12 +90,15 @@ instalar_requerimentos_para_rodar_vps(){
 	echo "==> Os requerimentos para rodar o VPS_DEV foram instalados."
 }
 provisionar_vps(){
+	echo "==> Provisionando o VPS_DEV..."
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant up
+	echo "==> Reiniciando o VPS_DEV para todas as configurações se tornarem ativas..."
     VAGRANT_VAGRANTFILE=Vagrantfile_Virtualbox vagrant reload
 }
 
 instalar_requerimentos_para_rodar_vps
-pwd
+provisionar_vps
+
 usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
 if [ "$usuario" == "neo@desktop1" ]; then
 		vagrant cloud auth login
