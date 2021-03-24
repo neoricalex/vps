@@ -172,7 +172,7 @@ then
 	
 fi
 
-vagrant destroy -f
+vagrant up
 
 cd .. 
 EOF
