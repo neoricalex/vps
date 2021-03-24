@@ -171,6 +171,8 @@ then
 	vagrant plugin install vagrant-libvirt
 fi
 
+vagrant up
+
 cd .. 
 EOF
 
