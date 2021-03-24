@@ -98,7 +98,7 @@ provisionar_vps(){
 		if [ $? == "1" ];
 		then
 			vagrant cloud auth login
-			vagrant cloud search neoricalex/ubuntu
+			vagrant package --base neoricalex/ubuntu --output vagrant-libs/vps_dev.box
 			exit
 			#vagrant cloud publish \
 			#--box-version $NFDOS_VERSAO \
@@ -115,7 +115,7 @@ provisionar_vps(){
 sudo apt-get clean -y 
 sudo dd if=/dev/zero of=/EMPTY bs=1M
 EOF
-			vagrant package --base neoricalex/ubuntu --output vagrant-libs/vps_dev.box
+
 		fi
 	fi
 }
