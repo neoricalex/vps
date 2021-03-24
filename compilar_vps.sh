@@ -169,6 +169,7 @@ then
 
 	echo "Instalar plugins do Vagrant"
 	vagrant plugin install vagrant-libvirt
+	
 fi
 
 vagrant up

@@ -8,11 +8,11 @@ Vagrant.configure("2") do |config|
 		vps.vm.box = "neoricalex/nfdos"
 		#vps.vm.box_version = "0.4.4"
 		vps.vm.box_url = "nfdos/desktop/vagrant/libvirt/NFDOS-0.4.4.box"
-
+		config.vm.synced_folder "./", "/home/neo/neoricalex", disabled: false
 
         vps.vm.provider :libvirt do |domain|
-            domain.memory = 2048
-            domain.cpus = 1
+            domain.memory = 4096
+            domain.cpus = 3
         end
 
         vps.vm.provider :libvirt do |libvirt|
