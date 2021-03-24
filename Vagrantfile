@@ -2,10 +2,13 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  
-    config.vm.define :VPS_DEV do |vps|
+ 
+    config.vm.define :NFDOS do |vps|
 		#vps.vm.define 'VPS_DEV'
-		vps.vm.box = "generic/ubuntu1804"
+		vps.vm.box = "neoricalex/nfdos"
+		vps.vm.box_version = "0.4.4"
+		vps.vm.box_url = "nfdos/desktop/vagrant/libvirt/NFDOS-0.4.4.box"
+
 
         vps.vm.provider :libvirt do |domain|
             domain.memory = 4096
@@ -19,7 +22,14 @@ Vagrant.configure("2") do |config|
         end
 
     end
-  
+
+	config.ssh.username = "neo"
+	config.ssh.password = "neoricalex"
+	# config.ssh.insert_key = true
+	# config.ssh.private_key_path = "./keys/priv.ppk"
+	# config.ssh.keys_only = false
+	#config.ssh.host = 'localhost'
+	
 	config.vm.provision :shell,
 		path: "vagrant-libs/bootstrap.sh"
 

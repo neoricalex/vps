@@ -13,11 +13,6 @@ wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Exte
 vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
 rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
 
-echo "==> Instalar libvrt & KVM (REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml)"
-apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
-    libvirt-dev qemu-kvm qemu-utils ruby-dev \
-    ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
-
 echo "==> Download Vagrant & Instalar"
 wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
 dpkg -i vagrant_2.2.9_x86_64.deb
@@ -31,4 +26,3 @@ vagrant plugin install vagrant-mutate
 echo "==> Removendo pacotes do Ubuntu desnecessários"
 apt autoremove -y
 
-# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts

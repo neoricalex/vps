@@ -12,6 +12,12 @@ sudo apt-get install -y build-essential checkinstall libreadline-gplv2-dev \
     libbz2-dev libffi-dev python3-pip unzip lsb-release software-properties-common \
     curl wget git rsync # python-dev python3-venv
 
+echo "==> Instalar libvrt & KVM"
+# REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml
+sudo apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
+    libvirt-dev qemu-kvm qemu-utils ruby-dev \
+    ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+
 # Install Docker
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -26,5 +32,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-
 echo '{"experimental": true}' > /etc/docker/daemon.json
 service docker restart
 
-# Add vagrant user to docker group
-sudo usermod -aG docker vagrant
+# Add neo user to docker group
+sudo usermod -aG docker neo
+
+# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts

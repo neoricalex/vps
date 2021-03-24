@@ -82,7 +82,8 @@ instalar_pacotes_uteis(){
         tmux \
         less \
         snapd \
-        git
+        git \
+		sudo
 
     systemctl enable --now snapd.socket
 

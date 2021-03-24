@@ -156,8 +156,11 @@ provisionar_vps
 echo "==> Entrando no neoricalex/ubuntu (VPS_DEV)..."
 VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 #!/bin/bash
+
 cd /vagrant
 make iso
+vagrant up
+
 cd .. 
 EOF
 
