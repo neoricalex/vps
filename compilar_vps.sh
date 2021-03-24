@@ -98,8 +98,7 @@ provisionar_vps(){
 		if [ $? == "1" ];
 		then
 			vagrant cloud auth login
-			vps_dev_cloud=$(vagrant cloud search neoricalex/ubuntu | grep "neoricalex/ubuntu" > /dev/null)
-			echo "$?"
+			vagrant cloud search neoricalex/ubuntu
 			exit
 			#vagrant cloud publish \
 			#--box-version $NFDOS_VERSAO \
