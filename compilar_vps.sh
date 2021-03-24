@@ -159,7 +159,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 
 cd /vagrant
 make iso
-vagrant up
+vboxmanage list vms
 
 cd .. 
 EOF
