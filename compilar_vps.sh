@@ -97,8 +97,18 @@ provisionar_vps(){
 		vps_dev=$(vagrant box list | grep "neoricalex/ubuntu" > /dev/null)
 		if [ $? == "1" ];
 		then
+			if [ ! -f "vagrant-libs/vps_dev.box" ];
+			then
+				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant up
+				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant reload
+				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant ssh<<EOF
+#!/bin/bash
+sudo apt-get clean -y 
+sudo dd if=/dev/zero of=/EMPTY bs=1M
+EOF
+				vagrant package --base VPS_DEV --output vagrant-libs/vps_dev.box
+			fi
 			vagrant cloud auth login
-			vagrant package --base VPS_DEV --output vagrant-libs/vps_dev.box
 			exit
 			#vagrant cloud publish \
 			#--box-version $NFDOS_VERSAO \
@@ -108,14 +118,6 @@ provisionar_vps(){
 			#neoricalex/ubuntu $NFDOS_VERSAO virtualbox \
 			#nfdos/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box # --force --debug
 			#vagrant cloud auth logout
-			VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
-			VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
-			VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
-#!/bin/bash
-sudo apt-get clean -y 
-sudo dd if=/dev/zero of=/EMPTY bs=1M
-EOF
-
 		fi
 	fi
 }
