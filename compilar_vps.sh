@@ -91,3 +91,17 @@ instalar_requerimentos_para_rodar_vps(){
 }
 
 instalar_requerimentos_para_rodar_vps
+
+usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
+echo "$usuario"
+if [ "$usuario" == "neo@desktop" ]; then
+		vagrant cloud auth login
+		#vagrant cloud publish \
+		#--box-version $NFDOS_VERSAO \
+		#--release \
+		#--short-description "An Ubuntu-based box for developing an Ubuntu-based GNU/Linux distribution from scratch, coded in Portuguese Language" \
+		#--version-description "Versão inicial" \
+		#neoricalex/ubuntu $NFDOS_VERSAO virtualbox \
+		#nfdos/desktop/vagrant/NFDOS-$NFDOS_VERSAO.box # --force --debug
+		vagrant cloud auth logout
+fi
