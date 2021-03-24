@@ -105,6 +105,13 @@ provisionar_vps(){
 			echo "==> Entrando na vagrant-libs/vps_dev.box..."
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant ssh<<EOF
 #!/bin/bash
+
+echo "Inserindo a Chave SSH Pública..."
+rm ~/.ssh/authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key" > ~/.ssh/authorized_keys
+find ~/.ssh/ -type d -exec chmod 0700 {} \;
+find ~/.ssh/ -type f -exec chmod 0600 {} \;
+
 echo "Limpando..."
 sudo apt-get clean -y 
 EOF
@@ -116,11 +123,11 @@ EOF
 			then
 				vagrant cloud auth login
 				vagrant cloud publish \
-					--box-version 0.0.1 \
+					--box-version 0.0.2 \
 					--release \
 					--short-description "Um VPS baseado no ubuntu/focal64 para desenvolvimento do projeto NEORICALEX e NFDOS" \
-					--version-description "Versão inicial" \
-					neoricalex/ubuntu "0.0.1" virtualbox \
+					--version-description "Inserir a Chave SSH Pública" \
+					neoricalex/ubuntu 0.0.2 virtualbox \
 					vagrant-libs/vps_dev.box # --force --debug
 				vagrant cloud auth logout
 				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant destroy -f
