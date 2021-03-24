@@ -118,7 +118,7 @@ EOF
 			vagrant package --base VPS_DEV --output vagrant-libs/vps_dev.box
 
 			usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
-			if [ "$usuario" == "neo@desktop" ]; 
+			if [ "$usuario" == "neo@desktop1" ]; 
 			then
 				vagrant cloud auth login
 				vagrant cloud publish \
