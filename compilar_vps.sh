@@ -153,11 +153,11 @@ EOF
 instalar_requerimentos_para_rodar_vps
 provisionar_vps
 
-echo "==> Entrando na neoricalex/ubuntu (VPS_DEV)..."
+echo "==> Entrando no neoricalex/ubuntu (VPS_DEV)..."
 VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 #!/bin/bash
 cd /vagrant
 echo "Parece bom!" 
 EOF
 
-echo "==> A compilação foi concluída com sucesso!"
+echo "==> A compilação do VPS_DEV foi concluída com sucesso!"
