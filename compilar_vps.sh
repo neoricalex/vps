@@ -91,25 +91,29 @@ instalar_requerimentos_para_rodar_vps(){
 }
 provisionar_vps(){
 
-	usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
-	if [ "$usuario" == "neo@desktop" ]; 
+	echo "==> Checkar se a neoricalex/ubuntu (VPS_DEV) foi gerada..."
+	vps_dev=$(vagrant box list | grep "neoricalex/ubuntu" > /dev/null)
+	if [ $? == "1" ];
 	then
-
-		vps_dev=$(vagrant box list | grep "neoricalex/ubuntu" > /dev/null)
-		if [ $? == "1" ];
+		echo "==> Checkar se a vagrant-libs/vps_dev.box foi gerada..."
+		if [ ! -f "vagrant-libs/vps_dev.box" ];
 		then
-
-			if [ ! -f "vagrant-libs/vps_dev.box" ];
-			then
-				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant up
-				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant reload
-				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant ssh<<EOF
+			echo "==> Provisionando a vagrant-libs/vps_dev.box..."
+			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant up
+			echo "==> Reiniciando a vagrant-libs/vps_dev.box para as configurações ficarem ativas..."
+			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant reload
+			echo "==> Entrando na vagrant-libs/vps_dev.box..."
+			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant ssh<<EOF
 #!/bin/bash
 echo "Limpando..."
 sudo apt-get clean -y 
 EOF
+			echo "==> Empacotando a vagrant-libs/vps_dev.box..."
+			vagrant package --base VPS_DEV --output vagrant-libs/vps_dev.box
 
-				vagrant package --base VPS_DEV --output vagrant-libs/vps_dev.box
+			usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
+			if [ "$usuario" == "neo@desktop" ]; 
+			then
 				vagrant cloud auth login
 				vagrant cloud publish \
 					--box-version 0.0.1 \
@@ -119,11 +123,32 @@ EOF
 					neoricalex/ubuntu "0.0.1" virtualbox \
 					vagrant-libs/vps_dev.box # --force --debug
 				vagrant cloud auth logout
-				
+				VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant destroy -f
+				vagrant box remove ubuntu/focal64 --provider virtualbox
+			else
+				echo "[DEBUG] Para enviar para a Vagrant Cloud tem que ter as credenciais. Continuando..."
 			fi
+			
 		fi
+		echo "==> A vagrant-libs/vps_dev.box foi gerada."
+
+		echo "==> Provisionando a neoricalex/ubuntu (VPS_DEV)..."
+		VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
+		echo "==> Reiniciando a neoricalex/ubuntu (VPS_DEV) para as configurações ficarem ativas..."
+		VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
+
 	fi
+	echo "==> A neoricalex/ubuntu (VPS_DEV) foi gerada."
 }
 
 instalar_requerimentos_para_rodar_vps
 provisionar_vps
+
+echo "==> Entrando na neoricalex/ubuntu (VPS_DEV)..."
+VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
+#!/bin/bash
+cd /vagrant
+echo "Parece bom!" 
+EOF
+
+echo "==> A compilação foi concluída com sucesso!"
