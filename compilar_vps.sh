@@ -14,8 +14,8 @@ provisionar_vps(){
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant up
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant ssh<<EOF
 #!/bin/bash
-echo "Parece bom."
-echo "Saindo..."
+echo "A Box base foi provisionada com sucesso!"
+echo "Continuando..."
 EOF
 			echo "==> Reiniciando a box base..."
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant reload
@@ -65,9 +65,7 @@ entrar_vps(){
 
 cd /vagrant
 
-make iso
-
-#vagrant up
+make nfdos
 
 cd .. 
 EOF

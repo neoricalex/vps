@@ -20,7 +20,7 @@ else
 endif
 VERSION_ARG ?= $(VERSION)
 
-.PHONY: all vps iso box build test tag_latest release ssh
+.PHONY: all vps nfdos iso box build test tag_latest release ssh
 
 all: vps
 
@@ -30,9 +30,9 @@ compilar_vps:
 	chmod +x compilar_vps.sh
 	./compilar_vps.sh
 
-iso:
-	chmod +x compilar_iso.sh
-	./compilar_iso.sh
+nfdos:
+	chmod +x compilar_nfdos.sh
+	./compilar_nfdos.sh
 
 build:
 	./build.sh
