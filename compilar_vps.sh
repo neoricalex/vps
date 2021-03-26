@@ -57,12 +57,8 @@ EOF
 	echo "==> Reiniciando o neoricalex/ubuntu (VPS_DEV) para as configurações ficarem ativas..."
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
 }
+entrar_vps(){
 
-if VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "not created" > /dev/null;
-then
-    provisionar_vps
-elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
-then
 	echo "==> Entrando no neoricalex/ubuntu (VPS_DEV)..."
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 #!/bin/bash
@@ -75,6 +71,14 @@ make iso
 
 cd .. 
 EOF
+}
+if VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "not created" > /dev/null;
+then
+    provisionar_vps
+	entrar_vps
+elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
+then
+	entrar_vps
 else
     echo "[DEBUG] O VPS_DEV existe mas está com um status diferente..."
     VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status 
