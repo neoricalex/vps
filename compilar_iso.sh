@@ -1,49 +1,8 @@
 #!/bin/bash
 
-# NEORICALEX
-export NEORICALEX_HOME=$(pwd)
-# NFDOS
-export NFDOS_HOME=$NEORICALEX_HOME/nfdos
-export NFDOS_VERSAO="0.4.4"
-# NFDOS Core
-export NFDOS_ROOT=$NFDOS_HOME/core
-export NFDOS_ROOTFS=$NFDOS_ROOT/rootfs
-export NFDOS_DISCO=$NFDOS_ROOT/nfdos.img
-# Vagrant
-export VERSAO_BOX_VAGRANT="libvirt"
+source .variaveis_ambiente_vps_dev
 
 echo "Iniciando a compilação da imagem ISO do NFDOS $NFDOS_VERSAO ..."
-
-if [ ! -f ".requerimentos_iso.box" ]; 
-then
-	echo "Atualizar repositórios e instalar requerimentos..."
-	sudo apt update
-	sudo apt install -y \
-		binutils \
-		debootstrap \
-		squashfs-tools \
-		xorriso \
-		grub-pc-bin \
-		grub-efi-amd64-bin \
-		unzip \
-		mtools \
-		whois \
-		jq \
-		moreutils
-
-	if ! command -v packer &> /dev/null
-	then
-		versao_packer="1.6.4"
-		wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
-		unzip packer_${versao_packer}_linux_amd64.zip
-		sudo mv packer /usr/local/bin 
-		rm packer_${versao_packer}_linux_amd64.zip
-	fi
-
-    echo "==> Removendo pacotes desnecessários"
-    sudo apt autoremove -y
-    touch .requerimentos_iso.box
-fi
 
 echo "Checkando se a $NFDOS_HOME existe"
 if [ ! -d "$NFDOS_HOME" ]; then
@@ -89,7 +48,7 @@ then
 		jq ".variables.iso_checksum = \"$checkar_sha256\"" $NFDOS_HOME/desktop/libvirt.json | sponge $NFDOS_HOME/desktop/libvirt.json
 
 		cd $NFDOS_HOME/desktop
-		packer build libvirt.json # PACKER_LOG=1
+		PACKER_LOG=1 packer build libvirt.json # PACKER_LOG=1
 		cd $NEORICALEX_HOME
 	fi
 	echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box já existe."

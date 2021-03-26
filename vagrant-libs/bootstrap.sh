@@ -3,7 +3,7 @@ set -eux
 
 echo "==> Atualizar os repositórios..."
 sudo apt-get update
-# sudo apt-get -y upgrade
+sudo apt-get -y upgrade
 # sudo apt-get -y dist-upgrade
 
 # Remover entradas antigas do kernel na Grub
@@ -47,11 +47,35 @@ vagrant plugin install vagrant-libvirt
 vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
 vagrant plugin install vagrant-mutate
 
-echo "==> Instalar libvrt & KVM" 
-# REF: https://github.com/alvistack/ansible-role-virtualbox/blob/master/.travis.yml
-sudo apt install -y bridge-utils dnsmasq-base ebtables libvirt-daemon-system libvirt-clients \
-	libvirt-dev qemu-kvm qemu-utils qemu-user-static ruby-dev \
-	ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+echo "==> Adicionar o grupo kvm"
+sudo groupadd kvm
+
+echo "==> Adicionar o usuário vagrant ao grupo kvm"
+sudo usermod -aG kvm vagrant
+
+echo "==> Instalar os pacotes do kvm"
+sudo apt install -y qemu-system qemu qemu-kvm qemu-utils qemu-block-extra \
+					libvirt-daemon libvirt-daemon-system libvirt-clients \
+					cpu-checker libguestfs-tools libosinfo-bin \
+					bridge-utils dnsmasq-base ebtables libvirt-dev ruby-dev \
+					ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev	qemu-user-static
+
+echo "==> Adicionar o usuário vagrant ao grupo libvirt"
+sudo usermod -aG libvirt vagrant
+
+echo "==> Iniciar o serviço KVM de forma automática"
+sudo systemctl start libvirtd
+sudo systemctl enable --now libvirtd
+
+echo "==> Reiniciar o serviço libvirt"
+sudo systemctl restart libvirtd.service
+
+echo "==> Habilitar o IPv4 e IPv6 forwarding"
+sudo sed -i "/net.ipv4.ip_forward=1/ s/# *//" /etc/sysctl.conf
+sudo sed -i "/net.ipv6.conf.all.forwarding=1/ s/# *//" /etc/sysctl.conf
+
+echo "==> Aplicar as mudanças"
+sudo sysctl -p
 
 # Install Docker
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
