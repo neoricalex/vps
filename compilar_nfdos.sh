@@ -59,20 +59,42 @@ compilar_iso(){
 	fi
 }
 
-compilar_iso
+compilar_vps_remoto(){
 
-echo "Parece bom"
-exit
+	if ! command -v vagrant &> /dev/null;
+	then
+		echo "==> Instalar Vagrant"
+		wget -nv https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
+		sudo dpkg -i vagrant_2.2.14_x86_64.deb
+		rm vagrant_2.2.14_x86_64.deb
 
-iniciar_vps(){
+		echo "==> Instalar plugins do Vagrant"
+		vagrant plugin install vagrant-libvirt
+		vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+		vagrant plugin install vagrant-mutate
+	fi
+
+	# VBoxManage list vms -l | grep -e ^Name: -e ^State | sed s/\ \ //g | cut -d: -f2-
+	#sudo killall vagrant
+	#sudo killall ruby
+	#vagrant destroy -f 
+	
     vagrant up --provider=libvirt
     vagrant ssh <<EOF
 #!/bin/bash
 
-cd nfdos
+echo ""
+echo "O NFDOS foi compilado com Sucesso!"
+
+ls /var/lib/neoricalex
 
 EOF
 }
+
+compilar_iso
+compilar_vps_remoto
+
+exit
 
 if vagrant status | grep "not created" > /dev/null; then
     iniciar_vps

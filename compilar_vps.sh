@@ -41,6 +41,8 @@ EOF
 			echo "==> Excluir a box ubuntu/focal64 pois não é mais necessária..."
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant destroy -f
 			vagrant box remove ubuntu/focal64 --provider virtualbox
+
+			echo "==> Excluir também a vagrant-libs/base.box para liberarmos espaço em disco..."
 			rm vagrant-libs/base.box
 
 
@@ -52,33 +54,94 @@ EOF
 
 	echo "==> O VPS_DEV baseado no neoricalex/ubuntu está agora pronto para ser executado."
 	echo "==> Provisionando o neoricalex/ubuntu (VPS_DEV)..."
-	cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
+	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	echo "==> Reiniciando o neoricalex/ubuntu (VPS_DEV) para as configurações ficarem ativas..."
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
 }
+
 entrar_vps(){
 
-	echo "==> Entrando no neoricalex/ubuntu (VPS_DEV)..."
+	echo "==> Entrando no VPS_DEV..."
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 #!/bin/bash
 
 cd /vagrant
+
+#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
+#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
+#virsh vol-delete --pool default NEORICALEX_NFDOS.img
+#virsh vol-list default
+#vagrant destroy -f
 
 make nfdos
 
 cd .. 
 EOF
 }
+
 if VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "not created" > /dev/null;
 then
+
     provisionar_vps
 	entrar_vps
+
+elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "poweroff" > /dev/null;
+then
+
+	echo "==> Ligando o VPS_DEV..."
+	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
+	entrar_vps
+
+elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "paused" > /dev/null;
+then
+
+	echo "[DEBUG] O VPS_DEV existe mas está com o status de pausado. Ligando ele de volta..."
+	vboxmanage controlvm VPS_DEV poweroff
+	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
+	entrar_vps
+
+
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
+
 	entrar_vps
+
 else
-    echo "[DEBUG] O VPS_DEV existe mas está com um status diferente..."
+
+    echo "[DEBUG] O VPS_DEV existe mas está com um status desconhecido."
     VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status 
-    sleep 5
+	sleep 5
+
+	exit
+	# TODO: Menu com opções
+	title="Select example"
+	prompt="Pick an option:"
+	options=("A" "B" "C")
+
+	echo "$title"
+	PS3="$prompt "
+	select opt in "${options[@]}" "Quit"; do 
+		case "$REPLY" in
+		1) echo "You picked $opt which is option 1";;
+		2) echo "You picked $opt which is option 2";;
+		3) echo "You picked $opt which is option 3";;
+		$((${#options[@]}+1))) echo "Goodbye!"; break;;
+		*) echo "Invalid option. Try another one.";continue;;
+		esac
+	done
+
+	while opt=$(zenity --title="$title" --text="$prompt" --list \
+					--column="Options" "${options[@]}")
+	do
+		case "$opt" in
+		"${options[0]}") zenity --info --text="You picked $opt, option 1";;
+		"${options[1]}") zenity --info --text="You picked $opt, option 2";;
+		"${options[2]}") zenity --info --text="You picked $opt, option 3";;
+		*) zenity --error --text="Invalid option. Try another one.";;
+		esac
+	done
+
 fi

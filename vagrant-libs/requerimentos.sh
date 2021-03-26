@@ -8,7 +8,19 @@ echo "==> Checkando se os requerimentos foram instalados..."
 if [ ! -f ".requerimentos_iso.box" ]; 
 then
 	echo "Atualizar repositórios e instalar requerimentos..."
-	sudo apt update
+	sudo apt-get update
+	sudo apt-get -y upgrade
+	sudo apt-get -y dist-upgrade
+
+	echo "==> Instalar o Linux/Ubuntu base..."
+	sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
+
+	echo "==> Remover entradas antigas do kernel na Grub..."
+	# REF: https://askubuntu.com/questions/176322/removing-old-kernel-entries-in-grub
+	sudo apt-get purge $( dpkg --list | grep -P -o "linux-image-\d\S+" | grep -v $(uname -r | grep -P -o ".+\d") ) -y	
+
+
+	echo "==> Instalar pacotes para a criação da imagem ISO..."
 	sudo apt install -y \
 		binutils \
 		debootstrap \
@@ -23,8 +35,11 @@ then
 		moreutils \
 		make
 
-	echo "==> Instalar o Linux/Ubuntu base..."
-	sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
+	echo "==> Instalar pacotes para desenvolvimento geral..."
+	sudo apt-get install -y build-essential checkinstall libreadline-gplv2-dev \
+		libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev \
+		libbz2-dev libffi-dev python3-pip unzip lsb-release software-properties-common \
+		curl wget git rsync devscripts # python-dev python3-venv
 
 	echo "==> Instalar o VirtualBox"
 	#sudo apt install -y virtualbox
@@ -43,36 +58,20 @@ then
 	sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
 	rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack 
 
-	if ! command -v vagrant &> /dev/null
-	then
-		echo "Download Vagrant & Instalar"
-		wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-		sudo dpkg -i vagrant_2.2.9_x86_64.deb
-		rm vagrant_2.2.9_x86_64.deb
-
-		echo "Instalar plugins do Vagrant"
-		vagrant plugin install vagrant-libvirt
-		
-	fi
-
-	if ! command -v packer &> /dev/null
-	then
-		versao_packer="1.6.4"
-		wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
-		unzip packer_${versao_packer}_linux_amd64.zip
-		sudo mv packer /usr/local/bin 
-		rm packer_${versao_packer}_linux_amd64.zip
-	fi
+	echo "==> Adicionar o grupo kvm"
+	sudo groupadd kvm
 
 	echo "==> Adicionar o usuário vagrant ao grupo kvm"
 	sudo usermod -aG kvm vagrant
 
 	echo "==> Instalar os pacotes do kvm"
 	sudo apt install -y qemu-system qemu qemu-kvm qemu-utils qemu-block-extra \
-		libvirt-daemon libvirt-daemon-system libvirt-clients \
-		cpu-checker libguestfs-tools libosinfo-bin \
-		bridge-utils dnsmasq-base ebtables libvirt-dev ruby-dev \
-		ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev	qemu-user-static
+						libvirt-daemon libvirt-daemon-system libvirt-clients \
+						cpu-checker libguestfs-tools libosinfo-bin \
+						bridge-utils dnsmasq-base ebtables libvirt-dev ruby-dev \
+						ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+						#qemu-user-static libvirt-bin build-dep
+
 
 	echo "==> Adicionar o usuário vagrant ao grupo libvirt"
 	sudo usermod -aG libvirt vagrant
@@ -91,7 +90,38 @@ then
 	echo "==> Aplicar as mudanças"
 	sudo sysctl -p
 
+	echo "==> Instalar Packer"
+	versao_packer="1.6.4"
+	wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
+	unzip packer_${versao_packer}_linux_amd64.zip
+	sudo mv packer /usr/local/bin 
+	rm packer_${versao_packer}_linux_amd64.zip
+
+	echo "==> Instalar Docker..."
+	sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+	sudo apt-get update
+	sudo apt-cache policy docker-ce
+	sudo apt-get install -y docker-ce docker-compose
+	# Re-instalar docker-compose # WORKAROUND: https://github.com/docker/for-linux/issues/563
+	# docker build -t terraform-azure-vm . >> "free(): invalid pointer"
+	sudo apt-get remove -y golang-docker-credential-helpers
+	sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+	echo '{"experimental": true}' > /etc/docker/daemon.json
+	service docker restart
+
+	echo "==> Adicionar o usuário vagrant ao grupo docker"
+	sudo usermod -aG docker vagrant
+
     echo "==> Removendo pacotes desnecessários"
     sudo apt autoremove -y
     touch .requerimentos_iso.box
 fi
+
+# TODO: Trellis/Bedrock/Wordpress: https://www.youtube.com/watch?v=-pOKTtAfJ8M&ab_channel=WPCasts
+# TODO Ainsible Docker Swarm: https://imasters.com.br/devsecops/cluster-de-docker-swarm-com-ansible
+# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
+
+# sudo sed -i -e "\\#PasswordAuthentication yes# s#PasswordAuthentication yes#PasswordAuthentication no#g" /etc/ssh/sshd_config
+# sudo systemctl restart sshd.service
+# echo "finished"
