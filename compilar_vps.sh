@@ -92,7 +92,7 @@ else
 	echo "# TODO"
 	sudo systemctl start wg-quick@wg0
 	ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
-	if [ $ip = "192.168.100.2" ];
+	if [ "$ip" = "192.168.100.2" ];
 	then
 		echo "Wireguard configurado com sucesso!"
 	fi
