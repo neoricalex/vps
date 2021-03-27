@@ -1,0 +1,92 @@
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common \
+    unzip \
+    net-tools -y
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y 
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+curl -L https://github.com/docker/machine/releases/download/v0.15.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+chmod +x /tmp/docker-machine &&
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+sudo usermod -aG docker $USER
+
+sudo curl -L git.io/weave -o /usr/local/bin/weave
+sudo chmod a+x /usr/local/bin/weave
+
+sudo apt-get install -y virtualbox virtualbox-ext-pack
+docker-machine create --driver virtualbox -h
+
+docker-machine create \
+    --driver "digitalocean" \
+    --digitalocean-size "s-1vcpu-1gb" \
+    --digitalocean-image "ubuntu-20-04-x64" \
+    --digitalocean-region "nyc1" \
+    --digitalocean-access-token "token" \
+    servidor
+
+docker-machine restart servidor
+eval $(docker-machine env servidor)
+
+docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
+docker swarm init --advertise-addr 67.205.165.55
+
+weave launch --ipalloc-init consensus=3
+
+docker run --name consul \
+    --restart=always \
+    -p 8400:8400 \
+    -p 8500:8500 \
+    -p 8553:53/udp \
+    -d progrium/consul \
+    -server -bootstrap-expect 1 -ui-dir /ui
+
+eval "$(docker-machine env -u)"
+
+docker-machine create \
+    -d virtualbox \
+    --swarm \
+    --swarm-master \
+    --swarm-discovery="consul://$(docker-machine ip servidor):8500" \
+    --engine-opt="cluster-store=consul://$(docker-machine ip servidor):8500" \
+    --engine-opt="cluster-advertise=eth0:2376" \
+    swarm-master
+
+eval $(docker-machine env swarm-master)
+weave launch --ipalloc-init consensus=3
+weave connect "$(docker-machine ip servidor)"
+
+eval "$(docker-machine env -u)"
+
+docker-machine -D create \
+    -d virtualbox \
+    --swarm \
+    --swarm-discovery="consul://$(docker-machine ip servidor):8500" \
+    --engine-opt="cluster-store=consul://$(docker-machine ip servidor):8500" \
+    --engine-opt="cluster-advertise=eth0:2376" \
+    swarm-node-1
+
+docker-machine ssh servidor <<EOF
+#!/bin/bash
+apt update && apt upgrade -y
+EOF
+docker-machine restart servidor
+
+do-release-upgrade

@@ -1,0 +1,8 @@
+# Remover imagens docker sem 1 contentor associado
+docker image prune -a
+
+# Limpar o docker
+docker system prune
+
+# VCL para o Varnish
+https://gist.github.com/matthewjackowski/062be03b41a68edbadfc

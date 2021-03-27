@@ -66,7 +66,30 @@ entrar_vps(){
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<EOF
 #!/bin/bash
 
-cd /vagrant
+cd /neoricalex
+
+echo "Configurando o Wireguard..."
+if ! command -v wg &> /dev/null;
+then
+	sudo apt install -y wireguard
+	if [ ! -d "docker/wireguard/digital-ocean" ]; 
+	then
+		cp docker/wireguard/digital-ocean/cliente/wg0.conf /etc/wireguard/wg0.conf
+		sudo sysctl -w net ipv4.ip_forward=1
+		sudo sysctl -w net ipv6.conf.all.forwarding=1
+		sudo systemctl enable wg-quick@wg0
+		sudo systemctl start wg-quick@wg0
+
+		ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
+		if [ $ip = "192.168.100.2" ];
+		then
+			echo "Wireguard configurado com sucesso!"
+		fi
+
+	fi
+else
+	echo "# TODO"
+fi
 
 #virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
 #virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
@@ -74,7 +97,7 @@ cd /vagrant
 #virsh vol-list default
 #vagrant destroy -f
 
-make nfdos
+#make nfdos
 
 cd .. 
 EOF

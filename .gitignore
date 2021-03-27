@@ -9,6 +9,17 @@
 .requerimentos_host.box
 .requerimentos_box_base.box
 
+docker/diversos
+docker/duckdns
+docker/email
+docker/gitlab
+docker/kubernetes
+docker/nextcloud
+docker/nginx-proxy
+docker/swarm
+docker/wireguard
+docker/wordpress
+
 nfdos/core/image
 nfdos/core/rootfs
 nfdos/core/nfdos.img
