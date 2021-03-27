@@ -96,6 +96,7 @@ else
 	then
 		echo "Wireguard configurado com sucesso!"
 	fi
+	sudo journalctl -xe
 fi
 
 #virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
