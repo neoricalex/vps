@@ -90,6 +90,12 @@ then
 	fi
 else
 	echo "# TODO"
+	sudo systemctl start wg-quick@wg0
+	ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
+	if [ $ip = "192.168.100.2" ];
+	then
+		echo "Wireguard configurado com sucesso!"
+	fi
 fi
 
 #virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
