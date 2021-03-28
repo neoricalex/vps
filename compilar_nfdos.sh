@@ -85,8 +85,7 @@ git pull
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
 
-vagrant destroy -f
-#vagrant box list
+vagrant box list
 
 
 #echo "==> Instalar Wireguard..."
