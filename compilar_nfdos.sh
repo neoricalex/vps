@@ -79,17 +79,10 @@ sudo chown -R neo:neo /var/lib/neoricalex
 cd /var/lib/neoricalex
 git pull
 
-echo "==> Criar o sub-módulo do VPS"
-caminho_vps="src/vps"
-github_vps="https://github.com/neoricalex/vps.git"
-if [ ! -d "$caminho_vps" ] ; then
-	git clone $github_vps src/vps
-else
-	sudo rm -rf $caminho_vps
-	git clone $github_vps src/vps
-fi
+cd src
+git clone https://github.com/neoricalex/vps.git
 
-cd /var/lib/neoricalex/src/vps/
+cd vps
 VAGRANT_VAGRANTFILE=Vagrantfile.NFDOS vagrant up
 
 
