@@ -87,9 +87,10 @@ git pull
 #virsh vol-delete --pool default generic-VAGRANTSLASH-ubuntu2004_vagrant_box_image_3.2.12.img
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
+#vagrant box remove ubuntu/focal64 --all
+#vagrant box list
 
-vagrant box remove ubuntu/focal64 --all
-vagrant box list
+vboxmanage list vms
 
 #echo "==> Instalar Wireguard..."
 #apt install wireguard -y
