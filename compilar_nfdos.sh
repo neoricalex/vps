@@ -85,7 +85,7 @@ git pull
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
 
-vagrant global-status --prune
+VAGRANT_VAGRANTFILE=Vagrantfile.NFDOS vagrant destroy -f
 #vagrant box list
 
 
