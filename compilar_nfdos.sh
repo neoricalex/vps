@@ -80,7 +80,7 @@ cd /var/lib/neoricalex
 git pull
 
 echo "==> Criar o sub-módulo do VPS"
-caminho_vps="src/vps"
+caminho_vps="./src/vps"
 github_vps="https://github.com/neoricalex/vps.git"
 if [ ! -d "$caminho_vps" ] ; then
 	git submodule add $github_vps src/vps
