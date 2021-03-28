@@ -61,53 +61,48 @@ compilar_iso(){
 
 compilar_vps_remoto(){
 
-	if ! command -v vagrant &> /dev/null;
-	then
-		echo "==> Instalar Vagrant"
-		wget -nv https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
-		sudo dpkg -i vagrant_2.2.14_x86_64.deb
-		rm vagrant_2.2.14_x86_64.deb
-
-		echo "==> Instalar plugins do Vagrant"
-		vagrant plugin install vagrant-libvirt
-		vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
-		vagrant plugin install vagrant-mutate
-	fi
-
 	# VBoxManage list vms -l | grep -e ^Name: -e ^State | sed s/\ \ //g | cut -d: -f2-
 	#sudo killall vagrant
 	#sudo killall ruby
-	#vagrant destroy -f 
+	#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
+	#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
+	#virsh vol-delete --pool default NEORICALEX_NFDOS.img
+	#virsh vol-list default
+	#vagrant destroy -f
 	
     vagrant up --provider=libvirt
     vagrant ssh <<EOF
 #!/bin/bash
 
+sudo chown -R neo:neo /var/lib/neoricalex
+
+cd /var/lib/neoricalex
+git pull
+
+cd /var/lib/neoricalex/src/vps/
+VAGRANT_VAGRANTFILE=Vagrantfile.NFDOS vagrant up
+
+
+#echo "==> Instalar Wireguard..."
+#apt install wireguard -y
+#cp src/vps/vagrant-libs/ssh/digital-ocean/wireguard/cliente/wg0.conf /etc/wireguard/wg0.conf
+#wg-quick up wg0
+
+#ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
+
+# TODO: Trellis/Bedrock/Wordpress: https://www.youtube.com/watch?v=-pOKTtAfJ8M&ab_channel=WPCasts
+# TODO Ainsible Docker Swarm: https://imasters.com.br/devsecops/cluster-de-docker-swarm-com-ansible
+# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
+
+# sudo sed -i -e "\\#PasswordAuthentication yes# s#PasswordAuthentication yes#PasswordAuthentication no#g" /etc/ssh/sshd_config
+# sudo systemctl restart sshd.service
+# echo "finished"
+
 echo ""
 echo "O NFDOS foi compilado com Sucesso!"
-
-ls /var/lib/neoricalex
 
 EOF
 }
 
 compilar_iso
 compilar_vps_remoto
-
-exit
-
-if vagrant status | grep "not created" > /dev/null; then
-    iniciar_vps
-elif vagrant status | grep "is running" > /dev/null; then
-    echo "[DEBUG] O VPS_DEV existe e está ligado. Destruir e começar de novo?"
-    vagrant destroy
-    iniciar_vps
-elif vagrant status | grep "poweroff" > /dev/null; then
-    echo "[DEBUG] O VPS_DEV existe mas está desligado. Destruir e começar de novo..."
-    vagrant destroy -f
-    iniciar_vps
-else
-    echo "[DEBUG] O VPS_DEV existe mas está com um status diferente..."
-    vagrant status
-    sleep 5
-fi

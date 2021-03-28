@@ -43,19 +43,18 @@ EOF
 			VAGRANT_VAGRANTFILE=Vagrantfile.Ubuntu vagrant destroy -f
 			vagrant box remove ubuntu/focal64 --provider virtualbox
 
-			echo "==> Excluir também a vagrant-libs/base.box para liberarmos espaço em disco..."
+			echo "==> Excluir também a vagrant-libs/base.box para liberarmos espaço em disco? (sim)"
 			rm vagrant-libs/base.box
 
 
 		fi
-		echo "==> A box base foi gerada e está acessivel em src/vps/vagrant-libs/base.box."
+		echo "==> A box base foi gerada."
 
 	fi
-	echo "==> A neoricalex/ubuntu (VPS_DEV) foi gerada."
+	echo "==> A box do VPS_DEV foi gerada."
 
 	echo "==> O VPS_DEV baseado no neoricalex/ubuntu está agora pronto para ser executado."
 	echo "==> Provisionando o VPS_DEV..."
-	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	echo "==> Reiniciando o VPS_DEV para as configurações ficarem ativas..."
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
@@ -69,43 +68,7 @@ entrar_vps(){
 
 cd /neoricalex
 
-echo "Configurando o Wireguard..."
-if ! command -v wg &> /dev/null;
-then
-	sudo apt install -y wireguard
-	if [ ! -d "docker/wireguard/digital-ocean" ]; 
-	then
-		cp docker/wireguard/digital-ocean/cliente/wg0.conf /etc/wireguard/wg0.conf
-		sudo sysctl -w net ipv4.ip_forward=1
-		sudo sysctl -w net ipv6.conf.all.forwarding=1
-		sudo systemctl enable wg-quick@wg0
-		sudo systemctl start wg-quick@wg0
-
-		ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
-		if [ $ip = "192.168.100.2" ];
-		then
-			echo "Wireguard configurado com sucesso!"
-		fi
-
-	fi
-else
-	echo "# TODO"
-	sudo systemctl start wg-quick@wg0
-	ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
-	if [ "$ip" = "192.168.100.2" ];
-	then
-		echo "Wireguard configurado com sucesso!"
-	fi
-	sudo journalctl -xe
-fi
-
-#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
-#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
-#virsh vol-delete --pool default NEORICALEX_NFDOS.img
-#virsh vol-list default
-#vagrant destroy -f
-
-#make nfdos
+make nfdos
 
 cd .. 
 EOF
@@ -120,20 +83,10 @@ then
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "poweroff" > /dev/null;
 then
 
-	echo "==> Ligando o VPS_DEV..."
+	echo "==> [DEBUG] O VPS_DEV existe mas está com um status de desligado. Ligando o VPS_DEV..."
 	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	entrar_vps
-
-elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "paused" > /dev/null;
-then
-
-	echo "[DEBUG] O VPS_DEV existe mas está com o status de pausado. Ligando ele de volta..."
-	vboxmanage controlvm VPS_DEV poweroff
-	#cat vagrant-libs/ssh/neoricalex > ~/.vagrant.d/insecure_private_key
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
-	entrar_vps
-
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
@@ -142,7 +95,7 @@ then
 
 else
 
-    echo "[DEBUG] O VPS_DEV existe mas está com um status desconhecido."
+    echo "==> [DEBUG] O VPS_DEV existe mas está com um status desconhecido."
     VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status 
 	sleep 5
 

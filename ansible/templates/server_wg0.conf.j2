@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+[Interface]
+Address = 192.168.100.1/24
+ListenPort = 51820
+PrivateKey = {{ server_privkey }}
+
+
+[Peer]
+PublicKey = {{ hostvars['localhost'].pubkey }}
+AllowedIPs = 192.168.100.2
