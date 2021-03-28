@@ -9,7 +9,7 @@
         "<tab><tab><tab><tab><tab><tab><tab><enter><wait60s>",
         "<tab><enter><wait30s>",
         "<tab><tab><tab><enter><wait30s>",
-        "<tab><tab><tab><wait>neoricalex<tab><wait>neoricalex<tab><tab><enter><wait75m>"
+        "<tab><tab><tab><wait>neoricalex<tab><wait>neoricalex<tab><tab><enter><wait45m>"
       ],
       "boot_wait": "10m",
       "disk_size": "{{user `disk_size`}}",
@@ -77,7 +77,7 @@
   ],
   "variables": {
     "vm_name": "NFDOS",
-    "version": "0.4.4",
+    "version": "0.4.5",
     "cpus": "1",
     "memory": "2048",
     "vram": "32",

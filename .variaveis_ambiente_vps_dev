@@ -2,7 +2,7 @@
 export NEORICALEX_HOME=$(pwd)
 # NFDOS
 export NFDOS_HOME=$NEORICALEX_HOME/nfdos
-export NFDOS_VERSAO="0.4.4"
+export NFDOS_VERSAO="0.4.5"
 # NFDOS Core
 export NFDOS_ROOT=$NFDOS_HOME/core
 export NFDOS_ROOTFS=$NFDOS_ROOT/rootfs

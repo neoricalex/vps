@@ -68,12 +68,24 @@ compilar_vps_remoto(){
 	#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
 	#virsh vol-delete --pool default NEORICALEX_NFDOS.img
 	#virsh vol-list default
-	vagrant destroy -f
+	#vagrant destroy -f
 	echo "==> Provisionando o NFDOS..."
     vagrant up --provider=libvirt
 	echo "==> Entrando no NFDOS..."
     vagrant ssh <<EOF
 #!/bin/bash
+
+#virsh vol-list default
+#virsh vol-delete --pool default generic-VAGRANTSLASH-ubuntu2004_vagrant_box_image_3.2.12.img
+#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
+#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
+
+#vagrant box remove ubuntu/focal64 --all
+#vagrant box list
+
+#vboxmanage controlvm vps_VPS_1616955616906_88956 poweroff
+#vboxmanage unregistervm vps_VPS_1616955616906_88956 --delete
+#vboxmanage list vms
 
 echo "$USER@$HOSTNAME"
 sudo chown -R $USER:$USER /var/lib/neoricalex
@@ -94,22 +106,6 @@ git pull
 # TODO: Trellis/Bedrock/Wordpress: https://www.youtube.com/watch?v=-pOKTtAfJ8M&ab_channel=WPCasts
 # TODO Ainsible Docker Swarm: https://imasters.com.br/devsecops/cluster-de-docker-swarm-com-ansible
 # TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
-
-# sudo sed -i -e "\\#PasswordAuthentication yes# s#PasswordAuthentication yes#PasswordAuthentication no#g" /etc/ssh/sshd_config
-# sudo systemctl restart sshd.service
-# echo "finished"
-
-#virsh vol-list default
-#virsh vol-delete --pool default generic-VAGRANTSLASH-ubuntu2004_vagrant_box_image_3.2.12.img
-#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
-#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
-
-#vagrant box remove ubuntu/focal64 --all
-#vagrant box list
-
-#vboxmanage controlvm vps_VPS_1616955616906_88956 poweroff
-#vboxmanage unregistervm vps_VPS_1616955616906_88956 --delete
-#vboxmanage list vms
 
 echo ""
 echo "O NFDOS foi compilado com Sucesso!"
