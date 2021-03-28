@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    config.vm.define :VPS do |vps|
+		vps.vm.box = "generic/ubuntu2004"
+		vps.vm.network :public_network, :dev => "virbr0", :mode => "bridge", :type => "bridge"
+
+        vps.vm.provider :libvirt do |domain|
+			domain.memory = 1024
+			domain.cpus = 1
+			domain.nested = true
+			domain.storage :file, :size => '10G', :type => 'qcow2'
+        end
+
+        vps.vm.provider :libvirt do |libvirt|
+            libvirt.driver = "kvm"
+            libvirt.storage_pool_name = "default"
+            libvirt.default_prefix = 'NEORICALEX_NFDOS_'
+			libvirt.nested = true
+			libvirt.machine_arch = "x86_64"
+			libvirt.emulator_path = "/usr/bin/qemu-system-x86_64"
+			libvirt.autostart = false
+			libvirt.watchdog :model => 'i6300esb', :action => 'reset'
+        end
+	end
+ end
