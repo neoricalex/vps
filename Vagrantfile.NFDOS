@@ -7,9 +7,9 @@ Vagrant.configure("2") do |config|
  
     config.vm.define :VPS do |vps|
 		vps.vm.box = "ubuntu/focal64"
-		#vps.vm.box_version = "20210320.0.0"
+		vps.vm.box_version = "20210320.0.0"
 		#vps.vm.box_url = "nfdos/desktop/vagrant/libvirt/NFDOS-0.4.4.box"
-		vps.vm.network :public_network, :dev => "virbr0", :mode => "bridge", :type => "bridge"
+		#vps.vm.network :public_network, :dev => "virbr0", :mode => "bridge", :type => "bridge"
 
         vps.vm.provider :libvirt do |domain|
 			domain.memory = 1024
@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
         vps.vm.provider :libvirt do |libvirt|
             libvirt.driver = "kvm"
             libvirt.storage_pool_name = "default"
-            libvirt.default_prefix = 'NEORICALEX_'
+            libvirt.default_prefix = 'NEORICALEX_NFDOS_'
 			libvirt.nested = true
 			libvirt.machine_arch = "x86_64"
 			#libvirt.machine_virtual_size = "10GB"
