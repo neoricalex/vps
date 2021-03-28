@@ -83,8 +83,8 @@ cd src
 if [ ! -d "./vps" ]; then
 	git clone https://github.com/neoricalex/vps.git
 else
-	cd vps
-	git pull
+	sudo rm -rf ./vps
+	git clone https://github.com/neoricalex/vps.git
 fi
 
 cd vps
