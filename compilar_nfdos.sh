@@ -85,10 +85,7 @@ git pull
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 #virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
 
-#vagrant box remove generic/ubuntu2004
-vagrant box remove ubuntu/focal64 --box-version 20210320.0.0
-vagrant box remove ubuntu/focal64
-
+vagrant box remove ubuntu/focal64 --all
 vagrant box list
 
 #echo "==> Instalar Wireguard..."
