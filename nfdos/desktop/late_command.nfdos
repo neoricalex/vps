@@ -1,6 +1,11 @@
 #!/bin/bash
 
-ls /var/lib/neoricalex/vps
+cd /var/lib/neoricalex
+
+echo "==> Criar o sub-módulo do VPS_DEV"
+if [ ! -d "./src/vps" ] ; then
+	git submodule add https://github.com/neoricalex/vps.git src/vps
+fi
 
 #cd /var/lib/neoricalex/src/vps/nfdos/desktop
 #cp inicio.desktop /home/neo/.config/autostart/inicio.desktop
