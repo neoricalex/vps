@@ -12,7 +12,8 @@ else
 	cd ../..
 fi
 
-cd /var/lib/neoricalex/src/vps/nfdos/desktop
-cp inicio.desktop /home/neo/.config/autostart/inicio.desktop
-chmod +x /home/neo/.config/autostart/inicio.desktop /var/lib/neoricalex/src/vps/nfdos/desktop/app/iniciar.sh
+ls /var/lib/neoricalex/src/vps/nfdos/desktop
+
+#cp inicio.desktop /home/neo/.config/autostart/inicio.desktop
+#chmod +x /home/neo/.config/autostart/inicio.desktop /var/lib/neoricalex/src/vps/nfdos/desktop/app/iniciar.sh
 
