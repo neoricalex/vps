@@ -58,23 +58,23 @@ compilar_iso(){
 		echo "A versão $VERSAO_BOX_VAGRANT do vagrant não é suportada."
 	fi
 
-	echo "==> [DEBUG] vagrant global-status --prune"
-	vagrant global-status --prune
+	#echo "==> [DEBUG] vagrant global-status --prune"
+	#vagrant global-status --prune
 	#vagrant destroy -f --name NFDOS
 
-	echo "==> [DEBUG] vboxmanage list vms"
-	vboxmanage list vms
+	#echo "==> [DEBUG] vboxmanage list vms"
+	#vboxmanage list vms
 	#vboxmanage controlvm vps_VPS_1616955616906_88956 poweroff
 	#vboxmanage unregistervm vps_VPS_1616955616906_88956 --delete
 	# VBoxManage list vms -l | grep -e ^Name: -e ^State | sed s/\ \ //g | cut -d: -f2-
 
-	echo "==> [DEBUG] vagrant box list"
-	vagrant box list
+	#echo "==> [DEBUG] vagrant box list"
+	#vagrant box list
 	#vagrant box remove neoricalex/nfdos
 	#vagrant box remove ubuntu/focal64 --all
 
-	echo "==> [DEBUG] virsh vol-list default"
-	virsh vol-list default
+	#echo "==> [DEBUG] virsh vol-list default"
+	#virsh vol-list default
 	#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
 	#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
 	#virsh vol-delete --pool default NEORICALEX_NFDOS.img
@@ -122,5 +122,5 @@ EOF
 }
 
 compilar_iso
-#compilar_vps_remoto
+compilar_vps_remoto
 
