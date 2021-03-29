@@ -87,7 +87,7 @@ sudo apt install -y qemu-system qemu qemu-kvm qemu-utils qemu-block-extra \
 					libvirt-daemon libvirt-daemon-system libvirt-clients \
 					cpu-checker libguestfs-tools libosinfo-bin \
 					bridge-utils dnsmasq-base ebtables libvirt-dev ruby-dev \
-					ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+					ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev       
 
 sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 sudo apt-get update
@@ -203,13 +203,13 @@ elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "poweroff" > 
 then
 
 	echo "==> [DEBUG] O VPS_DEV existe mas está com um status de desligado. Ligando o VPS_DEV..."
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant destroy -f
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	entrar_vps
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant destroy -f
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up	
 	entrar_vps
 
 else
