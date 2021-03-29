@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+# REF: https://www.rubydoc.info/gems/vagrant-libvirt/0.0.28
 
 	#config.vagrant.plugins = "vagrant-libvirt"
  
@@ -16,6 +17,7 @@ Vagrant.configure("2") do |config|
 			domain.memory = 2048
 			domain.cpus = 2
 			domain.nested = true
+			domain.keymap = "pt_BR"
 			#domain.disk_driver :cache => 'none'
 			domain.storage :file, :size => '10G', :type => 'qcow2'
         end
@@ -31,6 +33,9 @@ Vagrant.configure("2") do |config|
 			libvirt.emulator_path = "/usr/bin/qemu-system-x86_64"
 			libvirt.autostart = false
 			libvirt.watchdog :model => 'i6300esb', :action => 'reset'
+			libvirt.graphics_port = 5901
+			libvirt.graphics_ip = '0.0.0.0'
+			libvirt.video_type = 'cirrus'
         end
 
     end
