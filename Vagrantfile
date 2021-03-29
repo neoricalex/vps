@@ -5,13 +5,13 @@ Vagrant.configure("2") do |config|
 # REF: https://www.rubydoc.info/gems/vagrant-libvirt/0.0.28
 
 	#config.vagrant.plugins = "vagrant-libvirt"
+	config.vm.hostname = "nfdos"
  
     config.vm.define :NFDOS do |vps|
 		vps.vm.box = "neoricalex/nfdos"
 		#vps.vm.box_version = "0.4.4"
 		vps.vm.box_url = "nfdos/desktop/vagrant/libvirt/NFDOS-0.4.5.box"
 		vps.vm.network :public_network, :dev => "virbr0", :mode => "bridge", :type => "bridge"
-		vps.vm.hostname = "nfdos"
 
         vps.vm.provider :libvirt do |domain|
 			domain.memory = 2048

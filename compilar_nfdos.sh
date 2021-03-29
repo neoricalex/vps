@@ -91,7 +91,7 @@ compilar_vps_remoto(){
 	echo "==> Provisionando o NFDOS..."
 	#sudo killall vagrant
 	#sudo killall ruby
-	#vagrant destroy -f
+	vagrant destroy -f
 	#exit
     vagrant up --provider=libvirt --provision
 	echo "==> Entrando no NFDOS..."
