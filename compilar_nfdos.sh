@@ -117,7 +117,7 @@ EOF
 compilar_iso
 compilar_vps_remoto
 
-git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch vagrant-libs/base.box" -- --all
+git filter-branch -f --index-filter "git rm -rf --ignore-unmatch vagrant-libs/base.box" -- --all
 rm -rf .git/refs/original/
 git reflog expire --expire=now --all
 git gc --prune=now
