@@ -60,6 +60,7 @@ compilar_iso(){
 
 	echo "==> [DEBUG] vagrant global-status --prune"
 	vagrant global-status --prune
+	vagrant destroy --provider=libvirt -f
 
 	echo "==> [DEBUG] vboxmanage list vms"
 	vboxmanage list vms
@@ -69,14 +70,14 @@ compilar_iso(){
 
 	echo "==> [DEBUG] vagrant box list"
 	vagrant box list
-	#vagrant box remove neoricalex/nfdos
+	vagrant box remove neoricalex/nfdos
 	#vagrant box remove ubuntu/focal64 --all
 
 	echo "==> [DEBUG] virsh vol-list default"
 	virsh vol-list default
-	#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
-	#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
-	#virsh vol-delete --pool default NEORICALEX_NFDOS.img
+	virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
+	virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
+	virsh vol-delete --pool default NEORICALEX_NFDOS.img
 	#virsh vol-delete --pool default generic-VAGRANTSLASH-ubuntu2004_vagrant_box_image_3.2.12.img
 	#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 	#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
@@ -121,5 +122,5 @@ EOF
 }
 
 compilar_iso
-compilar_vps_remoto
+#compilar_vps_remoto
 
