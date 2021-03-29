@@ -58,21 +58,25 @@ compilar_iso(){
 		echo "A versão $VERSAO_BOX_VAGRANT do vagrant não é suportada."
 	fi
 
-	#vagrant global-status --prune
+	echo "==> [DEBUG] vagrant global-status --prune"
+	vagrant global-status --prune
 
-	#vboxmanage list vms
+	echo "==> [DEBUG] vboxmanage list vms"
+	vboxmanage list vms
 	#vboxmanage controlvm vps_VPS_1616955616906_88956 poweroff
 	#vboxmanage unregistervm vps_VPS_1616955616906_88956 --delete
 	# VBoxManage list vms -l | grep -e ^Name: -e ^State | sed s/\ \ //g | cut -d: -f2-
 
-	#vagrant box list
-	vagrant box remove neoricalex/nfdos
+	echo "==> [DEBUG] vagrant box list"
+	vagrant box list
+	#vagrant box remove neoricalex/nfdos
 	#vagrant box remove ubuntu/focal64 --all
 
-	#virsh vol-list default
-	virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
-	virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
-	virsh vol-delete --pool default NEORICALEX_NFDOS.img
+	echo "==> [DEBUG] virsh vol-list default"
+	virsh vol-list default
+	#virsh vol-delete --pool default neoricalex-VAGRANTSLASH-nfdos_vagrant_box_image_0.img
+	#virsh vol-delete --pool default NEORICALEX_NFDOS-vdb.qcow2
+	#virsh vol-delete --pool default NEORICALEX_NFDOS.img
 	#virsh vol-delete --pool default generic-VAGRANTSLASH-ubuntu2004_vagrant_box_image_3.2.12.img
 	#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS-vdb.qcow2
 	#virsh vol-delete --pool default NEORICALEX_NFDOS_VPS.img
