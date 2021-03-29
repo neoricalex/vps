@@ -88,7 +88,7 @@ compilar_iso(){
 compilar_vps_remoto(){
 
 	echo "==> Provisionando o NFDOS..."
-    vagrant up --provider=libvirt
+    vagrant up --provider=libvirt --provision
 	echo "==> Entrando no NFDOS..."
     vagrant ssh <<EOF
 #!/bin/bash

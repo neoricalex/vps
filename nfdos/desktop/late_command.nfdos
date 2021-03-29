@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ls /var/lib/neoricalex
+ls /var/lib/neoricalex/vps
 
 #cd /var/lib/neoricalex/src/vps/nfdos/desktop
 #cp inicio.desktop /home/neo/.config/autostart/inicio.desktop
