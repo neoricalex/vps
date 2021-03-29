@@ -10,7 +10,7 @@ else
 	cd ..
 fi
 
-cd vps
+cd vps/nfdos/desktop
 
 if [ ! -d "/home/neo/.config" ]; then
 	mkdir -p /home/neo/.config
