@@ -41,7 +41,6 @@ Vagrant.configure("2") do |config|
 		echo "#{ssh_prv_key}" > /home/vagrant/.ssh/id_rsa
 		chmod 600 /home/vagrant/.ssh/id_rsa
 		chown -R vagrant:vagrant /home/vagrant
-		bash #{Dir.pwd}/vagrant-libs/requerimentos.sh
 		exit 0
 	SHELL
 	end
