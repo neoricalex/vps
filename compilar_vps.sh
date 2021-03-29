@@ -209,7 +209,9 @@ then
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant destroy -f
+	vagrant box remove neoricalex/ubuntu
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	entrar_vps
 
 else
