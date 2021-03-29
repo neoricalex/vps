@@ -60,7 +60,7 @@ compilar_iso(){
 
 	echo "==> [DEBUG] vagrant global-status --prune"
 	vagrant global-status --prune
-	vagrant destroy --name NFDOS -f
+	#vagrant destroy -f --name NFDOS
 
 	echo "==> [DEBUG] vboxmanage list vms"
 	vboxmanage list vms
@@ -70,7 +70,7 @@ compilar_iso(){
 
 	echo "==> [DEBUG] vagrant box list"
 	vagrant box list
-	#vagrant box remove neoricalex/nfdos
+	vagrant box remove neoricalex/nfdos
 	#vagrant box remove ubuntu/focal64 --all
 
 	echo "==> [DEBUG] virsh vol-list default"
