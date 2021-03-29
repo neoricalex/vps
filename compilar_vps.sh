@@ -203,12 +203,13 @@ elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "poweroff" > 
 then
 
 	echo "==> [DEBUG] O VPS_DEV existe mas está com um status de desligado. Ligando o VPS_DEV..."
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant destroy -f
 	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
 	entrar_vps
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
+
 	entrar_vps
 
 else
