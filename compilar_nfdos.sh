@@ -86,15 +86,17 @@ compilar_iso(){
 	#sudo killall ruby
 }
 
-compilar_vps_remoto(){
+resetar_vps(){
 
-	echo "==> Provisionando o NFDOS..."
+	echo "==> [DEBUG] Matando e destruindo processos vagrant e ruby..."
 	sudo killall vagrant
 	sudo killall ruby
 	vagrant destroy -f
-	#exit
+
+	echo "==> [DEBUG] Provisionando o NFDOS..."
     vagrant up --provider=libvirt --provision
-	echo "==> Entrando no NFDOS..."
+
+	echo "==> [DEBUG] Entrando no NFDOS..."
     vagrant ssh <<EOF
 #!/bin/bash
 
@@ -104,6 +106,37 @@ bash iniciar.sh
 EOF
 }
 
+entrar_vps(){
+	echo "==> Entrando no NFDOS..."
+    vagrant ssh <<EOF
+#!/bin/bash
+
+cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
+bash iniciar.sh
+
+EOF	
+}
+
 compilar_iso
-compilar_vps_remoto
+
+if vagrant status | grep "not created" > /dev/null;
+then
+
+    vagrant up --provider=libvirt
+	entrar_vps
+
+elif vagrant status | grep "is running" > /dev/null;
+then
+
+	entrar_vps
+
+else
+
+    echo "==> [DEBUG] O NFDOS existe mas está com um status desconhecido:"
+    vagrant status 
+	sleep 5
+    echo "==> [DEBUG] Resetando..."
+	resetar_vps
+
+fi
 
