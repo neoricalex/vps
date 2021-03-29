@@ -55,7 +55,7 @@ sudo apt-get install -y docker-ce docker-compose
 # docker build -t terraform-azure-vm . >> "free(): invalid pointer"
 sudo apt-get remove -y golang-docker-credential-helpers
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-echo '{"experimental": true}' > /etc/docker/daemon.json
+sudo echo '{"experimental": true}' > /etc/docker/daemon.json
 service docker restart
 
 echo "==> Adicionar o usuário vagrant ao grupo docker"
@@ -122,10 +122,10 @@ vagrant plugin install vagrant-mutate
 
 echo "==> Instalar Packer"
 versao_packer="1.6.4"
-wget https://releases.hashicorp.com/packer/${versao_packer}/packer_${versao_packer}_linux_amd64.zip
-unzip packer_${versao_packer}_linux_amd64.zip
+wget https://releases.hashicorp.com/packer/$versao_packer/packer_$versao_packer_linux_amd64.zip
+unzip packer_$versao_packer_linux_amd64.zip
 sudo mv packer /usr/local/bin 
-rm packer_${versao_packer}_linux_amd64.zip
+rm packer_$versao_packer_linux_amd64.zip
 
 echo "==> Remover entradas antigas do kernel na Grub..."
 # REF: https://askubuntu.com/questions/176322/removing-old-kernel-entries-in-grub
@@ -148,11 +148,11 @@ EOF
 			then
 				vagrant cloud auth login
 				vagrant cloud publish \
-					--box-version 0.0.4 \
+					--box-version 0.0.5 \
 					--release \
 					--short-description "Um VPS baseado no ubuntu/focal64 para desenvolvimento do projeto NEORICALEX e NFDOS" \
-					--version-description "Inserir a Chave SSH" \
-					neoricalex/ubuntu 0.0.4 virtualbox \
+					--version-description "Instalar Requerimentos" \
+					neoricalex/ubuntu 0.0.5 virtualbox \
 					vagrant-libs/base.box # --force --debug
 				vagrant cloud auth logout
 			else
