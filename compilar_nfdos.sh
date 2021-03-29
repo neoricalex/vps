@@ -98,29 +98,8 @@ compilar_vps_remoto(){
     vagrant ssh <<EOF
 #!/bin/bash
 
-echo "$USER@$HOSTNAME"
-sudo chown -R $USER:$USER /var/lib/neoricalex
-
-cd /var/lib/neoricalex
-git pull
-
-cd /var/lib/neoricalex/src/vps
-git pull
-
-#echo "==> Instalar Wireguard..."
-#sudo apt install wireguard -y
-#sudo cp /neoricalex/vagrant-libs/ssh/digital-ocean/wireguard/cliente/wg0.conf /etc/wireguard/wg0.conf
-#sleep 10
-#sudo wg-quick up wg0
-
-#ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
-
-# TODO: Trellis/Bedrock/Wordpress: https://www.youtube.com/watch?v=-pOKTtAfJ8M&ab_channel=WPCasts
-# TODO Ainsible Docker Swarm: https://imasters.com.br/devsecops/cluster-de-docker-swarm-com-ansible
-# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
-
-echo ""
-echo "O NFDOS foi compilado com Sucesso!"
+cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
+bash iniciar.sh
 
 EOF
 }
