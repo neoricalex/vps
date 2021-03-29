@@ -4,9 +4,8 @@ cd /var/lib/neoricalex
 git pull
 
 git rm --cached src/vps
-git rm --cached /var/lib/neoricalex/src/vps
 rm -rf .git/modules/src/vps
-rm -rf .git/modules/var/lib/neoricalex/src/vps
+rm -rf src/vps
 
 if [ ! -d "src/vps" ]; then
 	git submodule add https://github.com/neoricalex/vps.git src/vps
