@@ -42,7 +42,8 @@ compilar_iso(){
 	then
 		echo "Checkando se a $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box existe..."
 		if [ ! -f "$NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box" ]; then
-
+			vagrant destroy -f --provider=libvirt
+			exit
 			echo "A $NFDOS_HOME/desktop/vagrant/libvirt/NFDOS-$NFDOS_VERSAO.box não existe. Criando ela..."
 
 			echo "Checkando o SHA256 da imagem ISO..."
@@ -129,8 +130,7 @@ then
 elif vagrant status | grep "is running" > /dev/null;
 then
 
-	#entrar_vps
-	vagrant destroy -f 
+	entrar_vps
 
 else
 
