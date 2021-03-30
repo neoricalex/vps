@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! $(wg --version) &> /dev/null;
+if [ ! -f "/etc/wireguard/wg0.conf" ]; then
 	echo "==> Instalar Wireguard..."
 	sudo apt install wireguard -y
 	sudo cp /nfdos/vagrant-libs/ssh/digital-ocean/wireguard/cliente/wg0.conf /etc/wireguard/wg0.conf
@@ -8,7 +8,7 @@ if ! $(wg --version) &> /dev/null;
 	sudo wg-quick up wg0
 fi
 
-ip a 
+ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
 
 exit 
 
