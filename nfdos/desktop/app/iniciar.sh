@@ -34,7 +34,8 @@ echo "==> Instalar pacotes para desenvolvimento geral..."
 sudo apt-get install -y build-essential checkinstall libreadline-gplv2-dev \
 	libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev \
 	libbz2-dev libffi-dev python3-pip unzip lsb-release software-properties-common \
-	curl wget git rsync devscripts python-dev python3-venv
+	curl wget git rsync devscripts python-dev python3-venv php-cli unzip \
+	libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc
 
 echo "==> Instalar pacotes para a criação da imagem ISO..."
 sudo apt install -y \
@@ -71,7 +72,7 @@ sudo apt-get install -y build-essential checkinstall libreadline-gplv2-dev \
 	libvirt-daemon libvirt-daemon-system libvirt-clients \
 	cpu-checker libguestfs-tools libosinfo-bin \
 	bridge-utils dnsmasq-base ebtables libvirt-dev ruby-dev \
-	ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+	ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev 
 
 echo "==> Instalar o VirtualBox"
 echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -144,13 +145,17 @@ unzip packer_1.6.4_linux_amd64.zip
 sudo mv packer /usr/local/bin 
 rm packer_1.6.4_linux_amd64.zip
 
-echo "==> Remover entradas antigas do kernel na Grub..."
-# REF: https://askubuntu.com/questions/176322/removing-old-kernel-entries-in-grub
-sudo apt-get purge $( dpkg --list | grep -P -o "linux-image-\d\S+" | grep -v $(uname -r | grep -P -o ".+\d") ) -y	
+echo "==> Iniciar a configuração do backend..."
+cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+rm composer-setup.php
 
-echo "==> Removendo pacotes desnecessários"
-sudo apt autoremove -y
+git config --global user.name "neoricalex"
+git config --global user.email "neo.webmaster.2@gmail.com"
 
+git clone --depth=1 git@github.com:roots/trellis.git backend && rm -rf backend/.git
+composer create-project roots/bedrock site
 
 if [ ! -f "/etc/wireguard/wg0.conf" ]; then
 	echo "==> Instalar Wireguard..."
@@ -159,6 +164,13 @@ if [ ! -f "/etc/wireguard/wg0.conf" ]; then
 	sleep 10
 	sudo wg-quick up wg0
 fi
+
+echo "==> Remover entradas antigas do kernel na Grub..."
+# REF: https://askubuntu.com/questions/176322/removing-old-kernel-entries-in-grub
+sudo apt-get purge $( dpkg --list | grep -P -o "linux-image-\d\S+" | grep -v $(uname -r | grep -P -o ".+\d") ) -y	
+
+echo "==> Removendo pacotes desnecessários"
+sudo apt autoremove -y
 
 #ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
 

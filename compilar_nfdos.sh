@@ -128,7 +128,8 @@ then
 elif vagrant status | grep "is running" > /dev/null;
 then
 
-	entrar_vps
+	#entrar_vps
+	resetar_vps
 
 else
 
