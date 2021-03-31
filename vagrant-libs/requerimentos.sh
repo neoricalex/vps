@@ -4,7 +4,7 @@ echo "==> Gerar e configurar o idioma pt_BR"
 DEBIAN_FRONTEND="teletype" \
     LANG="pt_BR.UTF-8" \
     LANGUAGE="pt_BR:br" \
-    LC_ALL=$LANG
+    LC_ALL="pt_BR.UTF-8"
 
 locale-gen --purge $LANG
 update-locale LANG=$LANG LC_ALL=$LC_ALL LANGUAGE=$LANGUAGE
@@ -160,5 +160,10 @@ then
 	vagrant plugin install vagrant-mutate
 	vagrant plugin install vagrant-bindfs
 fi
+
+echo "==> Remover entradas antigas do kernel na Grub..."
+# REF: https://askubuntu.com/questions/176322/removing-old-kernel-entries-in-grub
+sudo apt-get purge $( dpkg --list | grep -P -o "linux-image-\d\S+" | grep -v $(uname -r | grep -P -o ".+\d") ) -y
+
 echo "==> Removendo pacotes desnecessários"
 sudo apt autoremove -y
