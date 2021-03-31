@@ -7,6 +7,6 @@ VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant ssh<<ENTRAR_VPS
 #!/bin/bash
 
 cd /neoricalex
-ls vagrant-libs/ssh
+ls vagrant-libs/ssh/segura
 touch teste.sh
 ENTRAR_VPS
