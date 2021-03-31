@@ -84,8 +84,6 @@ entrar_vps(){
     vagrant ssh <<ENTRAR_VPS
 #!/bin/bash
 
-cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
-#bash iniciar.sh
 echo "Parece Bom!"
 $USER@$HOSTNAME
 
@@ -101,11 +99,12 @@ then
 	vagrant box remove neoricalex/nfdos
 	vagrant box add \
 		--name neoricalex/nfdos \
+		--provider $VERSAO_BOX_VAGRANT \
 		$NFDOS_HOME/desktop/vagrant/$VERSAO_BOX_VAGRANT/NFDOS-$NFDOS_VERSAO.box
 
 	echo "==> Provisionando o NFDOS..."
 	vagrant box list
-    vagrant up --provider libvirt
+    vagrant up --provider $VERSAO_BOX_VAGRANT
 	entrar_vps
 
 elif vagrant status | grep "is running" > /dev/null;
