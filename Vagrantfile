@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
 # REF: https://www.rubydoc.info/gems/vagrant-libvirt/0.0.28
 
-	#config.vagrant.plugins = "vagrant-libvirt"
+	config.vagrant.plugins = "vagrant-libvirt"
  
     config.vm.define :NFDOS do |vps|
 		vps.vm.box = "neoricalex/nfdos"
