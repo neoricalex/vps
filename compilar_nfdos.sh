@@ -112,16 +112,15 @@ entrar_vps(){
 #!/bin/bash
 
 cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
-bash iniciar.sh
+#bash iniciar.sh
+echo "Parece Bom!"
 
 ENTRAR_VPS
 }
 
-compilar_iso
-
 if vagrant status | grep "not created" > /dev/null;
 then
-
+	compilar_iso
     vagrant up --provider=libvirt
 	entrar_vps
 

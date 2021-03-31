@@ -104,3 +104,17 @@ wget https://releases.hashicorp.com/packer/1.6.4/packer_1.6.4_linux_amd64.zip
 unzip packer_1.6.4_linux_amd64.zip
 sudo mv packer /usr/local/bin 
 rm packer_1.6.4_linux_amd64.zip
+
+echo "==> Download Vagrant & Instalar"
+wget -nv https://releases.hashicorp.com/vagrant/2.2.15/vagrant_2.2.15_x86_64.deb
+sudo dpkg -i vagrant_2.2.15_x86_64.deb
+rm vagrant_2.2.15_x86_64.deb
+
+echo "==> Instalar plugins do Vagrant"
+vagrant plugin install vagrant-libvirt
+vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+vagrant plugin install vagrant-mutate
+vagrant plugin install vagrant-bindfs
+
+echo "==> Removendo pacotes desnecessários"
+sudo apt autoremove -y
