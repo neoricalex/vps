@@ -2,7 +2,6 @@
 
 echo "Atualizar repositórios e pacotes..."
 
-sudo rm /etc/apt/sources.list
 sudo bash -c 'cat > /etc/apt/sources.list' <<REPOSITORIOS
 # deb cdrom:[Ubuntu 20.04 LTS _Focal Fossa_ - Release amd64 (20200423)]/ focal main restricted
 
@@ -69,3 +68,39 @@ sudo apt-get -y dist-upgrade
 
 echo "==> Instalar o Linux/Ubuntu base..."
 sudo apt-get install linux-generic linux-headers-`uname -r` ubuntu-minimal dkms -y
+
+echo "==> Instalar pacotes para a criação da imagem ISO..."
+sudo apt install -y \
+	binutils \
+	debootstrap \
+	squashfs-tools \
+	xorriso \
+	grub-pc-bin \
+	grub-efi-amd64-bin \
+	mtools \
+	whois \
+	jq \
+	moreutils \
+	make
+
+echo "==> Instalar o VirtualBox"
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install virtualbox -y
+sudo apt install -y virtualbox-guest-dkms #virtualbox-guest-x11
+sudo apt install -y virtualbox-guest-additions-iso
+
+echo "==> Instalar o Extension Pack do VirtualBox"
+wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack \
+	-q --show-progress \
+	--progress=bar:force:noscroll
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+rm Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack 
+
+echo "==> Instalar Packer"
+wget https://releases.hashicorp.com/packer/1.6.4/packer_1.6.4_linux_amd64.zip
+unzip packer_1.6.4_linux_amd64.zip
+sudo mv packer /usr/local/bin 
+rm packer_1.6.4_linux_amd64.zip
