@@ -9,7 +9,7 @@
         "<tab><tab><tab><tab><tab><tab><tab><enter><wait60s>",
         "<tab><enter><wait30s>",
         "<tab><tab><tab><enter><wait30s>",
-        "<tab><tab><tab><wait>neoricalex<tab><wait>neoricalex<tab><tab><enter><wait60m>"
+        "<tab><tab><tab><wait>neoricalex<tab><wait>neoricalex<tab><tab><enter><wait45m>"
       ],
       "boot_wait": "10m",
       "disk_size": "{{user `disk_size`}}",
@@ -50,7 +50,7 @@
     {
       "compression_level": 9,
       "keep_input_artifact": true,
-	  "provider_override": "libvirt",
+      "provider_override": "libvirt",
       "output": "vagrant/libvirt/{{user `vm_name`}}-{{user `version`}}.box",
       "type": "vagrant",
       "vagrantfile_template": "{{user `vagrantfile_template`}}"
@@ -99,6 +99,6 @@
     "ssh_password": "neoricalex",
     "ssh_timeout": "30m",
     "update": "true",
-    "vagrantfile_template": ""
+    "vagrantfile_template": "../../Vagrantfile"
   }
 }

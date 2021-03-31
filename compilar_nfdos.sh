@@ -95,8 +95,9 @@ then
 
 	compilar_iso
 
-	echo "==> Adicionar a box neoricalex/nfdos ao Vagrant..."
 	vagrant box remove neoricalex/nfdos
+
+	echo "==> Adicionar a box neoricalex/nfdos ao Vagrant..."
 	vagrant box add \
 		--name neoricalex/nfdos \
 		--provider $VERSAO_BOX_VAGRANT \
