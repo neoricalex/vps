@@ -1,9 +1,13 @@
 #!/bin/bash
 
 
-sudo usermod -G -a kvm vagrant
-sudo usermod -G -a libvirtd vagrant
+sudo usermod -aG kvm vagrant
+sudo usermod -aG libvirtd vagrant
+
+sudo chown root:kvm /dev/kvm
+sudo chmod -R 660 /dev/kvm
 sudo systemctl restart libvirtd
+
 
 echo "Atualizar repositórios e pacotes..."
 
