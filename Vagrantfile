@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
         end
 
         vps.vm.provider :libvirt do |libvirt|
-            libvirt.driver = "kvm"
+            libvirt.driver = "qemu"
             libvirt.storage_pool_name = "default"
             libvirt.default_prefix = 'NEORICALEX_'
 			libvirt.nested = true
