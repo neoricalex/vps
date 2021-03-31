@@ -105,7 +105,7 @@ then
 
 	echo "==> Provisionando o NFDOS..."
 	vagrant box list
-    vagrant up --provider qemu
+    vagrant up --provider libvirt
 	entrar_vps
 
 elif vagrant status | grep "is running" > /dev/null;
