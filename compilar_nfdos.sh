@@ -101,7 +101,6 @@ then
 	vagrant box add \
 		--provider $VERSAO_BOX_VAGRANT \
 		--name neoricalex/nfdos \
-		--box-version $NFDOS_VERSAO \
 		$NFDOS_HOME/desktop/vagrant/$VERSAO_BOX_VAGRANT/NFDOS-$NFDOS_VERSAO.box
 
 	echo "==> Provisionando o NFDOS..."
