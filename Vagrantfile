@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
 # REF: https://www.rubydoc.info/gems/vagrant-libvirt/0.0.28
 
+	config.ssh.pty = true
 	config.vagrant.plugins = "vagrant-libvirt"
  
     config.vm.define :NFDOS do |vps|
@@ -14,7 +15,7 @@ Vagrant.configure("2") do |config|
 		#vps.vm.synced_folder "./", "/nfdos", disabled: false
 		vps.vm.hostname = "nfdos"
 		#vps.vm.network :public_network, :dev => "virbr0", :mode => "bridge", :type => "bridge"
-		vps.ssh.pty = true
+		#vps.ssh.pty = true
 
         vps.vm.provider :libvirt do |domain|
 			domain.memory = 2048
