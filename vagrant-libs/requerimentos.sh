@@ -144,7 +144,7 @@ then
 	sudo mv packer /usr/local/bin 
 	rm packer_1.6.4_linux_amd64.zip
 fi
-sudo apt purge -y vagrant*
+
 if ! command -v vagrant &> /dev/null;
 then
 	echo "==> Download Vagrant & Instalar"
@@ -153,7 +153,9 @@ then
 	rm vagrant_2.2.15_x86_64.deb
 
 	echo "==> Instalar requerimentos dos plugins do Vagrant"
-	sudo apt install -y ruby-dev ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
+	sudo apt install -y \
+		ruby-dev ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev libvirt-dev zlib1g-dev
+		
 	sudo apt install -y build-dep 
 
 	echo "==> Instalar plugins do Vagrant"

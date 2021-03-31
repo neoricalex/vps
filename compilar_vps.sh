@@ -90,7 +90,7 @@ then
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant reload
 	entrar_vps
 
 else
