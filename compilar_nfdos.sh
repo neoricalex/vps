@@ -109,8 +109,8 @@ then
 
 elif vagrant status | grep "is running" > /dev/null;
 then
-
-	entrar_vps
+	vagrant destroy -f
+	#entrar_vps
 
 else
 
