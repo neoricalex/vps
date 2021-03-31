@@ -81,7 +81,8 @@ sudo apt install -y \
 	whois \
 	jq \
 	moreutils \
-	make
+	make \
+	unzip
 
 echo "==> Instalar o VirtualBox"
 echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -109,6 +110,9 @@ echo "==> Download Vagrant & Instalar"
 wget -nv https://releases.hashicorp.com/vagrant/2.2.15/vagrant_2.2.15_x86_64.deb
 sudo dpkg -i vagrant_2.2.15_x86_64.deb
 rm vagrant_2.2.15_x86_64.deb
+
+echo "==> Instalar requerimentos dos plugins do Vagrant"
+sudo apt install -y build-dep ruby-dev ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev
 
 echo "==> Instalar plugins do Vagrant"
 vagrant plugin install vagrant-libvirt
