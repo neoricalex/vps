@@ -104,7 +104,7 @@ then
 		$NFDOS_HOME/desktop/vagrant/$VERSAO_BOX_VAGRANT/NFDOS-$NFDOS_VERSAO.box
 
 	echo "==> Provisionando o NFDOS..."
-    vagrant up
+    vagrant up --provider $VERSAO_BOX_VAGRANT
 	entrar_vps
 
 elif vagrant status | grep "is running" > /dev/null;
