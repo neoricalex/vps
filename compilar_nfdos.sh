@@ -152,8 +152,8 @@ entrar_vps(){
     vagrant ssh <<ENTRAR_VPS
 #!/bin/bash
 
-echo "Parece Bom!"
-$USER@$HOSTNAME
+echo ""
+echo "O NFDOS foi compilado com Sucesso!"
 ENTRAR_VPS
 }
 
