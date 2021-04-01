@@ -85,8 +85,7 @@ if vagrant plugin list | grep "vagrant-libvirt" > /dev/null;
 then
 
 	echo "==> Instalar plugins do Vagrant"
-	# WORKAROUND: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos,
-	#				eles de alguma forma, não ficam "ativos"
+	echo "==> [WORKAROUND]: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\""
 	vagrant plugin install vagrant-libvirt
 	#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
 	#vagrant plugin install vagrant-mutate
