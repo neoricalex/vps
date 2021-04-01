@@ -72,7 +72,8 @@ entrar_vps(){
 #!/bin/bash
 
 cd /neoricalex
-echo "Certificar em como as permissões do KVM estão setadas..."
+
+echo "==> Certificar em como as permissões do KVM estão setadas..."
 # WORKAROUND: Não sei porquê, mas se setarmos as permissões nos requerimentos,
 #				elas de alguma forma, não ficam "ativas"
 sudo chown root:kvm /dev/kvm
@@ -82,6 +83,10 @@ sudo systemctl restart libvirtd
 
 if vagrant plugin list | grep "vagrant-libvirt" > /dev/null;
 then
+	echo "==> Instalar requerimentos dos plugins do Vagrant"
+	sudo apt install -y \
+		ruby-dev ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev libvirt-dev zlib1g-dev
+		
 	echo "==> Instalar plugins do Vagrant"
 	# WORKAROUND: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos,
 	#				eles de alguma forma, não ficam "ativos"
