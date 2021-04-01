@@ -157,8 +157,6 @@ echo "O NFDOS foi compilado com Sucesso!"
 ENTRAR_VPS
 }
 
-vagrant box remove neoricalex/nfdos
-
 if vagrant status | grep "not created" > /dev/null;
 then
 
