@@ -80,7 +80,7 @@ sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
 
-vagrant plugin list
+vagrant box list
 
 if vagrant plugin list | grep "vagrant-libvirt" > /dev/null;
 then
