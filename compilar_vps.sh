@@ -107,7 +107,7 @@ then
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
+	vagrant plugin expunge --reinstall
 	entrar_vps
 
 else
