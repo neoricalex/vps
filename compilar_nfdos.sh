@@ -95,6 +95,7 @@ then
 
 	compilar_iso
 
+	vagrant box remove neoricalex/nfdos
 	vagrant mutate $NFDOS_HOME/desktop/vagrant/$VERSAO_BOX_VAGRANT/NFDOS-$NFDOS_VERSAO.box libvirt
 
 
