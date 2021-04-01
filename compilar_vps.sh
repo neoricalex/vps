@@ -73,20 +73,17 @@ entrar_vps(){
 
 cd /neoricalex
 
-echo "==> Certificar em como as permissões do KVM estão setadas..."
-echo "==> [WORKAROUND]: Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\""
+echo "==> [WORKAROUND]: Certificar em como as permissões do KVM estão setadas. Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\""
 sudo chown root:kvm /dev/kvm
 sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
 
-echo "==> Instalar plugins do Vagrant"
-echo "==> [WORKAROUND]: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\""
+echo "==> [WORKAROUND]: Instalar plugins do Vagrant. Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\""
 vagrant plugin install vagrant-libvirt
 #vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
 #vagrant plugin install vagrant-mutate
 #vagrant plugin install vagrant-bindfs
-
 
 echo "Compilando o NFDOS..."
 make nfdos
@@ -102,7 +99,7 @@ then
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-	#VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
+
 	entrar_vps
 
 else
