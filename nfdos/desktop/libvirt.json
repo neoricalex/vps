@@ -99,6 +99,6 @@
     "ssh_password": "neoricalex",
     "ssh_timeout": "30m",
     "update": "true",
-    "vagrantfile_template": "../../Vagrantfile"
+    "vagrantfile_template": ""
   }
 }
