@@ -80,6 +80,14 @@ sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
 
+echo "==> Instalar plugins do Vagrant"
+# WORKAROUND: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos,
+#				eles de alguma forma, não ficam "ativos"
+vagrant plugin install vagrant-libvirt
+#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+#vagrant plugin install vagrant-mutate
+#vagrant plugin install vagrant-bindfs
+
 echo "Compilando o NFDOS..."
 make nfdos
 cd ..
