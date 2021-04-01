@@ -158,11 +158,6 @@ then
 		
 	sudo apt install -y build-dep 
 
-	echo "==> Instalar plugins do Vagrant"
-	vagrant plugin install vagrant-libvirt
-	vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
-	vagrant plugin install vagrant-mutate
-	vagrant plugin install vagrant-bindfs
 fi
 
 echo "==> Remover entradas antigas do kernel na Grub..."

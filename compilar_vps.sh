@@ -73,6 +73,8 @@ entrar_vps(){
 
 cd /neoricalex
 echo "Certificar em como as permissões do KVM estão setadas..."
+# WORKAROUND: Não sei porquê, mas se setarmos as permissões nos requerimentos,
+#				elas de alguma forma, não ficam "ativas"
 sudo chown root:kvm /dev/kvm
 sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules

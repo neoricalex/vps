@@ -95,7 +95,13 @@ then
 
 	compilar_iso
 
+	echo "==> Instalar plugins do Vagrant"
+	# WORKAROUND: Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos,
+	#				eles de alguma forma, não ficam "ativos"
 	vagrant plugin install vagrant-libvirt
+	#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+	#vagrant plugin install vagrant-mutate
+	#vagrant plugin install vagrant-bindfs
 
 	echo "==> Adicionar a box neoricalex/nfdos ao Vagrant..."
 	vagrant box add \
@@ -104,14 +110,13 @@ then
 		$NFDOS_HOME/desktop/vagrant/$VERSAO_BOX_VAGRANT/NFDOS-$NFDOS_VERSAO.box
 
 	echo "==> Provisionando o NFDOS..."
-	vagrant box list
     vagrant up --provider $VERSAO_BOX_VAGRANT
 	entrar_vps
 
 elif vagrant status | grep "is running" > /dev/null;
 then
-	vagrant destroy -f
-	#entrar_vps
+
+	entrar_vps
 
 else
 
