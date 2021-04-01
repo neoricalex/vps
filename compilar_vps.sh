@@ -72,11 +72,13 @@ entrar_vps(){
 #!/bin/bash
 
 cd /neoricalex
-echo "Compilando o NFDOS..."
+echo "Certificar em como as permissões do KVM estão setadas..."
 sudo chown root:kvm /dev/kvm
 sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
+
+echo "Compilando o NFDOS..."
 make nfdos
 cd ..
 EOF
