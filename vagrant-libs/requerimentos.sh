@@ -144,13 +144,16 @@ then
 	sudo mv packer /usr/local/bin 
 	rm packer_1.6.4_linux_amd64.zip
 fi
+sudo apt remove vagrant* -y 
+vagrant plugin expunge --force
+sudo apt autoremove -y
 
 if ! command -v vagrant &> /dev/null;
 then
 	echo "==> Download Vagrant & Instalar"
-	wget -nv https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-	sudo dpkg -i vagrant_2.2.9_x86_64.deb
-	rm vagrant_2.2.9_x86_64.deb
+	wget -nv https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
+	sudo dpkg -i vagrant_2.2.14_x86_64.deb
+	rm vagrant_2.2.14_x86_64.deb
 
 	echo "==> Instalar requerimentos dos plugins do Vagrant"
 	sudo apt install -y \

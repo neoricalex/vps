@@ -72,7 +72,7 @@ entrar_vps(){
 #!/bin/bash
 
 cd /neoricalex
-vagrant plugin expunge --reinstall
+
 echo "==> Certificar em como as permissões do KVM estão setadas..."
 # WORKAROUND: Não sei porquê, mas se setarmos as permissões nos requerimentos,
 #				elas de alguma forma, não ficam "ativas"
@@ -107,7 +107,7 @@ then
 
 elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "is running" > /dev/null;
 then
-
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up --provision
 	entrar_vps
 
 else
