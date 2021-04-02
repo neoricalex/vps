@@ -163,7 +163,7 @@ git pull
 git submodule update --init --recursive
 
 cd /var/lib/neoricalex/src/vps/
-git pull
+git pull origin master
 
 cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
 bash iniciar.sh
