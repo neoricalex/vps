@@ -76,6 +76,13 @@ then
 
 	entrar_vps
 
+elif VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant status | grep "aborted" > /dev/null;
+then
+
+	vboxmanage startvm VPS_DEV --type headless
+	VAGRANT_VAGRANTFILE=Vagrantfile.VPS_DEV vagrant up
+	entrar_vps
+
 else
 
     echo "==> [DEBUG] O VPS_DEV existe mas está com um status desconhecido."

@@ -1,6 +1,8 @@
 #!/bin/bash 
 
-touch ~/testado
+echo "Parece bom!"
+
+exit
 
 IP_MSG="$(curl --no-progress-meter http://ifconfig.io 2>&1)"
 STATUS=$? 
@@ -13,8 +15,6 @@ else
     zenity --info --text="$MESSAGE"
 fi
 echo $MESSAGE
-
-exit
 
 rm /etc/apt/sources.list
 cat > /etc/apt/sources.list <<REPOSITORIOS

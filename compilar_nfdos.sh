@@ -155,21 +155,32 @@ entrar_vps(){
 echo ""
 echo "O NFDOS foi compilado com Sucesso!"
 # TODO: https://www.howtogeek.com/104708/how-to-customize-ubuntus-message-of-the-day/
+
+sudo chown -R neo:neo /var/lib/neoricalex
+
+cd /var/lib/neoricalex
+git submodule update --init --recursive
+
+cd /var/lib/neoricalex/src/vps/nfdos/desktop/app
+bash iniciar.sh
 ENTRAR_VPS
 }
 
-echo -e "==> [WORKAROUND]: Certificar em como as permissões do KVM estão setadas. \n Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\" \n"
+echo -e "==> [ WORKAROUND ]: Certificar em como as permissões do KVM estão setadas. \n Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\" \n"
 sudo chown root:kvm /dev/kvm
 sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
 
-echo -e "==> [WORKAROUND]: Instalar plugins do Vagrant. \n Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\" \n"
-vagrant plugin install vagrant-libvirt
-vagrant plugin install vagrant-vbguest
-#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
-#vagrant plugin install vagrant-mutate
-#vagrant plugin install vagrant-bindfs
+if ! vagrant plugin list | grep "vagrant-libvirt" > /dev/null;
+then
+	echo -e "==> [ WORKAROUND ]: Instalar plugins do Vagrant. \n Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\" \n"
+	sudo vagrant plugin install vagrant-libvirt
+	sudo vagrant plugin install vagrant-vbguest
+	#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+	#vagrant plugin install vagrant-mutate
+	#vagrant plugin install vagrant-bindfs
+fi
 
 if vagrant status | grep "not created" > /dev/null;
 then
@@ -191,6 +202,11 @@ then
 elif vagrant status | grep "is running" > /dev/null;
 then
 
+	entrar_vps
+
+elif vagrant status | grep "shutoff" > /dev/null;
+then
+	vagrant up --provider $VERSAO_BOX_VAGRANT
 	entrar_vps
 
 else

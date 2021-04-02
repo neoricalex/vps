@@ -1,19 +1,9 @@
 #!/bin/bash
 
+sudo chown -R neo:neo /var/lib/neoricalex
 cd /var/lib/neoricalex
-git pull
 
-git rm --cached src/vps
-rm -rf .git/modules/src/vps
-rm -rf src/vps
-
-echo "==> Criar o sub-módulo do VPS_DEV"
-caminho_vps="src/vps"
-github_vps="https://github.com/neoricalex/vps.git"
-if [ ! -d "$caminho_vps" ] ; then
-	git submodule add $github_vps src/vps
-	git commit -m "Adicionar o sub-módulo do VPS_DEV"
-fi
+git submodule update --init --recursive
 
 cd src/vps/nfdos/desktop
 echo "==> Iniciar o Auto-Start na versão GUI"
