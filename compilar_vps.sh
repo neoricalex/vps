@@ -91,4 +91,26 @@ else
 
 fi
 
-echo "$USER@$HOSTNAME"
+usuario="$(whoami)@$(hostname | cut -d . -f 1-2)"
+if [ "$usuario" == "neo@desktop" ]; then
+
+    vagrant cloud auth login
+	vagrant box list
+	pwd
+
+    #cd src/vps
+    #vagrant box repackage nfdos/desktop/vagrant/libvirt/NFDOS-0.4.5.box libvirt 0
+    #rm src/vps/nfdos/desktop/vagrant/libvirt/NFDOS-0.4.5.box
+    #mv package.box nfdos/desktop/vagrant/libvirt/NFDOS-0.4.5.box
+    #cd ../..
+
+    #vagrant cloud publish \
+    #    --box-version 0.4.5 \
+    #    --release \
+    #    --short-description "Ubuntu from scratch coded with Portuguese Language" \
+    #    --version-description "Primeira versão box" \
+    #    neoricalex/nfdos 0.4.5 libvirt \
+    #    src/vps/nfdos/desktop/vagrant/libvirt/NFDOS-0.4.5.box # --force --debug
+
+    vagrant cloud auth logout
+fi
