@@ -56,13 +56,13 @@ entrar_vps(){
 
 cd /neoricalex
 
-echo -e "==> [WORKAROUND]: Certificar em como as permissões do KVM estão setadas. \n Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\""
+echo -e "==> [WORKAROUND]: Certificar em como as permissões do KVM estão setadas. \n Não sei porquê, mas se setarmos as permissões nos requerimentos, elas de alguma forma, não ficam \"ativas\" \n"
 sudo chown root:kvm /dev/kvm
 sudo chmod -R 660 /dev/kvm
 sudo udevadm control --reload-rules
 sudo systemctl restart libvirtd
 
-echo -e "==> [WORKAROUND]: Instalar plugins do Vagrant. \n Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\""
+echo -e "==> [WORKAROUND]: Instalar plugins do Vagrant. \n Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\" \n"
 vagrant plugin install vagrant-libvirt
 vagrant plugin install vagrant-vbguest
 #vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
