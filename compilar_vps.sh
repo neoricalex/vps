@@ -90,3 +90,5 @@ else
 	sleep 5
 
 fi
+
+echo "$USER@$HOSTNAME"
