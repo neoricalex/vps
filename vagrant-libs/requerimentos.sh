@@ -162,6 +162,13 @@ then
 		
 	sudo apt install -y build-dep 
 
+	#echo -e "==> [WORKAROUND]: Instalar plugins do Vagrant. \n Não sei porquê, mas se colocarmos a instalação dos plugins nos requerimentos, eles de alguma forma, não ficam \"ativos\" \n"
+	sudo vagrant plugin install vagrant-libvirt
+	sudo vagrant plugin install vagrant-vbguest
+	#vagrant plugin install vagrant-disksize # Só funciona no Virtualbox
+	#vagrant plugin install vagrant-mutate
+	#vagrant plugin install vagrant-bindfs
+
 fi
 
 echo "==> Remover entradas antigas do kernel na Grub..."
