@@ -1,0 +1,49 @@
+# Translation of Plugins - Media Cleaner &#8211; Clean &amp; Optimize Space - Stable (latest release) in Portuguese (Brazil)
+# This file is distributed under the same license as the Plugins - Media Cleaner &#8211; Clean &amp; Optimize Space - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-12-02 14:23:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: pt_BR\n"
+"Project-Id-Version: Plugins - Media Cleaner &#8211; Clean &amp; Optimize Space - Stable (latest release)\n"
+
+#: classes/rest.php:123
+msgid "Invalid Regular-Expression"
+msgstr "Expressão regular inválida"
+
+#: common/admin.php:138
+msgid "<label>Hide <b>Meow Apps</b> Menu</label><br /><small>Hide Meow Apps menu and all its components, for a cleaner admin. This option will be reset if a new Meow Apps plugin is installed. <b>Once activated, an option will be added in your General settings to display it again.</b></small>"
+msgstr "<label>Ocultar o menu <b>Meow Apps</b></label><br /><small>Oculte o menu Meow Apps e todos os seus componentes, para ter um painel de administrador mais limpo. Essa opção será redefinida se um novo plug-in da Meow Apps for instalado. <b>Uma vez ativada, uma opção será adicionada em suas configurações gerais para exibi-la novamente.</b></small>"
+
+#: classes/ui.php:106
+msgid "Restore with Media Cleaner"
+msgstr "Restaurar com o Media Cleaner"
+
+#: classes/ui.php:103
+msgid "Trash with Media Cleaner"
+msgstr "Mandar para a Lixeira com o Media Cleaner"
+
+#: classes/ui.php:100
+msgid "Delete with Media Cleaner"
+msgstr "Excluir com o Media Cleaner"
+
+#: common/admin.php:129 common/admin.php:130
+msgid "Dashboard"
+msgstr "Painel"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://meowapps.com"
+msgstr "https://meowapps.com"
+
+#. Author of the plugin
+msgid "Jordy Meow"
+msgstr "Jordy Meow"
+
+#. Plugin Name of the plugin
+msgid "Media Cleaner"
+msgstr "Media Cleaner"

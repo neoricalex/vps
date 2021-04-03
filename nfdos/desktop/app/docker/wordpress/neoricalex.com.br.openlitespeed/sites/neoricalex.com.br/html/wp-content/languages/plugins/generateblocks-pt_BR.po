@@ -1,0 +1,117 @@
+# Translation of Plugins - GenerateBlocks - Stable (latest release) in Portuguese (Brazil)
+# This file is distributed under the same license as the Plugins - GenerateBlocks - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-22 19:19:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: pt_BR\n"
+"Project-Id-Version: Plugins - GenerateBlocks - Stable (latest release)\n"
+
+#: includes/class-rest.php:157
+msgid "Settings saved."
+msgstr "Configurações salvas."
+
+#: includes/dashboard.php:281
+msgid "Happy customers"
+msgstr "Clientes felizes"
+
+#: includes/dashboard.php:277
+msgid "Active websites"
+msgstr "Sites ativos"
+
+#: includes/dashboard.php:268
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/class-settings.php:51 includes/class-settings.php:52
+#: includes/dashboard.php:142 src/dashboard.js:107 dist/dashboard.js:1
+msgid "Settings"
+msgstr "Configurações "
+
+#. Author URI of the plugin
+msgid "https://tomusborne.com"
+msgstr "https://tomusborne.com"
+
+#. Author of the plugin
+msgid "Tom Usborne"
+msgstr "Tom Usborne"
+
+#. Description of the plugin
+#: includes/dashboard.php:198
+msgid "A small collection of lightweight WordPress blocks that can accomplish nearly anything."
+msgstr "Uma pequena coleção de blocos leves do WordPress que podem realizar quase qualquer coisa."
+
+#. Plugin URI of the plugin
+msgid "https://generateblocks.com"
+msgstr "https://generateblocks.com"
+
+#. Plugin Name of the plugin
+#: includes/general.php:135 includes/dashboard.php:20 includes/dashboard.php:21
+msgid "GenerateBlocks"
+msgstr "GenerateBlocks"
+
+#: includes/dashboard.php:214 src/blocks/container/block.js:35 dist/blocks.js:9
+msgid "Organize your content into rows and sections."
+msgstr "Organize seu conteúdo em linhas e seções."
+
+#: includes/dashboard.php:202 src/blocks/grid/edit.js:806
+#: src/blocks/headline/edit.js:1191 src/blocks/button/edit.js:969
+#: src/blocks/button-container/edit.js:387 src/blocks/container/edit.js:1980
+#: dist/blocks.js:3 dist/blocks.js:9 dist/blocks.js:15
+msgid "Documentation"
+msgstr "Documentação"
+
+#: includes/dashboard.php:252 src/blocks/button-container/block.js:34
+#: dist/blocks.js:9
+msgid "Buttons"
+msgstr "Botões"
+
+#: includes/dashboard.php:240 src/blocks/headline/block.js:33 dist/blocks.js:15
+msgid "Craft text-rich content with advanced typography."
+msgstr "Crie conteúdo textual rico com tipografia avançada."
+
+#: includes/dashboard.php:253 src/blocks/button/block.js:31
+#: src/blocks/button-container/block.js:35 dist/blocks.js:9
+msgid "Drive conversions with beautiful buttons."
+msgstr "Gere conversões com belos botões."
+
+#: includes/dashboard.php:265
+msgid "Looking for a WordPress theme? GenerateBlocks and GeneratePress are built with the same principles in mind and complement each other perfectly."
+msgstr "Procurando um tema para o WordPress? GenerateBlocks e GeneratePress são construídos com os mesmos princípios em mente e se complementam perfeitamente."
+
+#: includes/dashboard.php:239 src/blocks/headline/block.js:32
+#: src/blocks/headline/edit.js:1267 src/blocks/headline/edit.js:1281
+#: dist/blocks.js:15
+msgid "Headline"
+msgstr "Título"
+
+#: includes/dashboard.php:226 src/blocks/grid/block.js:33
+#: src/blocks/grid/edit.js:207 dist/blocks.js:3
+msgid "Grid"
+msgstr "Grade"
+
+#: includes/dashboard.php:213 src/blocks/container/block.js:34
+#: src/blocks/container/edit.js:470 dist/blocks.js:7 dist/blocks.js:9
+msgid "Container"
+msgstr "Contêiner"
+
+#: includes/dashboard.php:201
+msgid "Learn More"
+msgstr "Saiba mais"
+
+#: includes/dashboard.php:29 includes/dashboard.php:30
+#: includes/dashboard.php:137
+msgid "Dashboard"
+msgstr "Painel de controle"
+
+#: includes/dashboard.php:227 src/blocks/grid/block.js:34 dist/blocks.js:3
+msgid "Create advanced layouts with flexible grids."
+msgstr "Crie layouts avançados com grades flexíveis."
+
+#: includes/dashboard.php:284
+msgid "Learn more"
+msgstr "Saiba mais"

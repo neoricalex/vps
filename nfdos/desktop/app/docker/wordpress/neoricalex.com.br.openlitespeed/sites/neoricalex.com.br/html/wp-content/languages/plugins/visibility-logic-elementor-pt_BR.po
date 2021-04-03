@@ -1,0 +1,48 @@
+# Translation of Plugins - Visibility Logic for Elementor - Stable (latest release) in Portuguese (Brazil)
+# This file is distributed under the same license as the Plugins - Visibility Logic for Elementor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-01-01 01:05:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: pt_BR\n"
+"Project-Id-Version: Plugins - Visibility Logic for Elementor - Stable (latest release)\n"
+
+#: Elementor_Visibility_Control.php:73
+msgid "No"
+msgstr "Não"
+
+#: Elementor_Visibility_Control.php:72
+msgid "Yes"
+msgstr "Sim"
+
+#: Elementor_Visibility_Control.php:69
+msgid "Enable Conditions"
+msgstr "Ativar condições"
+
+#: Elementor_Visibility_Control.php:54
+msgid "Visibility control"
+msgstr "Controle de visibilidade"
+
+#. Author of the plugin
+msgid "SeventhQueen"
+msgstr "SeventhQueen"
+
+#. Plugin Name of the plugin
+msgid "Visibility Logic for Elementor"
+msgstr "Visibility Logic for Elementor"
+
+#: Elementor_Visibility_Control.php:98
+msgid "Hidden for:"
+msgstr "Oculto para:"
+
+#: Elementor_Visibility_Control.php:82
+msgid "Visible for:"
+msgstr "Visível para:"
+
+#. Description of the plugin
+msgid "Hide or show Elementor widgets based on user conditions"
+msgstr "Ocultar ou mostrar widgets do Elementor com base nas condições do usuário"
