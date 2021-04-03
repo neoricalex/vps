@@ -1,0 +1,99 @@
+.tva-purchase {
+  @include sendowl-typography;
+
+  &-top {
+    justify-content: space-between;
+
+    > div {
+      width: calc((100% - 40px) / 3);
+    }
+  }
+
+  &-empty {
+    text-align: center;
+
+    &:not(#_) h3 {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0 0 25px;
+    }
+  }
+
+  &-card {
+    min-height: 250px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    .tva-option-content &,
+    .tva-discount-content & {
+      flex-direction: column;
+    }
+
+    p {
+      flex: 0 0 100%;
+    }
+
+    .tva-colored-card {
+      width: initial;
+      min-height: 120px;
+      flex: 0 0 calc((100% - 20px) / 2);
+      margin: 0;
+    }
+
+    select,
+    button {
+      width: 100%;
+      max-width: initial;
+    }
+
+    &.tva-so-option-disabled {
+      pointer-events: none;
+
+      select,
+      button {
+        opacity: .6;
+      }
+    }
+  }
+
+  &-links {
+    display: block;
+    padding: 20px 20%;
+
+    #wpbody & h3 {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0 0 15px;
+    }
+
+    > div {
+      position: relative;
+
+      &.tva-disable-copy {
+        pointer-events: none;
+        opacity: .4;
+      }
+    }
+
+    input[type='text'] {
+      padding-right: 40px;
+    }
+
+    label {
+      flex: 0 0 100px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 8px;
+        fill: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+}

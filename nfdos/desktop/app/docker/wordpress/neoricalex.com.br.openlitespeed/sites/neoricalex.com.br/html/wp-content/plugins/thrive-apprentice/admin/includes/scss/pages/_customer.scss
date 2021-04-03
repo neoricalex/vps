@@ -1,0 +1,229 @@
+// add select2 custom styling only to customers tab
+body.tva-active-tab-customers {
+  .select2-container {
+    flex: 0 1 340px;
+    max-width: 340px;
+  }
+
+  .tva-customers-select { //The customers select2 widget dropdown
+    li {
+      max-width: 340px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+#tva-customers:not(#_):empty {
+  background: #f6f8f8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='75' viewBox='0 0 108 75'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23879198' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M91.071 32.143c7.4 0 13.393-5.993 13.393-13.393S98.471 5.357 91.071 5.357 77.68 11.35 77.68 18.75s5.993 13.393 13.392 13.393zm0-21.429c4.437 0 8.036 3.6 8.036 8.036s-3.6 8.036-8.036 8.036-8.035-3.6-8.035-8.036 3.599-8.036 8.035-8.036zM53.571 37.5c10.363 0 18.75-8.387 18.75-18.75S63.934 0 53.571 0c-10.362 0-18.75 8.387-18.75 18.75S43.21 37.5 53.571 37.5zm0-32.143c7.383 0 13.393 6.01 13.393 13.393 0 7.383-6.01 13.393-13.393 13.393-7.382 0-13.392-6.01-13.392-13.393 0-7.383 6.01-13.393 13.392-13.393zM94.42 37.5h-6.697c-2.544 0-4.905.804-6.88 2.16 1.573 1.071 2.996 2.327 4.252 3.75.82-.352 1.707-.553 2.628-.553h6.697c4.051 0 7.366 3.6 7.366 8.036 0 1.473 1.205 2.678 2.678 2.678 1.474 0 2.679-1.205 2.679-2.678 0-7.383-5.709-13.393-12.723-13.393zM16.07 32.143c7.4 0 13.393-5.993 13.393-13.393S23.471 5.357 16.071 5.357 2.68 11.35 2.68 18.75 8.672 32.143 16.07 32.143zm0-21.429c4.437 0 8.036 3.6 8.036 8.036s-3.6 8.036-8.036 8.036-8.035-3.6-8.035-8.036 3.599-8.036 8.035-8.036zm50.91 30.134c-5.591 0-6.981 2.01-13.41 2.01-6.428 0-7.818-2.01-13.41-2.01-6.076 0-11.986 2.712-15.451 7.852-2.076 3.08-3.281 6.78-3.281 10.764v7.5c0 4.437 3.599 8.036 8.035 8.036H77.68c4.436 0 8.035-3.6 8.035-8.036v-7.5c0-3.984-1.205-7.684-3.281-10.764-3.465-5.14-9.375-7.852-15.452-7.852zm13.376 26.116c0 1.474-1.205 2.679-2.678 2.679H29.464c-1.473 0-2.678-1.206-2.678-2.679v-7.5c0-2.779.82-5.474 2.36-7.768 2.31-3.431 6.429-5.49 11-5.49 4.586 0 6.227 2.008 13.425 2.008 7.2 0 8.84-2.009 13.41-2.009s8.689 2.06 10.999 5.491c1.54 2.294 2.36 4.99 2.36 7.768v7.5h.017zM26.3 39.66c-1.992-1.356-4.352-2.16-6.88-2.16h-6.697C5.71 37.5 0 43.51 0 50.893c0 1.473 1.205 2.678 2.679 2.678 1.473 0 2.678-1.205 2.678-2.678 0-4.437 3.315-8.036 7.366-8.036h6.697c.92 0 1.808.201 2.628.553 1.256-1.423 2.695-2.679 4.252-3.75z' transform='translate(-779 -312) translate(779 312)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") center top 100px no-repeat;
+}
+
+.tva-customers {
+  &-top {
+    align-items: center;
+    margin: 0 0 45px;
+  }
+
+  &-filter-label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+
+    color: #725f5f;
+  }
+
+  // clear select filter
+  &-clear {
+    margin-left: 10px;
+    opacity: .8;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    color: $color-blue-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .15s;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    svg {
+      width: 7.5px;
+      height: 7.5px;
+      opacity: .8;
+      fill: currentColor;
+      margin-right: 6px;
+    }
+  }
+}
+
+#tva-filters-wrapper {
+  display: flex;
+
+  select {
+    max-width: 200px;
+    margin-right: 10px;
+  }
+
+  .tva-search-elem {
+    margin-left: auto;
+    flex: 0 1 315px;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+// custom card styles for customers page
+.tva-customer {
+  &-card {
+    position: relative
+  }
+
+  &-avatar {
+    flex: 0 0 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-name {
+    flex: 0 1 300px;
+  }
+
+  &-email {
+    flex: 0 1 250px;
+  }
+
+  &-card:hover &-buttons {
+    opacity: 1;
+  }
+
+  &-buttons {
+    margin-left: auto;
+    min-width: 190px;
+    opacity: 0;
+    transition: opacity .15s;
+  }
+}
+
+// customer import elems
+.tva-drop-file-elem {
+  min-height: 155px;
+  border-radius: 4px;
+  border: dashed 1px #b0b9bf;
+  background-color: #f1f3f3;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  color: #b0b9bf;
+  text-align: center;
+  padding-top: 60px;
+
+  .tva-file-upload-trigger {
+    display: inline-flex;
+    align-items: center;
+    color: #1ca5e5;
+    vertical-align: bottom;
+    cursor: pointer;
+
+    &#tva-file-name {
+      color: inherit;
+      margin: 5px 0 0;
+      display: block;
+      cursor: initial;
+    }
+
+    svg {
+      margin-right: 8px;
+      fill: #1ca5e5;
+    }
+  }
+}
+
+// customers table
+.tva-csv-customers-list {
+  border-radius: 4px;
+  border: solid 1px rgba(#b0b9bf, .5);
+  border-collapse: separate;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  color: #50565f;
+
+  &.b-hidden {
+    tbody {
+      display: none;
+    }
+
+    th .toggle {
+      svg {
+        top: 3px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f1f3f3;
+      }
+
+      &.tva-customers-list-error {
+        background-color: #f9d7d1;
+
+        &:nth-child(even) {
+          background-color: #ffe0da;
+        }
+      }
+    }
+  }
+
+  th, td {
+    font-weight: inherit;
+    padding: 8px 10px;
+    min-height: 30px;
+    border-radius: 0;
+    position: relative;
+  }
+
+  th .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: opacity .15s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    svg {
+      position: relative;
+      top: 2px;
+      transition: all .15s;
+      fill: currentColor;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+// Code Mirror adjustments for CSV Customer Modal
+.CodeMirror-wrap {
+  border: solid 1px rgba(176, 185, 191, .2);
+}
+
+.CodeMirror-placeholder {
+  color: #b0b9bf !important;
+}
+
+.CodeMirror-sizer {
+  margin-left: 30px !important;
+}

@@ -1,0 +1,54 @@
+.tva-search-elem {
+  position: relative;
+
+  input[type=search] {
+    margin: 0;
+    padding: 0 10px;
+    height: unset;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #b0b9c1;
+    line-height: 34px;
+    box-sizing: border-box;
+
+    &:focus:not([readonly]) {
+      outline: none;
+      border: solid 1px #b0b9c1;
+      box-shadow: none;
+    }
+  }
+
+  button {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: #b0b9c1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.tva-close {
+      svg {
+        display: none;
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
+    svg {
+      fill: currentColor;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

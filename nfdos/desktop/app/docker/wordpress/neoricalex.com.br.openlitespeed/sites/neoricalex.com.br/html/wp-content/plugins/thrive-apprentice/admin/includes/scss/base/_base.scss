@@ -1,0 +1,331 @@
+// wp resets, small tweaks
+#wpbody {
+  background-image: linear-gradient(to right, $color-blue-2 60px, white 60px, white 300px, #eaefef 300px);
+
+  body.tva-active-tab-customers &,
+  body.tva-active-tab-wizard & {
+    background-image: linear-gradient(to right, $color-blue-2 60px, #eaefef 60px);
+  }
+}
+
+body.thrive-dashboard_page_thrive_apprentice {
+  #wpcontent {
+    padding-left: 0;
+
+    /* hide different kinds of messages on our dashboard */
+    #message, .error, .notice, .update-nag, .sbi_notice, .update, .updated {
+      display: none !important;
+    }
+  }
+
+  #wpbody-content {
+    padding-bottom: 0;
+  }
+
+  #wpfooter,
+  .update-nag {
+    display: none;
+  }
+}
+
+// main admin container
+#tva-app {
+  background-color: $bg-1;
+  display: flex;
+  font-family: $font-default;
+  font-weight: 400;
+  min-height: calc(100vh - 32px);
+}
+
+// #tva-app > #tva-content
+#tva-content {
+  flex: 1;
+  z-index: 5;
+  overflow: hidden;
+
+  > div:not(.tva-course-form) {
+    box-sizing: border-box;
+    padding: 20px 35px 35px 35px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  > div.tva-course-main {
+    padding: 20px 10px 35px 35px;
+    overflow-x: hidden;
+  }
+}
+
+// for margins and padding
+@each $distance in $distances {
+  .p-#{$distance} {
+    padding: #{$distance}px !important;
+  }
+  .m-#{$distance} {
+    margin: #{$distance}px !important;
+  }
+  @each $p in $positions {
+    $position: nth($p, 1);
+    $position-short: nth($p, 2);
+    .padding-#{$position}-#{$distance}, .p#{$position-short}-#{$distance} {
+      padding-#{$position}: #{$distance}px !important;
+    }
+    .margin-#{$position}-#{$distance}, .m#{$position-short}-#{$distance} {
+      margin-#{$position}: #{$distance}px !important;
+    }
+  }
+}
+
+@mixin nice-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3.5px;
+    background-color: #c0cad1;
+  }
+}
+
+.tvd-spinner-blue-only {
+  border-color: $color-blue-1;
+}
+
+.tva-icon,
+.tva-svg-icon {
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+}
+
+.tva-top-border {
+  border-top: 1px solid #eaefef;
+}
+
+.tva-bottom-border {
+  border-bottom: 1px solid #eaefef;
+}
+
+.tva-flex {
+  display: flex;
+
+  &.tva-flex-one {
+    > * {
+      flex: 1;
+    }
+  }
+
+  &-one {
+    flex: 1 !important;
+  }
+
+  &-two {
+    flex: 2 !important;
+  }
+
+  &.tva-flex-row {
+    flex-direction: row;
+  }
+
+  &.tva-flex-column {
+    flex-direction: column;
+  }
+
+  &.tva-space-between {
+    justify-content: space-between;
+  }
+
+  &.tva-space-around {
+    justify-content: space-around;
+  }
+
+  &.tva-align-center {
+    align-items: center;
+  }
+
+  &.tva-space-center {
+    justify-content: center;
+  }
+
+  &.tva-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.tva-flex-end {
+    justify-content: flex-end;
+  }
+
+  &.tva-flex-start {
+    justify-content: flex-start;
+  }
+}
+
+.tva-info-circle {
+  color: $color-blue-1;
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+// custom tooltip
+.tva-custom-tooltip {
+  --background-color: #0f214a;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.15s;
+  transition-delay: .3s;
+  background-color: var(--background-color);
+  line-height: normal;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  white-space: nowrap;
+  padding: 8px 10px;
+  border-radius: 4px;
+  z-index: -1;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 5px);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--background-color);
+  }
+
+  .tva-tooltip-parent:hover & {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+// tooltip styling changes
+.tvd-material-tooltip,
+.tvd-tooltip-visible {
+  padding: 10px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+  line-height: normal;
+}
+
+.tvd-backdrop {
+  background-color: $color-blue-2;
+}
+
+// END tooltip styling changes
+
+.tva-flex-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tva-inline-flex-mid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.tva-white-bg {
+  background: #fff;
+}
+
+.tva-disabled {
+  opacity: .6;
+  pointer-events: none;
+
+  &.tva-element-loading {
+    opacity: 1;
+  }
+}
+
+.tva-text-center {
+  text-align: center;
+}
+
+.tva-text-right {
+  text-align: right;
+}
+
+.tva-hide {
+  display: none!important;
+}
+
+// textarea styling
+.textarea-box {
+  .mce-tinymce {
+    border: solid 1px rgba(176, 185, 193, 0.5) !important;
+  }
+
+  div.mce-toolbar-grp {
+    border-color: rgba(176, 185, 193, 0.5);
+    background-color: #eaefef;
+  }
+
+  .mce-top-part::before {
+    box-shadow: none;
+  }
+}
+
+// copy to clipboard
+button.tva-zclip {
+  position: absolute;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background: $color-blue-4 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAeCAYAAAAy2w7YAAAAAXNSR0IArs4c6QAAAdNJREFUSA3tlr1KA1EQhXc1YCmIio2axkoRsdBKfYDUglYKFha2gk9gYS2IjRixsA+k9a8UFBGtFMQXECKCWOj6Tchcx+xu9kdIlYHDzs6cmbOZvbl3Pa9N5ifpBEHQB2cZDCRxyd+Aqu/7Xym4vxRESuADZLEXyNO/XVJ4FJxmUTDc10xiprCKX4zAkuFs4u+b+/RipugwagDkFwxnBd8HeyYmY+yW2oI2IDCOn+aFa0noyiIQjQ0SXWAdjIASqBRITOAcgBkQZ3Gr08bn6KX3T6aRLIyK/KIt0ErE1ITcwETW8AWRJkKLjYz8B3abWJHvxnBu8Wug18QiXRHqaWTumHHZshiFCtkndxT4NTijBKaAjk3yQ+BEHDUR+peJGA0ubJOGuIbqDymroy3WEco95s7oOqNzE0jaGT5hyhY1yb991VUlO8OGIj08jwZquq85DoljTea8flM3Jg2TlvcOnCunnM15g77NXvgoZS1HB+kezixPFXX62h36CF4ZqMlGek39uwZaCimJggf19Yq4HA9qz3DO9SbqaoUGKS5GkWJi9dnH5MJhmuf9dqPU2Xy4c1MEap6vUaeA8+fQa2rvbuvHL2T9vu53mXTOGe/mMg31B/wYELpqOI7GAAAAAElFTkSuQmCC') center / 13px no-repeat;
+  transition: opacity .15s;
+  z-index: 90;
+
+  &:hover {
+    background-color: $color-blue-1;
+
+    &:hover {
+      .tva-custom-tooltip {
+        visibility: visible;
+        opacity: 1;
+        background-color: $color-blue-1;
+      }
+    }
+  }
+
+  &.tva-copied {
+    background: $color-green-1 url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNC41MDIsNzUuNDk2Yy05Ljk5Ny05Ljk5OC0yNi4yMDUtOS45OTgtMzYuMjA0LDBMMTYxLjU5NCwzODIuMjAzTDQzLjcwMiwyNjQuMzExYy05Ljk5Ny05Ljk5OC0yNi4yMDUtOS45OTctMzYuMjA0LDAgICAgYy05Ljk5OCw5Ljk5Ny05Ljk5OCwyNi4yMDUsMCwzNi4yMDNsMTM1Ljk5NCwxMzUuOTkyYzkuOTk0LDkuOTk3LDI2LjIxNCw5Ljk5LDM2LjIwNCwwTDUwNC41MDIsMTExLjcgICAgQzUxNC41LDEwMS43MDMsNTE0LjQ5OSw4NS40OTQsNTA0LjUwMiw3NS40OTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==) center center / 13px no-repeat;
+    pointer-events: none;
+  }
+}
+
+.tva-element-loader {
+  &:not(#_) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+  }
+}
+
+.tva-relative {
+  position: relative;
+}

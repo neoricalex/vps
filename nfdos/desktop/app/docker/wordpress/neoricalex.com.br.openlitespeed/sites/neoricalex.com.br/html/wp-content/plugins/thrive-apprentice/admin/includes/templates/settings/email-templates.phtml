@@ -1,0 +1,20 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row tva-space-between">
+	<h1 class="tva-main-heading"><?php echo __( 'Email templates', TVA_Const::T ); ?></h1>
+</div>
+<div class="tva-flex tva-flex-row tva-space-between mt-20">
+	<select id="email-template" class="change" data-fn="renderEmailTemplate">
+		<option value=""><?php echo esc_html__( 'Select email template', TVA_Const::T ); ?></option>
+	</select>
+</div>
+<div class="mt-10" id="tva-email-template-form-wrapper"></div>

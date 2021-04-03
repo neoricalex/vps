@@ -1,0 +1,56 @@
+<div class="tva-restrictions-card mt-20">
+	<div class="tva-flex tva-align-center tva-restrictions-top tva-bottom-border tva-space-between">
+		<div class="tvd-switch">
+			<label>
+				<span><?php echo esc_html__( 'Restrict access', 'thrive-apprentice' ); ?></span>
+				<input id="tva-course-is-private" type="checkbox" data-bind="is_private">
+				<span class="tvd-lever"></span>
+			</label>
+		</div>
+
+		<div class="tva-restrictions-exclude">
+			<span><?php echo esc_html__( 'Exclude first', 'thrive-apprentice' ); ?></span>
+			<input type="number" min="0" id="tva-course-excluded" data-bind="excluded" value="<#= model.get('excluded') #>">
+			<span><?php echo esc_html__( 'lessons from the protection rules', 'thrive-apprentice' ); ?></span>
+			<span class="tva-info-circle tvd-tooltipped"
+				  data-position="left"
+				  data-tooltip="<?php echo __( 'The selected number of lessons will be accessible by non-logged in users and users with different roles or membership statuses than the ones selected in the rules in case you want to offer a number of lessons for free. ', TVA_Const::T ) ?>">
+				<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+			</span>
+		</div>
+	</div>
+	<div class="tva-restrictions-card-state" data-state="0">
+		<div class="tva-flex tva-space-center tva-align-center">
+			<?php tva_get_svg_icon( 'free-access' ); ?>
+			<span><?php echo __( 'This course is available for everyone', 'thrive-apprentice' ); ?></span>
+			<span><?php echo __( 'If you want to restrict access to this course, slide the toggle and set the conditions', 'thrive-apprentice' ); ?></span>
+		</div>
+	</div>
+	<div class="tva-restrictions-card-state" data-state="1">
+		<div class="tva-flex tva-flex-one">
+			<div class="mr-30">
+				<label for="tva-course-message" class="course-label"><?php echo esc_html__( 'Message for users that do not have access', 'thrive-apprentice' ); ?></label>
+				<div class="textarea-box">
+					<textarea id="tva-course-message"><#= model.get('message') #></textarea>
+				</div>
+			</div>
+
+			<div>
+				<label class="course-label"><?php echo esc_html__( 'Restriction label', 'thrive-apprentice' ); ?></label>
+				<div class="tva-badge-container">
+					<div class="tva-badge-card" id="tva-course-label"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tva-flex tva-align-center mt-45 tva-space-between">
+			<label class="course-label"><?php echo esc_html__( 'Products', 'thrive-apprentice' ); ?></label>
+			<div class="tva-restrictions-counter mb-10">
+				<span id="tva-rules-count-message"><?php echo esc_html__( 'Access rules currently set', 'thrive-apprentice' ); ?></span>
+			</div>
+		</div>
+
+		<div class="" id="tva-course-integrations-wrapper"></div>
+	</div>
+
+</div>

@@ -1,0 +1,99 @@
+.tva-course {
+  padding: 10px !important;
+
+  &.thrv_wrapper {
+    margin: 0;
+  }
+
+  .tva-course-module-list,
+  .tva-course-chapter-list,
+  .tva-course-lesson-list {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &:not([data-deny-collapse-module="1"]), &:not([data-deny-collapse-chapter="1"]) {
+    .tva-course-module-dropzone, .tva-course-chapter-dropzone {
+      cursor: pointer;
+    }
+  }
+
+  /*Collapse Functionality Begin:*/
+  &[data-default-state="collapsed"] {
+    &:not([data-deny-collapse-module="1"]) {
+      .tva-course-module {
+        > div:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+
+    &:not([data-deny-collapse-chapter="1"]) {
+      .tva-course-chapter {
+        > div:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /*Collapse Functionality End*/
+
+  /* editor-only css: overlays, disabled clicks, etc */
+  .tve_editor_page & {
+    position: relative;
+
+    &:not(.tcb-elem-placeholder):not(.tcb-compact-edit-mode):after {
+      @include overlay;
+    }
+
+    &.tcb-compact-edit-mode {
+      .tva-course-state-content:empty {
+        min-height: 10px !important;
+        padding: 1px;
+      }
+    }
+
+    /* we use this to prevent a weird column resize glitch */
+    .tcb-col.tcb_similar_edit {
+      max-width: unset !important;
+    }
+  }
+
+  .tva-course-dropzone {
+    padding: 10px 1px; /* make this easier to select */
+  }
+
+  /* when the course item is empty, remove the default paddings and margins to make sure this doesn't take up space */
+  .tva-course-item-dropzone.tva-course-dropzone.tva-empty-course-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+
+    .tva-course-state-content {
+      min-height: 0 !important;
+    }
+  }
+
+  .tva-course-lesson-description * {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  .tva-structure-icon, .tva-structure-toggle-icon {
+    svg {
+      transition: transform .3s ease;
+    }
+  }
+
+  .tva-course-state {
+    display: flex;
+    flex-direction: row;
+
+    .tva-course-state-content {
+      flex: 1 1 auto;
+      /* make sure the container is not wider than the parent */
+      width: 100%;
+    }
+  }
+}

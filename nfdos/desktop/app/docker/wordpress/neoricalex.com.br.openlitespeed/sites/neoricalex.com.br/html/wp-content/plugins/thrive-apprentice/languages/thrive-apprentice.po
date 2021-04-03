@@ -1,0 +1,2490 @@
+# Copyright (C) 2021 Thrive Apprentice
+# This file is distributed under the same license as the Thrive Apprentice package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Apprentice\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../admin/includes/templates/image-upload.phtml:1, ../admin/includes/templates/image-upload.phtml:1
+msgid "Click to upload an image"
+msgstr ""
+
+#: ../admin/includes/templates/image-upload.phtml:2, ../admin/includes/templates/image-upload.phtml:2, ../admin/includes/templates/courses/cover-image.phtml:2, ../admin/includes/templates/courses/cover-image.phtml:2
+msgid "Recommended size:"
+msgstr ""
+
+#: ../admin/includes/templates/image-upload.phtml:6, ../admin/includes/templates/image-upload.phtml:6, ../admin/includes/templates/courses/cover-image.phtml:6, ../admin/includes/templates/courses/cover-image.phtml:6
+msgid "Remove"
+msgstr ""
+
+#: ../admin/includes/templates/image-upload.phtml:11, ../admin/includes/templates/image-upload.phtml:11, ../admin/includes/templates/courses/cover-image.phtml:11, ../admin/includes/templates/courses/cover-image.phtml:11
+msgid "Upload"
+msgstr ""
+
+#: ../admin/includes/templates/noItems.phtml:1, ../admin/includes/templates/noItems.phtml:1
+msgid "No items"
+msgstr ""
+
+#: ../admin/includes/templates/pagination.phtml:7, ../admin/includes/templates/pagination.phtml:7
+msgid "out of"
+msgstr ""
+
+#: ../admin/includes/templates/search-elem.phtml:1, ../admin/includes/templates/search-elem.phtml:1
+msgid "Search customers"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:5, ../admin/includes/templates/courses/access-tab.phtml:5
+msgid "Restrict access"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:12, ../admin/includes/templates/courses/access-tab.phtml:12
+msgid "Exclude first"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:14, ../admin/includes/templates/courses/access-tab.phtml:14
+msgid "lessons from the protection rules"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:17, ../admin/includes/templates/courses/access-tab.phtml:17
+msgid "The selected number of lessons will be accessible by non-logged in users and users with different roles or membership statuses than the ones selected in the rules in case you want to offer a number of lessons for free. "
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:25, ../admin/includes/templates/courses/access-tab.phtml:25
+msgid "This course is available for everyone"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:26, ../admin/includes/templates/courses/access-tab.phtml:26
+msgid "If you want to restrict access to this course, slide the toggle and set the conditions"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:32, ../admin/includes/templates/courses/access-tab.phtml:32
+msgid "Message for users that do not have access"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:39, ../admin/includes/templates/courses/access-tab.phtml:39
+msgid "Restriction label"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:47, ../admin/includes/templates/courses/access-tab.phtml:47
+msgid "Products"
+msgstr ""
+
+#: ../admin/includes/templates/courses/access-tab.phtml:49, ../admin/includes/templates/courses/access-tab.phtml:49
+msgid "Access rules currently set"
+msgstr ""
+
+#: ../admin/includes/templates/courses/add.phtml:3, ../admin/includes/templates/courses/add.phtml:3, ../admin/includes/templates/courses/no-items.phtml:15, ../admin/includes/templates/courses/no-items.phtml:15
+msgid "Add new course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/chapter.phtml:11, ../admin/includes/templates/courses/chapter.phtml:11, ../inc/views/module.phtml:26, ../tcb-bridge/editor-elements/course/sub-elements/chapter/class-chapter.php:29
+msgid "Chapter"
+msgid_plural "Chapters"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin/includes/templates/courses/chapter.phtml:22, ../admin/includes/templates/courses/chapter.phtml:22
+msgid "Delete Chapter"
+msgstr ""
+
+#: ../admin/includes/templates/courses/chapter.phtml:31, ../admin/includes/templates/courses/chapter.phtml:31, ../admin/includes/templates/courses/module.phtml:34, ../admin/includes/templates/courses/module.phtml:34, ../admin/includes/templates/modals/course-item.phtml:10, ../admin/includes/templates/modals/course-item.phtml:10, ../admin/includes/templates/courses/forms/lesson.phtml:12, ../admin/includes/templates/courses/forms/lesson.phtml:12, ../admin/includes/templates/modals/courses/content.phtml:10, ../admin/includes/templates/modals/courses/content.phtml:10
+msgid "Add Lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/cover-image.phtml:1, ../admin/includes/templates/courses/cover-image.phtml:1
+msgid "Click to upload a cover image"
+msgstr ""
+
+#: ../admin/includes/templates/courses/delete-course.phtml:1, ../admin/includes/templates/courses/delete-course.phtml:1
+msgid "Are you sure you want to delete this course?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/delete-course.phtml:2, ../admin/includes/templates/courses/delete-course.phtml:2, ../admin/includes/templates/courses/delete-lesson.phtml:2, ../admin/includes/templates/courses/delete-lesson.phtml:2, ../admin/includes/templates/courses/move.phtml:58, ../admin/includes/templates/courses/move.phtml:58, ../admin/includes/templates/modals/course-item.phtml:22, ../admin/includes/templates/modals/course-item.phtml:22, ../admin/includes/templates/modals/icons.phtml:22, ../admin/includes/templates/modals/icons.phtml:22, ../admin/includes/templates/courses/grouping/chapter.phtml:8, ../admin/includes/templates/courses/grouping/chapter.phtml:25, ../admin/includes/templates/courses/grouping/chapter.phtml:42, ../admin/includes/templates/courses/grouping/chapter.phtml:8, ../admin/includes/templates/courses/grouping/chapter.phtml:25, ../admin/includes/templates/courses/grouping/chapter.phtml:42, ../admin/includes/templates/courses/grouping/module.phtml:8, ../admin/includes/templates/courses/grouping/module.phtml:25, ../admin/includes/templates/courses/grouping/module.phtml:42, ../admin/includes/templates/courses/grouping/module.phtml:8, ../admin/includes/templates/courses/grouping/module.phtml:25, ../admin/includes/templates/courses/grouping/module.phtml:42, ../admin/includes/templates/login-page/states/create.phtml:25, ../admin/includes/templates/login-page/states/create.phtml:25, ../admin/includes/templates/modals/courses/content.phtml:22, ../admin/includes/templates/modals/courses/content.phtml:22, ../admin/includes/templates/modals/labels/confirm-delete.phtml:8, ../admin/includes/templates/modals/labels/confirm-delete.phtml:8, ../admin/includes/templates/modals/topics/confirm-delete.phtml:8, ../admin/includes/templates/modals/topics/confirm-delete.phtml:8
+msgid "Cancel"
+msgstr ""
+
+#: ../admin/includes/templates/courses/delete-course.phtml:3, ../admin/includes/templates/courses/delete-course.phtml:3, ../admin/includes/templates/courses/delete-lesson.phtml:3, ../admin/includes/templates/courses/delete-lesson.phtml:3, ../admin/includes/templates/courses/items-tab.phtml:20, ../admin/includes/templates/courses/items-tab.phtml:20, ../admin/includes/templates/settings/api-key-item.phtml:33, ../admin/includes/templates/settings/api-key-item.phtml:33
+msgid "Delete"
+msgstr ""
+
+#: ../admin/includes/templates/courses/delete-lesson.phtml:1, ../admin/includes/templates/courses/delete-lesson.phtml:1
+msgid "Are you sure you want to delete this lesson?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:4, ../admin/includes/templates/courses/details-tab.phtml:4, ../admin/includes/templates/settings/sendowl/links-input.phtml:16, ../admin/includes/templates/settings/sendowl/links-input.phtml:16
+msgid "URL"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:10, ../admin/includes/templates/courses/details-tab.phtml:10, ../admin/includes/templates/modals/api-key.phtml:29, ../admin/includes/templates/modals/api-key.phtml:29, ../admin/includes/templates/settings/sendowl/integration.phtml:73, ../admin/includes/templates/settings/sendowl/integration.phtml:73, ../admin/includes/templates/settings/sendowl/links-input.phtml:19, ../admin/includes/templates/settings/sendowl/links-input.phtml:26, ../admin/includes/templates/settings/sendowl/links-input.phtml:33, ../admin/includes/templates/settings/sendowl/links-input.phtml:19, ../admin/includes/templates/settings/sendowl/links-input.phtml:26, ../admin/includes/templates/settings/sendowl/links-input.phtml:33
+msgid "Copy"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:17, ../admin/includes/templates/courses/details-tab.phtml:17, ../admin/includes/templates/courses/forms/lesson.phtml:27, ../admin/includes/templates/courses/forms/lesson.phtml:27, ../admin/includes/templates/courses/forms/module.phtml:20, ../admin/includes/templates/courses/forms/module.phtml:20, ../tcb-bridge/classes/course/class-hooks.php:131, ../tcb-bridge/editor-elements/course/sub-elements/class-course-description.php:50
+msgid "Description"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:23, ../admin/includes/templates/courses/details-tab.phtml:23
+msgid "Cover Image"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:32, ../admin/includes/templates/courses/details-tab.phtml:32
+msgid "Author settings"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:39, ../admin/includes/templates/courses/details-tab.phtml:39
+msgid "Teacher biography"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:41, ../admin/includes/templates/courses/details-tab.phtml:41
+msgid "WordPress user bio"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:42, ../admin/includes/templates/courses/details-tab.phtml:42
+msgid "Custom bio for this course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:47, ../admin/includes/templates/courses/details-tab.phtml:47
+msgid "Teacher description"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:57, ../admin/includes/templates/courses/details-tab.phtml:57
+msgid "Allow comments for this course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:69, ../admin/includes/templates/courses/details-tab.phtml:69
+msgid "Add video description"
+msgstr ""
+
+#: ../admin/includes/templates/courses/details-tab.phtml:70, ../admin/includes/templates/courses/details-tab.phtml:70
+msgid "The video will be added under the title of the course and it won’t replace the cover image. You can still add a course description along side the video."
+msgstr ""
+
+#: ../admin/includes/templates/courses/form.phtml:6, ../admin/includes/templates/courses/form.phtml:6, ../admin/includes/templates/design/advanced.phtml:23, ../admin/includes/templates/design/advanced.phtml:23
+msgid "Course name"
+msgstr ""
+
+#: ../admin/includes/templates/courses/form.phtml:11, ../admin/includes/templates/courses/form.phtml:11, ../admin/includes/templates/courses/item.phtml:27, ../admin/includes/templates/courses/item.phtml:27
+msgid "Preview course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/form.phtml:12, ../admin/includes/templates/courses/form.phtml:12, ../admin/includes/templates/courses/items-tab.phtml:10, ../admin/includes/templates/courses/items-tab.phtml:10
+msgid "Publish"
+msgstr ""
+
+#: ../admin/includes/templates/courses/form.phtml:17, ../admin/includes/templates/courses/form.phtml:17, ../admin/includes/templates/modals/add-customer.phtml:27, ../admin/includes/templates/modals/add-customer.phtml:27, ../admin/includes/templates/modals/api-key.phtml:41, ../admin/includes/templates/modals/api-key.phtml:41, ../admin/includes/templates/modals/course-item.phtml:45, ../admin/includes/templates/modals/course-item.phtml:45, ../admin/includes/templates/modals/import-customer.phtml:98, ../admin/includes/templates/modals/import-customer.phtml:98, ../admin/includes/templates/courses/grouping/chapter.phtml:43, ../admin/includes/templates/courses/grouping/chapter.phtml:43, ../admin/includes/templates/courses/grouping/module.phtml:43, ../admin/includes/templates/courses/grouping/module.phtml:43, ../admin/includes/templates/modals/courses/content.phtml:45, ../admin/includes/templates/modals/courses/content.phtml:45, ../admin/includes/templates/modals/customer/edit.phtml:56, ../admin/includes/templates/modals/customer/edit.phtml:56
+msgid "Save"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:18, ../admin/includes/templates/courses/integration-thrivecart.phtml:18
+msgid "NO"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:21, ../admin/includes/templates/courses/integration-thrivecart.phtml:21
+msgid "YES"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:26, ../admin/includes/templates/courses/integration-thrivecart.phtml:26
+msgid "Thrive Apprentice Course Access is handled inside your ThriveCart Account"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:27, ../admin/includes/templates/courses/integration-thrivecart.phtml:27
+msgid "ThriveCart and Thrive Apprentice have teamed up to make it really easy to define course access right from within your ThriveCart Account."
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:29, ../admin/includes/templates/courses/integration-thrivecart.phtml:29
+msgid "Connect ThriveCart with Thrive Apprentice by creating an %s and pasting it into the Thrive Apprentice integration settings in your ThriveCart Account."
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:30, ../admin/includes/templates/courses/integration-thrivecart.phtml:30
+msgid "API Key"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:32, ../admin/includes/templates/courses/integration-thrivecart.phtml:32
+msgid "Useful resources:"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:33, ../admin/includes/templates/courses/integration-thrivecart.phtml:33
+msgid "How to connect ThriveCart to Thrive Apprentice"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration-thrivecart.phtml:34, ../admin/includes/templates/courses/integration-thrivecart.phtml:34
+msgid "How to set Access Rules for ThriveCart in Thrive Apprentice"
+msgstr ""
+
+#: ../admin/includes/templates/courses/integration.phtml:18, ../admin/includes/templates/courses/integration.phtml:18
+msgid "Clear selection"
+msgstr ""
+
+#: ../admin/includes/templates/courses/item.phtml:17, ../admin/includes/templates/courses/item.phtml:17
+msgid "Drag and drop to change the order of the courses"
+msgstr ""
+
+#: ../admin/includes/templates/courses/item.phtml:22, ../admin/includes/templates/courses/item.phtml:22
+msgid "Delete course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/items-tab.phtml:5, ../admin/includes/templates/courses/items-tab.phtml:5
+msgid "Select all"
+msgstr ""
+
+#: ../admin/includes/templates/courses/items-tab.phtml:15, ../admin/includes/templates/courses/items-tab.phtml:15
+msgid "Unpublish"
+msgstr ""
+
+#: ../admin/includes/templates/courses/items-tab.phtml:25, ../admin/includes/templates/courses/items-tab.phtml:25
+msgid "Group into a module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/items-tab.phtml:30, ../admin/includes/templates/courses/items-tab.phtml:30
+msgid "Group into a chapter"
+msgstr ""
+
+#: ../admin/includes/templates/courses/items-tab.phtml:35, ../admin/includes/templates/courses/items-tab.phtml:35
+msgid "Move to another course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:2, ../admin/includes/templates/courses/lesson.phtml:2
+msgid "Change the lesson order"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:13, ../admin/includes/templates/courses/lesson.phtml:13
+msgid "lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:18, ../admin/includes/templates/courses/lesson.phtml:18
+msgid "Edit Summary"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:23, ../admin/includes/templates/courses/lesson.phtml:23
+msgid "Edit Content"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:24, ../admin/includes/templates/courses/lesson.phtml:24
+msgid "Add Content"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:30, ../admin/includes/templates/courses/lesson.phtml:30
+msgid "Unpublish Lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:33, ../admin/includes/templates/courses/lesson.phtml:33
+msgid "Publish Lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:42, ../admin/includes/templates/courses/lesson.phtml:42
+msgid "Preview Lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/lesson.phtml:43, ../admin/includes/templates/courses/lesson.phtml:43
+msgid "Delete Lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/list.phtml:2, ../admin/includes/templates/courses/list.phtml:2, ../admin/includes/templates/customers/no-course.phtml:7, ../admin/includes/templates/customers/no-course.phtml:7
+msgid "Courses"
+msgstr ""
+
+#: ../admin/includes/templates/courses/list.phtml:6, ../admin/includes/templates/courses/list.phtml:6
+msgid "Add course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/list.phtml:14, ../admin/includes/templates/courses/list.phtml:14
+msgid "Notice: "
+msgstr ""
+
+#: ../admin/includes/templates/courses/list.phtml:15, ../admin/includes/templates/courses/list.phtml:15
+msgid "You only have one course published. When your users will visit your Courses page they will be redirected directly to this course."
+msgstr ""
+
+#: ../admin/includes/templates/courses/merge-warning.phtml:1, ../admin/includes/templates/courses/merge-warning.phtml:1, ../admin/includes/templates/modals/course-item.phtml:51, ../admin/includes/templates/modals/course-item.phtml:51
+msgid "Just to let you know..."
+msgstr ""
+
+#: ../admin/includes/templates/courses/merge-warning.phtml:2, ../admin/includes/templates/courses/merge-warning.phtml:2
+msgid "We will move all your existing lessons inside the newly created chapter. None of your lessons content will be lost."
+msgstr ""
+
+#: ../admin/includes/templates/courses/merge-warning.phtml:3, ../admin/includes/templates/courses/merge-warning.phtml:3, ../admin/includes/templates/modals/course-item.phtml:53, ../admin/includes/templates/modals/course-item.phtml:53
+msgid "Are you sure you want to proceed?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/module.phtml:12, ../admin/includes/templates/courses/module.phtml:12, ../tcb-bridge/editor-elements/course/sub-elements/module/class-module.php:30
+msgid "Module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/module.phtml:23, ../admin/includes/templates/courses/module.phtml:23
+msgid "Edit Module Details"
+msgstr ""
+
+#: ../admin/includes/templates/courses/module.phtml:24, ../admin/includes/templates/courses/module.phtml:24
+msgid "Delete Module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/module.phtml:38, ../admin/includes/templates/courses/module.phtml:38, ../admin/includes/templates/modals/course-item.phtml:14, ../admin/includes/templates/modals/course-item.phtml:14, ../admin/includes/templates/courses/forms/chapter.phtml:12, ../admin/includes/templates/courses/forms/chapter.phtml:12, ../admin/includes/templates/modals/courses/content.phtml:14, ../admin/includes/templates/modals/courses/content.phtml:14
+msgid "Add Chapter"
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:3, ../admin/includes/templates/courses/move.phtml:3
+msgid "Move selected items to another course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:4, ../admin/includes/templates/courses/move.phtml:4
+msgid "You're about to move %s from %s. Choose where these items should be placed."
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:9, ../admin/includes/templates/courses/move.phtml:9
+msgid "No suitable courses have been found."
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:13, ../admin/includes/templates/courses/move.phtml:13
+msgid "Select course"
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:16, ../admin/includes/templates/courses/move.phtml:31, ../admin/includes/templates/courses/move.phtml:46, ../admin/includes/templates/courses/move.phtml:16, ../admin/includes/templates/courses/move.phtml:31, ../admin/includes/templates/courses/move.phtml:46
+msgid "Choose from the list..."
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:28, ../admin/includes/templates/courses/move.phtml:28
+msgid "Select module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:43, ../admin/includes/templates/courses/move.phtml:43
+msgid "Select chapter"
+msgstr ""
+
+#: ../admin/includes/templates/courses/move.phtml:60, ../admin/includes/templates/courses/move.phtml:60
+msgid "Move selected items"
+msgstr ""
+
+#: ../admin/includes/templates/courses/no-items.phtml:14, ../admin/includes/templates/courses/no-items.phtml:14
+msgid "No courses found"
+msgstr ""
+
+#: ../admin/includes/templates/customers/delete-purchased-item.phtml:1, ../admin/includes/templates/customers/delete-purchased-item.phtml:1
+msgid "Are you sure you want to delete access?"
+msgstr ""
+
+#: ../admin/includes/templates/customers/delete-purchased-item.phtml:2, ../admin/includes/templates/customers/delete-purchased-item.phtml:2
+msgid "No, cancel"
+msgstr ""
+
+#: ../admin/includes/templates/customers/delete-purchased-item.phtml:3, ../admin/includes/templates/customers/delete-purchased-item.phtml:3
+msgid "Yes, delete"
+msgstr ""
+
+#: ../admin/includes/templates/customers/empty-list.phtml:12, ../admin/includes/templates/customers/empty-list.phtml:12
+msgid "No customers found"
+msgstr ""
+
+#: ../admin/includes/templates/customers/item.phtml:8, ../admin/includes/templates/customers/item.phtml:8
+msgid "Edit access rights"
+msgstr ""
+
+#: ../admin/includes/templates/customers/item.phtml:12, ../admin/includes/templates/customers/item.phtml:12
+msgid "View WordPress user"
+msgstr ""
+
+#: ../admin/includes/templates/customers/list.phtml:2, ../admin/includes/templates/customers/list.phtml:2
+msgid "Customers"
+msgstr ""
+
+#: ../admin/includes/templates/customers/list.phtml:6, ../admin/includes/templates/customers/list.phtml:6
+msgid "Add customer"
+msgstr ""
+
+#: ../admin/includes/templates/customers/list.phtml:10, ../admin/includes/templates/customers/list.phtml:10
+msgid "Import customer"
+msgstr ""
+
+#: ../admin/includes/templates/customers/no-access-item.phtml:5, ../admin/includes/templates/customers/no-access-item.phtml:5
+msgid "doesn't currently have any access rights"
+msgstr ""
+
+#: ../admin/includes/templates/customers/no-access-item.phtml:9, ../admin/includes/templates/customers/no-access-item.phtml:9
+msgid "Add"
+msgstr ""
+
+#: ../admin/includes/templates/customers/no-course.phtml:2, ../admin/includes/templates/customers/no-course.phtml:2
+msgid "You don't currently have any Thrive Apprentice courses created. "
+msgstr ""
+
+#: ../admin/includes/templates/customers/no-course.phtml:6, ../admin/includes/templates/customers/no-course.phtml:6
+msgid "Create a new course in the %s screen."
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:30, ../admin/includes/templates/design/advanced.phtml:63, ../admin/includes/templates/design/advanced.phtml:92, ../admin/includes/templates/design/advanced.phtml:30, ../admin/includes/templates/design/advanced.phtml:63, ../admin/includes/templates/design/advanced.phtml:92
+msgid "Font size"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:35, ../admin/includes/templates/design/advanced.phtml:68, ../admin/includes/templates/design/advanced.phtml:97, ../admin/includes/templates/design/advanced.phtml:152, ../admin/includes/templates/design/advanced.phtml:167, ../admin/includes/templates/design/advanced.phtml:182, ../admin/includes/templates/design/advanced.phtml:35, ../admin/includes/templates/design/advanced.phtml:68, ../admin/includes/templates/design/advanced.phtml:97, ../admin/includes/templates/design/advanced.phtml:152, ../admin/includes/templates/design/advanced.phtml:167, ../admin/includes/templates/design/advanced.phtml:182, ../admin/includes/templates/design/template.phtml:66, ../admin/includes/templates/design/template.phtml:66
+msgid "px"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:42, ../admin/includes/templates/design/advanced.phtml:75, ../admin/includes/templates/design/advanced.phtml:104, ../admin/includes/templates/design/advanced.phtml:42, ../admin/includes/templates/design/advanced.phtml:75, ../admin/includes/templates/design/advanced.phtml:104
+msgid "Color"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:52, ../admin/includes/templates/design/advanced.phtml:52
+msgid "Description title"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:57, ../admin/includes/templates/design/advanced.phtml:119, ../admin/includes/templates/design/advanced.phtml:57, ../admin/includes/templates/design/advanced.phtml:119, ../admin/includes/templates/design/index.phtml:52, ../admin/includes/templates/design/index.phtml:52
+msgid "Text"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:85, ../admin/includes/templates/design/advanced.phtml:85
+msgid "Paragraphs"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:114, ../admin/includes/templates/design/advanced.phtml:114
+msgid "Course structure"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:126, ../admin/includes/templates/design/advanced.phtml:126
+msgid "Collapse modules"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:132, ../admin/includes/templates/design/advanced.phtml:132
+msgid "Collapse chapters"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:140, ../admin/includes/templates/design/advanced.phtml:140
+msgid "Title size"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:147, ../admin/includes/templates/design/advanced.phtml:147
+msgid "Module font size"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:162, ../admin/includes/templates/design/advanced.phtml:162
+msgid "Chapter font size"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:177, ../admin/includes/templates/design/advanced.phtml:177
+msgid "Lesson font size"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:194, ../admin/includes/templates/design/advanced.phtml:194
+msgid "Author"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:199, ../admin/includes/templates/design/advanced.phtml:199
+msgid "Label"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:209, ../admin/includes/templates/design/advanced.phtml:209
+msgid "Lesson overview"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:214, ../admin/includes/templates/design/advanced.phtml:214, ../tcb-bridge/classes/course/class-hooks.php:126, ../tcb-bridge/editor-elements/course/sub-elements/class-course-title.php:50
+msgid "Title"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:217, ../admin/includes/templates/design/advanced.phtml:217
+msgid "Not viewed label"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:224, ../admin/includes/templates/design/advanced.phtml:224
+msgid "In progress label"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:231, ../admin/includes/templates/design/advanced.phtml:231
+msgid "Completed label"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:244, ../admin/includes/templates/design/advanced.phtml:244
+msgid "Course labels"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:249, ../admin/includes/templates/design/advanced.phtml:249
+msgid "Lesson singular"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:255, ../admin/includes/templates/design/advanced.phtml:255
+msgid "Lesson plural"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:261, ../admin/includes/templates/design/advanced.phtml:261
+msgid "Chapter singular"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:267, ../admin/includes/templates/design/advanced.phtml:267
+msgid "Chapter plural"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:273, ../admin/includes/templates/design/advanced.phtml:273
+msgid "Module singular"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:279, ../admin/includes/templates/design/advanced.phtml:279
+msgid "Module plural"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:290, ../admin/includes/templates/design/advanced.phtml:290
+msgid "Lessons labels"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:295, ../admin/includes/templates/design/advanced.phtml:295
+msgid "Next lesson"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:298, ../admin/includes/templates/design/advanced.phtml:298
+msgid "Previous lesson"
+msgstr ""
+
+#: ../admin/includes/templates/design/advanced.phtml:301, ../admin/includes/templates/design/advanced.phtml:301
+msgid "To course page"
+msgstr ""
+
+#: ../admin/includes/templates/design/base.phtml:14, ../admin/includes/templates/design/base.phtml:14
+msgid "Template"
+msgstr ""
+
+#: ../admin/includes/templates/design/base.phtml:18, ../admin/includes/templates/design/base.phtml:18
+msgid "Demo"
+msgstr ""
+
+#: ../admin/includes/templates/design/base.phtml:19, ../admin/includes/templates/design/base.phtml:19
+msgid "Live"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:24, ../admin/includes/templates/design/index.phtml:24
+msgid "Course lessons"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:30, ../admin/includes/templates/design/index.phtml:30
+msgid "Plural"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:42, ../admin/includes/templates/design/index.phtml:42
+msgid "Course type labels"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:46, ../admin/includes/templates/design/index.phtml:46, ../templates/template_1/archive.php:51, ../templates/template_1/single-module.php:45
+msgid "Guide"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:58, ../admin/includes/templates/design/index.phtml:58
+msgid "Audio"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:64, ../admin/includes/templates/design/index.phtml:64
+msgid "Video"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:70, ../admin/includes/templates/design/index.phtml:70
+msgid "Audio/text"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:76, ../admin/includes/templates/design/index.phtml:76
+msgid "Video/text"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:82, ../admin/includes/templates/design/index.phtml:82
+msgid "Video/audio"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:88, ../admin/includes/templates/design/index.phtml:88
+msgid "Video/audio/text"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:99, ../admin/includes/templates/design/index.phtml:99
+msgid "Progress bar"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:104, ../admin/includes/templates/design/index.phtml:104
+msgid "Progress label"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:110, ../admin/includes/templates/design/index.phtml:110
+msgid "Progress not started"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:114, ../admin/includes/templates/design/index.phtml:114
+msgid "Progress finished"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:125, ../admin/includes/templates/design/index.phtml:125
+msgid "Search label"
+msgstr ""
+
+#: ../admin/includes/templates/design/index.phtml:130, ../admin/includes/templates/design/index.phtml:130
+msgid "Search"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:15, ../admin/includes/templates/design/template.phtml:15
+msgid "Template settings"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:21, ../admin/includes/templates/design/template.phtml:21
+msgid "Main color"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:27, ../admin/includes/templates/design/template.phtml:27
+msgid "Colors"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:37, ../admin/includes/templates/design/template.phtml:37
+msgid "Logo"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:44, ../admin/includes/templates/design/template.phtml:48, ../admin/includes/templates/design/template.phtml:44, ../admin/includes/templates/design/template.phtml:48
+msgid "Add logo as text"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:53, ../admin/includes/templates/design/template.phtml:53
+msgid "No file selected"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:55, ../admin/includes/templates/design/template.phtml:55
+msgid "Change"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:61, ../admin/includes/templates/design/template.phtml:61
+msgid "Size"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:77, ../admin/includes/templates/design/template.phtml:77
+msgid "Font"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:83, ../admin/includes/templates/design/template.phtml:83
+msgid "Font source"
+msgstr ""
+
+#: ../admin/includes/templates/design/template.phtml:94, ../admin/includes/templates/design/template.phtml:94
+msgid "Advanced settings"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:2, ../admin/includes/templates/labels/dashboard.phtml:2
+msgid "Dynamic Labels"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:5, ../admin/includes/templates/labels/dashboard.phtml:5
+msgid "Add Label"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:9, ../admin/includes/templates/labels/dashboard.phtml:9
+msgid "Access restriction labels"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:13, ../admin/includes/templates/labels/dashboard.phtml:13
+msgid "Labels show the access restrictions on a course"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:14, ../admin/includes/templates/labels/dashboard.phtml:14
+msgid "Labels help the user to understand which courses they:"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:16, ../admin/includes/templates/labels/dashboard.phtml:16
+msgid "are unable to access"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:17, ../admin/includes/templates/labels/dashboard.phtml:17
+msgid "have access to but haven’t started"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:18, ../admin/includes/templates/labels/dashboard.phtml:18
+msgid "have already started"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:19, ../admin/includes/templates/labels/dashboard.phtml:19
+msgid "have finished"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:21, ../admin/includes/templates/labels/dashboard.phtml:21
+msgid "Labels switch depending on the situation."
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:22, ../admin/includes/templates/labels/dashboard.phtml:22
+msgid "For example, a user that doesn’t have access to a course might see the label “Premium course”, whereas a user that has already purchased the course might see the label “Not started yet”."
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:24, ../admin/includes/templates/labels/dashboard.phtml:24
+msgid "Learn more about course labels"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:33, ../admin/includes/templates/labels/dashboard.phtml:33
+msgid "Switch labels depending on user status"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:41, ../admin/includes/templates/labels/dashboard.phtml:41
+msgid "Call to action buttons"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:45, ../admin/includes/templates/labels/dashboard.phtml:45
+msgid "Buttons help the user navigate around your courses"
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:46, ../admin/includes/templates/labels/dashboard.phtml:46
+msgid "The buttons inside Thrive Apprentice intelligently update so that they reflect the state of the course participant."
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:47, ../admin/includes/templates/labels/dashboard.phtml:47
+msgid "For example, if a customer doesn’t have access to a course, the button might say “Sign up now“ and, when clicked, will take the user to the purchase page."
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:48, ../admin/includes/templates/labels/dashboard.phtml:48
+msgid "If the user already has access, the button might say \"Start course\" and take the user to the first lesson."
+msgstr ""
+
+#: ../admin/includes/templates/labels/dashboard.phtml:50, ../admin/includes/templates/labels/dashboard.phtml:50
+msgid "Learn more about button behavior in Apprentice"
+msgstr ""
+
+#: ../admin/includes/templates/labels/user-context-item.phtml:5, ../admin/includes/templates/labels/user-context-item.phtml:5
+msgid "Switch label to"
+msgstr ""
+
+#: ../admin/includes/templates/labels/user-context-item.phtml:7, ../admin/includes/templates/labels/user-context-item.phtml:7
+msgid "Hide label"
+msgstr ""
+
+#: ../admin/includes/templates/labels/user-context-item.phtml:9, ../admin/includes/templates/labels/user-context-item.phtml:9
+msgid "No change"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/index.phtml:13, ../admin/includes/templates/login-page/index.phtml:13
+msgid "Login & Registration Page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/index.phtml:17, ../admin/includes/templates/login-page/index.phtml:17
+msgid "On what page would you like your login & registration page to be?"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/index.phtml:21, ../admin/includes/templates/login-page/index.phtml:21
+msgid " Learn more about the login & registration page"
+msgstr ""
+
+#: ../admin/includes/templates/modals/add-customer.phtml:8, ../admin/includes/templates/modals/add-customer.phtml:8
+msgid "Add new customer"
+msgstr ""
+
+#: ../admin/includes/templates/modals/add-customer.phtml:13, ../admin/includes/templates/modals/add-customer.phtml:14, ../admin/includes/templates/modals/add-customer.phtml:13, ../admin/includes/templates/modals/add-customer.phtml:14, ../admin/includes/templates/modals/api-key.phtml:16, ../admin/includes/templates/modals/api-key.phtml:16, ../admin/includes/templates/settings/api-keys.phtml:24, ../admin/includes/templates/settings/api-keys.phtml:24, ../templates/comments.php:35, ../templates/email-template.php:7
+msgid "Name"
+msgstr ""
+
+#: ../admin/includes/templates/modals/add-customer.phtml:17, ../admin/includes/templates/modals/add-customer.phtml:18, ../admin/includes/templates/modals/add-customer.phtml:17, ../admin/includes/templates/modals/add-customer.phtml:18, ../tcb-bridge/editor-layouts/elements/checkout.php:113, ../templates/email-template.php:8
+msgid "Email"
+msgstr ""
+
+#: ../admin/includes/templates/modals/add-customer.phtml:21, ../admin/includes/templates/modals/add-customer.phtml:21, ../admin/includes/templates/modals/import-customer.phtml:90, ../admin/includes/templates/modals/import-customer.phtml:90, ../admin/includes/templates/utils/customers/service-cards.phtml:19, ../admin/includes/templates/utils/customers/service-cards.phtml:19
+msgid "Give users access to the following:"
+msgstr ""
+
+#: ../admin/includes/templates/modals/api-key.phtml:13, ../admin/includes/templates/modals/api-key.phtml:13
+msgid "Add new API key"
+msgstr ""
+
+#: ../admin/includes/templates/modals/api-key.phtml:19, ../admin/includes/templates/modals/api-key.phtml:19
+msgid "Give your API key a name"
+msgstr ""
+
+#: ../admin/includes/templates/modals/api-key.phtml:24, ../admin/includes/templates/modals/api-key.phtml:24, ../admin/includes/templates/settings/api-keys.phtml:25, ../admin/includes/templates/settings/api-keys.phtml:25
+msgid "Key"
+msgstr ""
+
+#: ../admin/includes/templates/modals/api-key.phtml:35, ../admin/includes/templates/modals/api-key.phtml:35
+msgid "Active"
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:3, ../admin/includes/templates/modals/course-item.phtml:29, ../admin/includes/templates/modals/course-item.phtml:3, ../admin/includes/templates/modals/course-item.phtml:29, ../admin/includes/templates/modals/courses/content.phtml:3, ../admin/includes/templates/modals/courses/content.phtml:29, ../admin/includes/templates/modals/courses/content.phtml:3, ../admin/includes/templates/modals/courses/content.phtml:29
+msgid "Add course content"
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:4, ../admin/includes/templates/modals/course-item.phtml:4, ../admin/includes/templates/modals/courses/content.phtml:4, ../admin/includes/templates/modals/courses/content.phtml:4
+msgid "Choose whether to add a module, chapter or a lesson."
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:5, ../admin/includes/templates/modals/course-item.phtml:5, ../admin/includes/templates/modals/courses/content.phtml:5, ../admin/includes/templates/modals/courses/content.phtml:5
+msgid "Lessons contain your course content. Modules and chapters are used to organize your lessons in a logical structure."
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:18, ../admin/includes/templates/modals/course-item.phtml:18, ../admin/includes/templates/courses/forms/module.phtml:12, ../admin/includes/templates/courses/forms/module.phtml:12, ../admin/includes/templates/modals/courses/content.phtml:18, ../admin/includes/templates/modals/courses/content.phtml:18
+msgid "Add Module"
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:34, ../admin/includes/templates/modals/course-item.phtml:44, ../admin/includes/templates/modals/course-item.phtml:56, ../admin/includes/templates/modals/course-item.phtml:34, ../admin/includes/templates/modals/course-item.phtml:44, ../admin/includes/templates/modals/course-item.phtml:56, ../admin/includes/templates/modals/customer/edit.phtml:36, ../admin/includes/templates/modals/customer/edit.phtml:36
+msgid "Close"
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:35, ../admin/includes/templates/modals/course-item.phtml:57, ../admin/includes/templates/modals/course-item.phtml:35, ../admin/includes/templates/modals/course-item.phtml:57, ../admin/includes/templates/modals/import-customer.phtml:51, ../admin/includes/templates/modals/import-customer.phtml:63, ../admin/includes/templates/modals/import-customer.phtml:51, ../admin/includes/templates/modals/import-customer.phtml:63, ../admin/includes/templates/modals/wizard.phtml:21, ../admin/includes/templates/modals/wizard.phtml:21, ../admin/includes/templates/courses/grouping/chapter.phtml:9, ../admin/includes/templates/courses/grouping/chapter.phtml:26, ../admin/includes/templates/courses/grouping/chapter.phtml:9, ../admin/includes/templates/courses/grouping/chapter.phtml:26, ../admin/includes/templates/courses/grouping/module.phtml:9, ../admin/includes/templates/courses/grouping/module.phtml:26, ../admin/includes/templates/courses/grouping/module.phtml:9, ../admin/includes/templates/courses/grouping/module.phtml:26, ../admin/includes/templates/modals/courses/content.phtml:35, ../admin/includes/templates/modals/courses/content.phtml:35
+msgid "Continue"
+msgstr ""
+
+#: ../admin/includes/templates/modals/course-item.phtml:52, ../admin/includes/templates/modals/course-item.phtml:52
+msgid "We will move all your existing %s inside the newly created %s. None of your %s content will be lost."
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-chapter.phtml:3, ../admin/includes/templates/modals/delete-chapter.phtml:3
+msgid "Are you sure you want to Delete this Chapter?"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-chapter.phtml:6, ../admin/includes/templates/modals/delete-chapter.phtml:6
+msgid "You are about to delete the selected chapter and all content contained inside. This action cannot be undone."
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-chapter.phtml:10, ../admin/includes/templates/modals/delete-chapter.phtml:10, ../admin/includes/templates/modals/delete-module.phtml:10, ../admin/includes/templates/modals/delete-module.phtml:10, ../admin/includes/templates/settings/api-key-item.phtml:43, ../admin/includes/templates/settings/api-key-item.phtml:43, ../admin/includes/templates/courses/forms/lesson.phtml:40, ../admin/includes/templates/courses/forms/lesson.phtml:40, ../admin/includes/templates/courses/forms/module.phtml:34, ../admin/includes/templates/courses/forms/module.phtml:34
+msgid "No"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-chapter.phtml:11, ../admin/includes/templates/modals/delete-chapter.phtml:11, ../admin/includes/templates/modals/delete-module.phtml:11, ../admin/includes/templates/modals/delete-module.phtml:11, ../admin/includes/templates/settings/api-key-item.phtml:42, ../admin/includes/templates/settings/api-key-item.phtml:42, ../admin/includes/templates/courses/forms/lesson.phtml:41, ../admin/includes/templates/courses/forms/lesson.phtml:41, ../admin/includes/templates/courses/forms/module.phtml:35, ../admin/includes/templates/courses/forms/module.phtml:35
+msgid "Yes"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-confirmation.phtml:3, ../admin/includes/templates/modals/delete-confirmation.phtml:3
+msgid "Are you sure you want to delete these items?"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-confirmation.phtml:6, ../admin/includes/templates/modals/delete-confirmation.phtml:6
+msgid "You are about to delete the selected items and all content contained inside."
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-confirmation.phtml:10, ../admin/includes/templates/modals/delete-confirmation.phtml:10
+msgid "No, take me back"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-confirmation.phtml:11, ../admin/includes/templates/modals/delete-confirmation.phtml:11
+msgid "Yes, delete them"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-module.phtml:3, ../admin/includes/templates/modals/delete-module.phtml:3
+msgid "Are you sure you want to Delete this Module?"
+msgstr ""
+
+#: ../admin/includes/templates/modals/delete-module.phtml:6, ../admin/includes/templates/modals/delete-module.phtml:6
+msgid "You are about to delete the selected module and all content contained inside. This action cannot be undone."
+msgstr ""
+
+#: ../admin/includes/templates/modals/icons.phtml:2, ../admin/includes/templates/modals/icons.phtml:2
+msgid "Choose an icon"
+msgstr ""
+
+#: ../admin/includes/templates/modals/icons.phtml:5, ../admin/includes/templates/modals/icons.phtml:5
+msgid "Search icon"
+msgstr ""
+
+#: ../admin/includes/templates/modals/icons.phtml:12, ../admin/includes/templates/modals/icons.phtml:12
+msgid "Custom Icons"
+msgstr ""
+
+#: ../admin/includes/templates/modals/icons.phtml:16, ../admin/includes/templates/modals/icons.phtml:16
+msgid "Font Awesome Icons"
+msgstr ""
+
+#: ../admin/includes/templates/modals/icons.phtml:23, ../admin/includes/templates/modals/icons.phtml:23
+msgid "Select"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:18, ../admin/includes/templates/modals/import-customer.phtml:18
+msgid "Bulk customer import"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:19, ../admin/includes/templates/modals/import-customer.phtml:19
+msgid "Choose the import method:"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:32, ../admin/includes/templates/modals/import-customer.phtml:69, ../admin/includes/templates/modals/import-customer.phtml:32, ../admin/includes/templates/modals/import-customer.phtml:69
+msgid "Import customer list"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:34, ../admin/includes/templates/modals/import-customer.phtml:34
+msgid "Drop the file to be uploaded below."
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:37, ../admin/includes/templates/modals/import-customer.phtml:37
+msgid "To learn how to create this file"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:38, ../admin/includes/templates/modals/import-customer.phtml:38, ../tcb-bridge/editor-layouts/menus/checkout.php:30
+msgid "click here"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:43, ../admin/includes/templates/modals/import-customer.phtml:43
+msgid "Add file "
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:45, ../admin/includes/templates/modals/import-customer.phtml:45
+msgid "or drop files here"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:50, ../admin/includes/templates/modals/import-customer.phtml:62, ../admin/includes/templates/modals/import-customer.phtml:97, ../admin/includes/templates/modals/import-customer.phtml:50, ../admin/includes/templates/modals/import-customer.phtml:62, ../admin/includes/templates/modals/import-customer.phtml:97, ../admin/includes/templates/modals/wizard.phtml:20, ../admin/includes/templates/modals/wizard.phtml:20, ../admin/includes/templates/modals/courses/content.phtml:34, ../admin/includes/templates/modals/courses/content.phtml:44, ../admin/includes/templates/modals/courses/content.phtml:34, ../admin/includes/templates/modals/courses/content.phtml:44, ../admin/includes/templates/modals/customer/edit.phtml:55, ../admin/includes/templates/modals/customer/edit.phtml:55
+msgid "Back"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:58, ../admin/includes/templates/modals/import-customer.phtml:58
+msgid "Bulk add customers"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:59, ../admin/includes/templates/modals/import-customer.phtml:59
+msgid "Add the name and email address of each customer, separated by a coma. One customer per line."
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:73, ../admin/includes/templates/modals/import-customer.phtml:73
+msgid "Validate your list and choose product access"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:79, ../admin/includes/templates/modals/import-customer.phtml:79
+msgid "Customer name"
+msgstr ""
+
+#: ../admin/includes/templates/modals/import-customer.phtml:81, ../admin/includes/templates/modals/import-customer.phtml:81
+msgid "Email address"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:14, ../admin/includes/templates/modals/wizard.phtml:14
+msgid "Welcome to Thrive Apprentice 3.0!"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:15, ../admin/includes/templates/modals/wizard.phtml:15
+msgid "In order to create your online teaching platform, we need to set up a few things really quickly."
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:16, ../admin/includes/templates/modals/wizard.phtml:16
+msgid "Choose a page where all your courses will reside. You can always edit the course page by going to "
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:16, ../admin/includes/templates/modals/wizard.phtml:16
+msgid "Settings &rarr; General Settings"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:27, ../admin/includes/templates/modals/wizard.phtml:27
+msgid "Template Setup"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:28, ../admin/includes/templates/modals/wizard.phtml:28
+msgid "You can choose to personalize the template for your courses or go directly to creating courses by loading the default template."
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:29, ../admin/includes/templates/modals/wizard.phtml:29
+msgid "You can always edit the course template by going to"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:29, ../admin/includes/templates/modals/wizard.phtml:29
+msgid "Design"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:32, ../admin/includes/templates/modals/wizard.phtml:32
+msgid "Personalize Template"
+msgstr ""
+
+#: ../admin/includes/templates/modals/wizard.phtml:33, ../admin/includes/templates/modals/wizard.phtml:33
+msgid "Load Default Template"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-key-item.phtml:27, ../admin/includes/templates/settings/api-key-item.phtml:27, ../admin/includes/templates/login-page/states/normal.phtml:32, ../admin/includes/templates/login-page/states/normal.phtml:32, ../inc/classes/class-tva-sendowl-settings.php:289, ../inc/classes/class-tva-sendowl-settings.php:297
+msgid "Edit"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-key-item.phtml:40, ../admin/includes/templates/settings/api-key-item.phtml:40
+msgid "Are you sure you want to delete"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-keys.phtml:13, ../admin/includes/templates/settings/api-keys.phtml:13
+msgid "API Keys"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-keys.phtml:17, ../admin/includes/templates/settings/api-keys.phtml:17
+msgid "Add API"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-keys.phtml:26, ../admin/includes/templates/settings/api-keys.phtml:26, ../tcb-bridge/classes/course/class-hooks.php:141
+msgid "Status"
+msgstr ""
+
+#: ../admin/includes/templates/settings/api-keys.phtml:32, ../admin/includes/templates/settings/api-keys.phtml:32
+msgid "You have no API keys"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:15, ../admin/includes/templates/settings/email-template-item.phtml:15
+msgid "Subject"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:19, ../admin/includes/templates/settings/email-template-item.phtml:19
+msgid "Message"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:23, ../admin/includes/templates/settings/email-template-item.phtml:23, ../admin/views/template/emailTemplates/form.phtml:14, ../admin/views/template/emailTemplates/form.phtml:14
+msgid "Add shortcode"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:26, ../admin/includes/templates/settings/email-template-item.phtml:26, ../admin/views/template/emailTemplates/form.phtml:18, ../admin/views/template/emailTemplates/form.phtml:18
+msgid "Select shortcode"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:31, ../admin/includes/templates/settings/email-template-item.phtml:31, ../admin/views/template/emailTemplates/form.phtml:23, ../admin/views/template/emailTemplates/form.phtml:23
+msgid "Insert shortcode"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:36, ../admin/includes/templates/settings/email-template-item.phtml:36, ../admin/views/template/emailTemplates/form.phtml:29, ../admin/views/template/emailTemplates/form.phtml:29
+msgid "Email triggers"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:42, ../admin/includes/templates/settings/email-template-item.phtml:42, ../admin/views/template/emailTemplates/form.phtml:36, ../admin/views/template/emailTemplates/form.phtml:36
+msgid "Save template"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:46, ../admin/includes/templates/settings/email-template-item.phtml:46, ../admin/views/template/emailTemplates/form.phtml:42, ../admin/views/template/emailTemplates/form.phtml:42
+msgid "Email details"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:47, ../admin/includes/templates/settings/email-template-item.phtml:47, ../admin/views/template/emailTemplates/form.phtml:43, ../admin/views/template/emailTemplates/form.phtml:43
+msgid "This email is sent to new customers that have either purchased a course or signed up for a free course."
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:48, ../admin/includes/templates/settings/email-template-item.phtml:48, ../admin/views/template/emailTemplates/form.phtml:44, ../admin/views/template/emailTemplates/form.phtml:44
+msgid "The email typically includes login details that customers can use to access their account."
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:49, ../admin/includes/templates/settings/email-template-item.phtml:49, ../admin/views/template/emailTemplates/form.phtml:45, ../admin/views/template/emailTemplates/form.phtml:45
+msgid "This email is only triggered when the account is created.  Repeat purchases through the same user account will not trigger the email."
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-template-item.phtml:50, ../admin/includes/templates/settings/email-template-item.phtml:50
+msgid "Login Button and Login Link shortcodes will link to the page set under Apprentice &rarr; Settings &rarr; Edit Login & Registration Page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-templates.phtml:13, ../admin/includes/templates/settings/email-templates.phtml:13
+msgid "Email templates"
+msgstr ""
+
+#: ../admin/includes/templates/settings/email-templates.phtml:17, ../admin/includes/templates/settings/email-templates.phtml:17
+msgid "Select email template"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:13, ../admin/includes/templates/settings/general.phtml:13
+msgid "General settings"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:14, ../admin/includes/templates/settings/general.phtml:14
+msgid "These settings apply to the page where your courses are displayed"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:23, ../admin/includes/templates/settings/general.phtml:23
+msgid "Courses per page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:30, ../admin/includes/templates/settings/general.phtml:30
+msgid "Load themes and plugins scripts and styles?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:40, ../admin/includes/templates/settings/general.phtml:40
+msgid "Perform auto-login when creating a WordPress account?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:50, ../admin/includes/templates/settings/general.phtml:50
+msgid "Show the login form for not logged in users?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:62, ../admin/includes/templates/settings/general.phtml:62
+msgid "Display \"Powered by Thrive Apprentice\""
+msgstr ""
+
+#: ../admin/includes/templates/settings/general.phtml:72, ../admin/includes/templates/settings/general.phtml:72
+msgid "Enable comments for courses"
+msgstr ""
+
+#: ../admin/includes/templates/settings/log-info-item.phtml:15, ../admin/includes/templates/settings/log-info-item.phtml:15
+msgid "Method ->"
+msgstr ""
+
+#: ../admin/includes/templates/settings/log-info-item.phtml:17, ../admin/includes/templates/settings/log-info-item.phtml:17, ../admin/includes/templates/settings/log-item.phtml:14, ../admin/includes/templates/settings/log-item.phtml:14
+msgid "Type:"
+msgstr ""
+
+#: ../admin/includes/templates/settings/log-info-item.phtml:17, ../admin/includes/templates/settings/log-info-item.phtml:17
+msgid "Identifier:"
+msgstr ""
+
+#: ../admin/includes/templates/settings/log-info-item.phtml:17, ../admin/includes/templates/settings/log-info-item.phtml:17, ../admin/includes/templates/settings/log-item.phtml:13, ../admin/includes/templates/settings/log-item.phtml:13
+msgid "Product:"
+msgstr ""
+
+#: ../admin/includes/templates/settings/log-item.phtml:15, ../admin/includes/templates/settings/log-item.phtml:15
+msgid "Added:"
+msgstr ""
+
+#: ../admin/includes/templates/settings/logs-empty-list.phtml:12, ../admin/includes/templates/settings/logs-empty-list.phtml:12
+msgid "No logs found"
+msgstr ""
+
+#: ../admin/includes/templates/settings/logs.phtml:13, ../admin/includes/templates/settings/logs.phtml:13
+msgid "Logs"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:15, ../admin/includes/templates/settings/sendowl.phtml:15
+msgid "Start Here"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:16, ../admin/includes/templates/settings/sendowl.phtml:16
+msgid "Not sure where to begin? Follow our quick start guide and sell your first product within an hour"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:17, ../admin/includes/templates/settings/sendowl.phtml:17, ../admin/includes/templates/settings/sendowl/checkout.phtml:14, ../admin/includes/templates/settings/sendowl/checkout.phtml:14, ../admin/includes/templates/settings/sendowl/create-product.phtml:13, ../admin/includes/templates/settings/sendowl/create-product.phtml:13, ../admin/includes/templates/settings/sendowl/integration.phtml:13, ../admin/includes/templates/settings/sendowl/integration.phtml:13, ../admin/includes/templates/settings/sendowl/links.phtml:13, ../admin/includes/templates/settings/sendowl/links.phtml:13, ../admin/includes/templates/settings/sendowl/quick-start.phtml:14, ../admin/includes/templates/settings/sendowl/quick-start.phtml:78, ../admin/includes/templates/settings/sendowl/quick-start.phtml:14, ../admin/includes/templates/settings/sendowl/quick-start.phtml:78, ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:34, ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:34
+msgid "Quick Start Guide"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:22, ../admin/includes/templates/settings/sendowl.phtml:24, ../admin/includes/templates/settings/sendowl.phtml:22, ../admin/includes/templates/settings/sendowl.phtml:24
+msgid "Checkout Settings"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:23, ../admin/includes/templates/settings/sendowl.phtml:23
+msgid "Set up the checkout page your customers will see when purchasing"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:29, ../admin/includes/templates/settings/sendowl.phtml:29, ../admin/includes/templates/settings/sendowl/integration.phtml:17, ../admin/includes/templates/settings/sendowl/integration.phtml:23, ../admin/includes/templates/settings/sendowl/integration.phtml:17, ../admin/includes/templates/settings/sendowl/integration.phtml:23
+msgid "Integration Settings"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:30, ../admin/includes/templates/settings/sendowl.phtml:30, ../admin/includes/templates/settings/sendowl/quick-start.phtml:70, ../admin/includes/templates/settings/sendowl/quick-start.phtml:70
+msgid "Set up the SendOwl Listener"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:31, ../admin/includes/templates/settings/sendowl.phtml:31
+msgid "Integrate with SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:36, ../admin/includes/templates/settings/sendowl.phtml:36, ../admin/includes/templates/settings/sendowl/links.phtml:17, ../admin/includes/templates/settings/sendowl/links.phtml:40, ../admin/includes/templates/settings/sendowl/links.phtml:17, ../admin/includes/templates/settings/sendowl/links.phtml:40
+msgid "Purchase Links"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:37, ../admin/includes/templates/settings/sendowl.phtml:37
+msgid "Get Purchase links for each of your SendOwl products"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:38, ../admin/includes/templates/settings/sendowl.phtml:38
+msgid "Get Purchase Links"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl.phtml:44, ../admin/includes/templates/settings/sendowl.phtml:44
+msgid "SendOwl settings"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:2, ../admin/includes/templates/topics/dashboard.phtml:2
+msgid "Course topics"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:5, ../admin/includes/templates/topics/dashboard.phtml:5
+msgid "Add topic"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:10, ../admin/includes/templates/topics/dashboard.phtml:10
+msgid "Topic name"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:11, ../admin/includes/templates/topics/dashboard.phtml:11
+msgid "Topic color"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:14, ../admin/includes/templates/topics/dashboard.phtml:14
+msgid "Displayed symbol"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:15, ../admin/includes/templates/topics/dashboard.phtml:15
+msgid "The recommended size is 32 x 32 px"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:21, ../admin/includes/templates/topics/dashboard.phtml:38, ../admin/includes/templates/topics/dashboard.phtml:21, ../admin/includes/templates/topics/dashboard.phtml:38
+msgid "Symbol color"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:23, ../admin/includes/templates/topics/dashboard.phtml:23
+msgid "Course overview"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:28, ../admin/includes/templates/topics/dashboard.phtml:28
+msgid "You can pick what color will have the symbol in course overview header. Please note that %s to assign %s to your topic and not an icon."
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:28, ../admin/includes/templates/topics/dashboard.phtml:44, ../admin/includes/templates/topics/dashboard.phtml:28, ../admin/includes/templates/topics/dashboard.phtml:44
+msgid "this option is not available if you have chosen"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:28, ../admin/includes/templates/topics/dashboard.phtml:44, ../admin/includes/templates/topics/dashboard.phtml:28, ../admin/includes/templates/topics/dashboard.phtml:44
+msgid "an image"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:31, ../admin/includes/templates/topics/dashboard.phtml:47, ../admin/includes/templates/topics/dashboard.phtml:31, ../admin/includes/templates/topics/dashboard.phtml:47
+msgid "In preview mode you can see what it will look like"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:40, ../admin/includes/templates/topics/dashboard.phtml:40
+msgid "Course layout"
+msgstr ""
+
+#: ../admin/includes/templates/topics/dashboard.phtml:44, ../admin/includes/templates/topics/dashboard.phtml:44
+msgid "You can pick what color will have the symbol on course card. Please note that %s to assign %s to your topic and not an icon."
+msgstr ""
+
+#: ../admin/includes/templates/topics/item.phtml:20, ../admin/includes/templates/topics/item.phtml:20
+msgid "Icon"
+msgstr ""
+
+#: ../admin/includes/templates/topics/item.phtml:23, ../admin/includes/templates/topics/item.phtml:23
+msgid "Image"
+msgstr ""
+
+#: ../admin/includes/templates/topics/item.phtml:31, ../admin/includes/templates/topics/item.phtml:45, ../admin/includes/templates/topics/item.phtml:31, ../admin/includes/templates/topics/item.phtml:45
+msgid "not available"
+msgstr ""
+
+#: ../admin/includes/templates/topics/item.phtml:32, ../admin/includes/templates/topics/item.phtml:46, ../admin/includes/templates/topics/item.phtml:32, ../admin/includes/templates/topics/item.phtml:46
+msgid "Topic images cannot be colored"
+msgstr ""
+
+#: ../admin/includes/templates/utils/input-title.phtml:12, ../admin/includes/templates/utils/input-title.phtml:12
+msgid "Enter a title"
+msgstr ""
+
+#: ../admin/views/template/emailTemplates/form.phtml:46, ../admin/views/template/emailTemplates/form.phtml:46
+msgid "Login Button and Login Link shortcodes will link to the page set under Apprentice -> Display -> Edit Login Page"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/chapter.phtml:15, ../admin/includes/templates/courses/forms/chapter.phtml:15
+msgid "Chapter Title"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/lesson.phtml:18, ../admin/includes/templates/courses/forms/lesson.phtml:18
+msgid "Lesson Title"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/lesson.phtml:35, ../admin/includes/templates/courses/forms/lesson.phtml:35
+msgid "Allow users comment on this lesson"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/lesson.phtml:48, ../admin/includes/templates/courses/forms/lesson.phtml:48
+msgid "Would you like to add a custom lesson cover image?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/module.phtml:16, ../admin/includes/templates/courses/forms/module.phtml:16
+msgid "Module Title"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/module.phtml:29, ../admin/includes/templates/courses/forms/module.phtml:29
+msgid "Allow users comment on this module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/forms/module.phtml:40, ../admin/includes/templates/courses/forms/module.phtml:40
+msgid "Would you like to add a custom module cover image?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:3, ../admin/includes/templates/courses/grouping/chapter.phtml:3
+msgid "Are you sure you want to create a new chapter?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:4, ../admin/includes/templates/courses/grouping/chapter.phtml:4
+msgid "You are about to group the selected items into a new chapter.  This action cannot be undone."
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:16, ../admin/includes/templates/courses/grouping/chapter.phtml:33, ../admin/includes/templates/courses/grouping/chapter.phtml:16, ../admin/includes/templates/courses/grouping/chapter.phtml:33
+msgid "Create new chapter"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:17, ../admin/includes/templates/courses/grouping/chapter.phtml:17
+msgid "Because you have some unselected items we will move them into a new chapter. Please insert the name of the new chapter:"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:20, ../admin/includes/templates/courses/grouping/chapter.phtml:37, ../admin/includes/templates/courses/grouping/chapter.phtml:20, ../admin/includes/templates/courses/grouping/chapter.phtml:37
+msgid "Chapter title"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/chapter.phtml:34, ../admin/includes/templates/courses/grouping/chapter.phtml:34
+msgid "Enter the name of the chapter where to place the selected lessons:"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:3, ../admin/includes/templates/courses/grouping/module.phtml:3
+msgid "Are you sure you want to create a new module?"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:4, ../admin/includes/templates/courses/grouping/module.phtml:4
+msgid "You are about to group the selected items into a new module.  This action cannot be undone."
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:16, ../admin/includes/templates/courses/grouping/module.phtml:33, ../admin/includes/templates/courses/grouping/module.phtml:16, ../admin/includes/templates/courses/grouping/module.phtml:33
+msgid "Create new module"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:17, ../admin/includes/templates/courses/grouping/module.phtml:17
+msgid "Because you have some unselected items we will move them into a new module. Please insert the name of the new module:"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:20, ../admin/includes/templates/courses/grouping/module.phtml:37, ../admin/includes/templates/courses/grouping/module.phtml:20, ../admin/includes/templates/courses/grouping/module.phtml:37
+msgid "Module title"
+msgstr ""
+
+#: ../admin/includes/templates/courses/grouping/module.phtml:34, ../admin/includes/templates/courses/grouping/module.phtml:34
+msgid "Enter the name of the module where to place the selected items:"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/custom.phtml:2, ../admin/includes/templates/courses/media/custom.phtml:2
+msgid "Custom embed code"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/default.phtml:2, ../admin/includes/templates/courses/media/default.phtml:2, ../admin/includes/templates/courses/media/youtube.phtml:2, ../admin/includes/templates/courses/media/youtube.phtml:2
+msgid "Url"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/youtube.phtml:9, ../admin/includes/templates/courses/media/youtube.phtml:9
+msgid "Optimize related videos"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/youtube.phtml:14, ../admin/includes/templates/courses/media/youtube.phtml:14
+msgid "Auto-hide YouTube logo"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/youtube.phtml:19, ../admin/includes/templates/courses/media/youtube.phtml:19
+msgid "Auto-hide Player Controls"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/youtube.phtml:24, ../admin/includes/templates/courses/media/youtube.phtml:24
+msgid "Autoplay"
+msgstr ""
+
+#: ../admin/includes/templates/courses/media/youtube.phtml:29, ../admin/includes/templates/courses/media/youtube.phtml:29
+msgid "Hide Full-Screen Button"
+msgstr ""
+
+#: ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:15, ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:15
+msgid "Checkout Page Not Set"
+msgstr ""
+
+#: ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:18, ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:18
+msgid "The checkout page hasn't been set. %s to set it."
+msgstr ""
+
+#: ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:18, ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:18, ../templates/template_1/course-list.php:136
+msgid "Click here"
+msgstr ""
+
+#: ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:20, ../admin/includes/templates/courses/restrict-integration/sendowl_product.phtml:20
+msgid "Please make sure to save the current course settings in order not to lose the current progress."
+msgstr ""
+
+#: ../admin/includes/templates/design/fonts/google.phtml:13, ../admin/includes/templates/design/fonts/google.phtml:13, ../admin/includes/templates/design/fonts/safe.phtml:13, ../admin/includes/templates/design/fonts/safe.phtml:13
+msgid "Font family"
+msgstr ""
+
+#: ../admin/includes/templates/design/fonts/google.phtml:19, ../admin/includes/templates/design/fonts/google.phtml:19
+msgid "Regular"
+msgstr ""
+
+#: ../admin/includes/templates/design/fonts/google.phtml:24, ../admin/includes/templates/design/fonts/google.phtml:24
+msgid "Bold"
+msgstr ""
+
+#: ../admin/includes/templates/design/fonts/google.phtml:30, ../admin/includes/templates/design/fonts/google.phtml:30
+msgid "Charset"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/create.phtml:17, ../admin/includes/templates/login-page/states/create.phtml:17, ../admin/includes/templates/login-page/states/search.phtml:22, ../admin/includes/templates/login-page/states/search.phtml:22
+msgid "Create new page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/create.phtml:21, ../admin/includes/templates/login-page/states/create.phtml:21
+msgid "Page title"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/create.phtml:28, ../admin/includes/templates/login-page/states/create.phtml:28
+msgid "Add page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/delete.phtml:18, ../admin/includes/templates/login-page/states/delete.phtml:18
+msgid "Keep this page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/delete.phtml:21, ../admin/includes/templates/login-page/states/delete.phtml:21
+msgid "Remove this page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/normal.phtml:22, ../admin/includes/templates/login-page/states/normal.phtml:22
+msgid "View"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/normal.phtml:37, ../admin/includes/templates/login-page/states/normal.phtml:37
+msgid "Remove page"
+msgstr ""
+
+#: ../admin/includes/templates/login-page/states/search.phtml:17, ../admin/includes/templates/login-page/states/search.phtml:17
+msgid "Search an existing page"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:9, ../admin/includes/templates/modals/customer/edit.phtml:43, ../admin/includes/templates/modals/customer/edit.phtml:9, ../admin/includes/templates/modals/customer/edit.phtml:43
+msgid "Edit customer"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:15, ../admin/includes/templates/modals/customer/edit.phtml:49, ../admin/includes/templates/modals/customer/edit.phtml:15, ../admin/includes/templates/modals/customer/edit.phtml:49
+msgid "has access to the following Apprentice courses:"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:20, ../admin/includes/templates/modals/customer/edit.phtml:20, ../admin/includes/templates/utils/customers/service-cards.phtml:27, ../admin/includes/templates/utils/customers/service-cards.phtml:50, ../admin/includes/templates/utils/customers/service-cards.phtml:27, ../admin/includes/templates/utils/customers/service-cards.phtml:50
+msgid "Add access"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:27, ../admin/includes/templates/modals/customer/edit.phtml:27
+msgid "Product name"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:28, ../admin/includes/templates/modals/customer/edit.phtml:28
+msgid "Access type"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:29, ../admin/includes/templates/modals/customer/edit.phtml:29
+msgid "Source"
+msgstr ""
+
+#: ../admin/includes/templates/modals/customer/edit.phtml:30, ../admin/includes/templates/modals/customer/edit.phtml:30
+msgid "Date"
+msgstr ""
+
+#: ../admin/includes/templates/modals/design/hi-professor.phtml:13, ../admin/includes/templates/modals/design/hi-professor.phtml:13
+msgid "Hi there, Professor"
+msgstr ""
+
+#: ../admin/includes/templates/modals/design/hi-professor.phtml:14, ../admin/includes/templates/modals/design/hi-professor.phtml:14
+msgid "Since this is your first time using Thrive Apprentice, we will provide you with demo content in order to see which elements of the template are affected by the changes you make."
+msgstr ""
+
+#: ../admin/includes/templates/modals/design/hi-professor.phtml:15, ../admin/includes/templates/modals/design/hi-professor.phtml:15
+msgid "Don't worry! You'll still be able to change the preview to see your content by switching between DEMO and LIVE tabs."
+msgstr ""
+
+#: ../admin/includes/templates/modals/design/hi-professor.phtml:17, ../admin/includes/templates/modals/design/hi-professor.phtml:17
+msgid "Ok"
+msgstr ""
+
+#: ../admin/includes/templates/modals/labels/confirm-delete.phtml:2, ../admin/includes/templates/modals/labels/confirm-delete.phtml:2
+msgid "Warning: You are about to delete the selected label"
+msgstr ""
+
+#: ../admin/includes/templates/modals/labels/confirm-delete.phtml:3, ../admin/includes/templates/modals/labels/confirm-delete.phtml:3
+msgid "You are about to permanently delete a label. Are you sure you want to delete it? "
+msgstr ""
+
+#: ../admin/includes/templates/modals/labels/confirm-delete.phtml:12, ../admin/includes/templates/modals/labels/confirm-delete.phtml:12
+msgid "Delete Label"
+msgstr ""
+
+#: ../admin/includes/templates/modals/topics/confirm-delete.phtml:2, ../admin/includes/templates/modals/topics/confirm-delete.phtml:2
+msgid "Warning: You are about to delete the selected topic"
+msgstr ""
+
+#: ../admin/includes/templates/modals/topics/confirm-delete.phtml:3, ../admin/includes/templates/modals/topics/confirm-delete.phtml:3
+msgid "You are about to permanently delete a topic. Are you sure you want to delete it? "
+msgstr ""
+
+#: ../admin/includes/templates/modals/topics/confirm-delete.phtml:12, ../admin/includes/templates/modals/topics/confirm-delete.phtml:12
+msgid "Delete Topic"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/breadcrumbs.phtml:18, ../admin/includes/templates/settings/sendowl/breadcrumbs.phtml:18
+msgid "SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/checkout-content.phtml:16, ../admin/includes/templates/settings/sendowl/checkout-content.phtml:16
+msgid "Registration Page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/checkout-content.phtml:20, ../admin/includes/templates/settings/sendowl/checkout-content.phtml:20
+msgid "Thank You Page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/checkout.phtml:18, ../admin/includes/templates/settings/sendowl/checkout.phtml:25, ../admin/includes/templates/settings/sendowl/checkout.phtml:18, ../admin/includes/templates/settings/sendowl/checkout.phtml:25
+msgid "SendOwl Checkout"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:17, ../admin/includes/templates/settings/sendowl/create-product.phtml:17
+msgid "Create Products in SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:23, ../admin/includes/templates/settings/sendowl/create-product.phtml:23
+msgid "Log into your %s account"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:27, ../admin/includes/templates/settings/sendowl/create-product.phtml:27
+msgid "Go to the right sidebar menu and select %s"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:30, ../admin/includes/templates/settings/sendowl/create-product.phtml:30
+msgid "Copy this URL"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:34, ../admin/includes/templates/settings/sendowl/create-product.phtml:34
+msgid "Press %s button and choose %s"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:38, ../admin/includes/templates/settings/sendowl/create-product.phtml:38
+msgid "Choose %s. Add product %s and %s. Paste the URL from step 3. Press %s button"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:47, ../admin/includes/templates/settings/sendowl/create-product.phtml:47
+msgid "That’s it, your product is created. Repeat the process to create more products to sell"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/create-product.phtml:54, ../admin/includes/templates/settings/sendowl/create-product.phtml:54
+msgid "Create products in SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:30, ../admin/includes/templates/settings/sendowl/integration.phtml:30
+msgid "API Account Keys"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:34, ../admin/includes/templates/settings/sendowl/integration.phtml:34
+msgid "Copy and paste the API Account Keys from your SendOwl account. You can find them under "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:35, ../admin/includes/templates/settings/sendowl/integration.phtml:35
+msgid "Settings / API"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:40, ../admin/includes/templates/settings/sendowl/integration.phtml:40
+msgid "Account Key"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:41, ../admin/includes/templates/settings/sendowl/integration.phtml:41
+msgid "Account Key:"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:44, ../admin/includes/templates/settings/sendowl/integration.phtml:45, ../admin/includes/templates/settings/sendowl/integration.phtml:44, ../admin/includes/templates/settings/sendowl/integration.phtml:45
+msgid "Account Secret"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:48, ../admin/includes/templates/settings/sendowl/integration.phtml:48
+msgid "Save Keys"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:52, ../admin/includes/templates/settings/sendowl/integration.phtml:52
+msgid "Webhooks"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:56, ../admin/includes/templates/settings/sendowl/integration.phtml:56
+msgid "In your SendOwl account go to  "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:57, ../admin/includes/templates/settings/sendowl/integration.phtml:57
+msgid "Settings / Advanced / Webhooks"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:58, ../admin/includes/templates/settings/sendowl/integration.phtml:58
+msgid " and create a new webhook."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:59, ../admin/includes/templates/settings/sendowl/integration.phtml:59
+msgid "You’ll need to set up 5 different webhooks (Order Completed, Failed, Purchase, Refund and Free Order) so Thrive Apprentice will know exactly what’s going on."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:60, ../admin/includes/templates/settings/sendowl/integration.phtml:60
+msgid "For each webhook you set up, copy the "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:61, ../admin/includes/templates/settings/sendowl/integration.phtml:61
+msgid "Listener URL "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:62, ../admin/includes/templates/settings/sendowl/integration.phtml:62
+msgid "below and paste it in the URL field."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:64, ../admin/includes/templates/settings/sendowl/integration.phtml:64
+msgid "Click here "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:66, ../admin/includes/templates/settings/sendowl/integration.phtml:66
+msgid "for full video instructions."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:70, ../admin/includes/templates/settings/sendowl/integration.phtml:70
+msgid "Listener URL"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/integration.phtml:78, ../admin/includes/templates/settings/sendowl/integration.phtml:78
+msgid "How to set up the SendOwl Listener"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links-input.phtml:13, ../admin/includes/templates/settings/sendowl/links-input.phtml:13
+msgid "Copy your purchase links below"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links-input.phtml:23, ../admin/includes/templates/settings/sendowl/links-input.phtml:23
+msgid "Shortcode"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links-input.phtml:30, ../admin/includes/templates/settings/sendowl/links-input.phtml:30
+msgid "HTML"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links-option.phtml:14, ../admin/includes/templates/settings/sendowl/links-option.phtml:14
+msgid "Select an option"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links-option.phtml:17, ../admin/includes/templates/settings/sendowl/links-option.phtml:17
+msgid "Button"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:23, ../admin/includes/templates/settings/sendowl/links.phtml:23
+msgid "Product"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:25, ../admin/includes/templates/settings/sendowl/links.phtml:25
+msgid "Refresh Products List"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:26, ../admin/includes/templates/settings/sendowl/links.phtml:33, ../admin/includes/templates/settings/sendowl/links.phtml:26, ../admin/includes/templates/settings/sendowl/links.phtml:33
+msgid "Refresh Discount List"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:30, ../admin/includes/templates/settings/sendowl/links.phtml:30
+msgid "Bundle"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:32, ../admin/includes/templates/settings/sendowl/links.phtml:32
+msgid "Refresh Bundles List"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:46, ../admin/includes/templates/settings/sendowl/links.phtml:46
+msgid "You haven't set up your checkout page yet! In order to get your correct Purchase Links you need to set up your Checkout Page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:47, ../admin/includes/templates/settings/sendowl/links.phtml:47
+msgid "Here"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:50, ../admin/includes/templates/settings/sendowl/links.phtml:50
+msgid "Use the link generator below to get purchase links for any of your SendOwl products or bundles. "
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:52, ../admin/includes/templates/settings/sendowl/links.phtml:52
+msgid "Click here to see video instructions on how to use these links."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/links.phtml:59, ../admin/includes/templates/settings/sendowl/links.phtml:59
+msgid "Would you like to generate a purchase link for a product or a bundle?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-bundles.phtml:14, ../admin/includes/templates/settings/sendowl/no-bundles.phtml:14
+msgid "No Bundles Found"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-bundles.phtml:17, ../admin/includes/templates/settings/sendowl/no-bundles.phtml:17
+msgid "We managed to connect to your SendOwl account but didn't find any bundles."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-bundles.phtml:20, ../admin/includes/templates/settings/sendowl/no-bundles.phtml:20, ../admin/includes/templates/settings/sendowl/no-discounts.phtml:20, ../admin/includes/templates/settings/sendowl/no-discounts.phtml:20, ../admin/includes/templates/settings/sendowl/no-products.phtml:20, ../admin/includes/templates/settings/sendowl/no-products.phtml:20
+msgid "Click here to troubleshoot"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-discounts.phtml:14, ../admin/includes/templates/settings/sendowl/no-discounts.phtml:14
+msgid "No Discounts Found"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-discounts.phtml:17, ../admin/includes/templates/settings/sendowl/no-discounts.phtml:17
+msgid "We managed to connect to your SendOwl account but didn't find any discounts."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-products.phtml:14, ../admin/includes/templates/settings/sendowl/no-products.phtml:14
+msgid "No Products Found"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/no-products.phtml:17, ../admin/includes/templates/settings/sendowl/no-products.phtml:17
+msgid "We managed to connect to your SendOwl account but didn't find any products."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:22, ../admin/includes/templates/settings/sendowl/quick-start.phtml:22
+msgid "Create a Product in SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:23, ../admin/includes/templates/settings/sendowl/quick-start.phtml:23
+msgid "Create the product your customers will buy in your SendOwl Account"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:24, ../admin/includes/templates/settings/sendowl/quick-start.phtml:24
+msgid "Create a product in SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:30, ../admin/includes/templates/settings/sendowl/quick-start.phtml:30
+msgid "Complete your Checkout Settings"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:31, ../admin/includes/templates/settings/sendowl/quick-start.phtml:31
+msgid "Create the Checkout and the Thank You pages that your customers will be redirected to when making a purchase"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:32, ../admin/includes/templates/settings/sendowl/quick-start.phtml:32
+msgid "Checkout page settings"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:38, ../admin/includes/templates/settings/sendowl/quick-start.phtml:38
+msgid "Create your Sales Page with Purchase Links"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:39, ../admin/includes/templates/settings/sendowl/quick-start.phtml:39
+msgid "Create sales pages where you can include purchase links for your courses"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:40, ../admin/includes/templates/settings/sendowl/quick-start.phtml:40
+msgid "Create your sales page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:46, ../admin/includes/templates/settings/sendowl/quick-start.phtml:48, ../admin/includes/templates/settings/sendowl/quick-start.phtml:46, ../admin/includes/templates/settings/sendowl/quick-start.phtml:48
+msgid "Set up your API Account Keys"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:47, ../admin/includes/templates/settings/sendowl/quick-start.phtml:47
+msgid "Make sure the incoming payments are registered and the orders you receive are valid."
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:54, ../admin/includes/templates/settings/sendowl/quick-start.phtml:54
+msgid "Build a Course in Thrive Apprentice"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:55, ../admin/includes/templates/settings/sendowl/quick-start.phtml:55
+msgid "Create the course that you're going to sell in Thrive Apprentice"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:56, ../admin/includes/templates/settings/sendowl/quick-start.phtml:56
+msgid "Learn how to create your first course"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:62, ../admin/includes/templates/settings/sendowl/quick-start.phtml:62
+msgid "Assign Access to your Course"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:63, ../admin/includes/templates/settings/sendowl/quick-start.phtml:63
+msgid "Set up Thrive Apprentice so that your customers will get access to their course immediately after purchase"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:64, ../admin/includes/templates/settings/sendowl/quick-start.phtml:64
+msgid "How to Assign Access Rules"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:71, ../admin/includes/templates/settings/sendowl/quick-start.phtml:71
+msgid "Make sure that SendOwl and Thrive Apprentice can talk to each other"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:72, ../admin/includes/templates/settings/sendowl/quick-start.phtml:72
+msgid "Set up the Listener"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/quick-start.phtml:91, ../admin/includes/templates/settings/sendowl/quick-start.phtml:91, ../inc/views/module.phtml:39, ../tcb-bridge/rest/class-tcb-course-rest-controller.php:125, ../tcb-bridge/classes/course/shortcodes/class-shortcodes.php:186
+msgid "Completed"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:14, ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:14
+msgid "For one course purchased"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:15, ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:15
+msgid "What purchase confirmation message would you like to display to the visitor?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:16, ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:16
+msgid "You can leave the field blank if you don't want to display a message"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:18, ../admin/includes/templates/settings/sendowl/redirect-th-options.phtml:18
+msgid "What does this message look like?"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/register-page.phtml:13, ../admin/includes/templates/settings/sendowl/register-page.phtml:13
+msgid "This is the page where your customer will register for your course by creating their user account"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/register-page.phtml:17, ../admin/includes/templates/settings/sendowl/register-page.phtml:17
+msgid " Learn more about the registration page"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/th-page-cards.phtml:15, ../admin/includes/templates/settings/sendowl/th-page-cards.phtml:15
+msgid "Show a static confirmation page for all products"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/th-page-cards.phtml:20, ../admin/includes/templates/settings/sendowl/th-page-cards.phtml:20
+msgid "Redirect the user to the start of the purchased course"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:15, ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:15
+msgid "This is the page your customer will see after they've purchased your course through SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:20, ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:20
+msgid "Learn more about thank you pages in SendOwl"
+msgstr ""
+
+#: ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:30, ../admin/includes/templates/settings/sendowl/thankyou-page.phtml:30
+msgid "New Functionality Implemented "
+msgstr ""
+
+#: ../admin/includes/templates/utils/customers/notify.phtml:14, ../admin/includes/templates/utils/customers/notify.phtml:14
+msgid "Notify user by email"
+msgstr ""
+
+#: ../admin/includes/templates/utils/customers/service-cards.phtml:26, ../admin/includes/templates/utils/customers/service-cards.phtml:55, ../admin/includes/templates/utils/customers/service-cards.phtml:26, ../admin/includes/templates/utils/customers/service-cards.phtml:55
+msgid "Manage"
+msgstr ""
+
+#: ../admin/includes/templates/utils/customers/service-cards.phtml:43, ../admin/includes/templates/utils/customers/service-cards.phtml:43
+msgid "You don't have any products defined yet for this service."
+msgstr ""
+
+#: ../admin/includes/templates/utils/customers/service-cards.phtml:43, ../admin/includes/templates/utils/customers/service-cards.phtml:43
+msgid "No products defined yet"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:20
+msgid "If user has access but not started the course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:21
+msgid "If user has started the course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:22
+msgid "If user has finished the course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:33
+msgid "View course details"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:34
+msgid "If user has access to the course but not started it yet"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:35
+msgid "If user is midway through a course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:36
+msgid "If user has finished a course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:37
+msgid "If user must register to access the course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:38
+msgid "If user must purchase the course to get access"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:253
+msgid "Not started yet"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:258
+msgid "In progress"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:263
+msgid "Course complete!"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:269
+msgid "Learn more"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:275
+msgid "Continue course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:278
+msgid "Revisit the course"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:281
+msgid "Register now"
+msgstr ""
+
+#: ../inc/classes/class-tva-dynamic-labels.php:284
+msgid "Get instant access"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:254
+msgid "SendOwl - new account created on registration page (during purchase flow)"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:259
+msgid "ThriveCart - new account created after purchase"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:264
+msgid "When a user registers to create a new free account"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:283
+msgid "First name"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:289
+msgid "Username"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:295, ../tcb-bridge/editor-layouts/elements/checkout.php:78, ../tcb-bridge/editor-layouts/elements/checkout.php:122
+msgid "Password"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:301
+msgid "Login button"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:302, ../inc/classes/class-tva-email-templates.php:308
+msgid "Log into your account"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:307
+msgid "Login link"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:313
+msgid "Site name"
+msgstr ""
+
+#: ../inc/classes/class-tva-email-templates.php:400
+msgid "New Account Created"
+msgstr ""
+
+#: ../inc/classes/class-tva-nav-menu.php:42
+msgid "Link to"
+msgstr ""
+
+#: ../inc/classes/class-tva-nav-menu.php:98, ../inc/classes/class-tva-nav-menu.php:111, ../tcb-bridge/editor-layouts/elements/checkout.php:88
+msgid "Log In"
+msgstr ""
+
+#: ../inc/classes/class-tva-nav-menu.php:105, ../inc/classes/class-tva-nav-menu.php:111
+msgid "Log Out"
+msgstr ""
+
+#: ../inc/classes/class-tva-nav-menu.php:118, ../tcb-bridge/editor-layouts/elements/checkout.php:45
+msgid "Register"
+msgstr ""
+
+#: ../inc/classes/class-tva-privacy.php:36, ../inc/classes/class-tva-privacy.php:52
+msgid "Thrive Apprentice"
+msgstr ""
+
+#: ../inc/classes/class-tva-privacy.php:79
+msgid "Subscribed to comments for a course from Thrive Apprentice"
+msgstr ""
+
+#: ../inc/classes/class-tva-privacy.php:83
+msgid "Visitor Email"
+msgstr ""
+
+#: ../inc/classes/class-tva-privacy.php:87
+msgid "Course Url"
+msgstr ""
+
+#: ../inc/classes/class-tva-product.php:31
+msgid "Create online courses in minutes to share your skills, knowledge and expertise"
+msgstr ""
+
+#: ../inc/classes/class-tva-product.php:36
+msgid "Apprentice Dashboard"
+msgstr ""
+
+#: ../inc/classes/class-tva-product.php:45
+msgid "Support"
+msgstr ""
+
+#: ../inc/classes/class-tva-rest-controller.php:307, ../inc/classes/class-tva-rest-controller.php:329, ../inc/classes/class-tva-rest-controller.php:360, ../inc/classes/class-tva-rest-controller.php:381
+msgid "message"
+msgstr ""
+
+#: ../inc/classes/class-tva-rest-controller.php:466
+msgid "Authentication failed due to invalid authentication credentials."
+msgstr ""
+
+#: ../inc/classes/class-tva-rest-controller.php:493
+msgid "Authorization failed due to insufficient permissions."
+msgstr ""
+
+#: ../inc/classes/class-tva-sendowl-settings.php:283, ../inc/classes/class-tva-sendowl-settings.php:288, ../inc/classes/class-tva-sendowl-settings.php:296, ../inc/classes/class-tva-settings.php:320
+msgid "Edit with Thrive Architect"
+msgstr ""
+
+#: ../inc/classes/class-tva-shortcodes.php:375, ../inc/views/chapter.phtml:19, ../inc/views/lesson.phtml:26, ../inc/views/module.phtml:17
+msgid "Members Only"
+msgstr ""
+
+#: ../inc/classes/class-tva-token.php:93
+msgid "Token could not be added into DB"
+msgstr ""
+
+#: ../inc/classes/class-tva-token.php:114
+msgid "Token could not be saved"
+msgstr ""
+
+#: ../inc/classes/class-tva-token.php:289
+msgid "Token could not be deleted"
+msgstr ""
+
+#: ../inc/views/chapter.phtml:32, ../inc/views/module.phtml:24, ../tcb-bridge/editor-elements/course/sub-elements/lesson/class-lesson.php:30
+msgid "Lesson"
+msgid_plural "Lessons"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../tcb-bridge/tcb-hooks.php:214
+msgid "Invalid request"
+msgstr ""
+
+#: ../tcb-bridge/tcb-hooks.php:225
+msgid "Invalid template"
+msgstr ""
+
+#: ../tcb-bridge/tcb-hooks.php:290, ../tcb-bridge/tcb-hooks.php:291
+msgid "Product Name"
+msgstr ""
+
+#: ../tcb-bridge/tcb-hooks.php:727
+msgid "Email Is Already Used"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:32
+msgid "Checkout"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:93
+msgid "None"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:115
+msgid "Labels"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:124
+msgid "Payment Platform"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:151
+msgid "Exit Group Styling"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:156
+msgid "Grouped Form Items"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:157
+msgid "-- Form Item %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:162
+msgid "Grouped Inputs"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:163
+msgid "-- Input %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:168
+msgid "Grouped Labels"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:169, ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:175, ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:181, ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:187, ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:193
+msgid "-- Label %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:174
+msgid "Submit Buttons"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:180
+msgid "Go Back Buttons"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:186
+msgid "Go Back Icon"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-element.php:192
+msgid "Go Back Text"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-checkout-form-element.php:25
+msgid "Checkout Form"
+msgstr ""
+
+#: ../tcb-bridge/rest/class-tcb-course-rest-controller.php:125, ../tcb-bridge/classes/course/shortcodes/class-shortcodes.php:186
+msgid "Not Completed"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:136
+msgid "Index"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:146
+msgid "Total lessons"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:151
+msgid "Completed lessons"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:156
+msgid "Course type"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:161
+msgid "Course difficulty level"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:166
+msgid "Topic title"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:186, ../tcb-bridge/classes/course/class-hooks.php:187
+msgid "Content URL"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:204
+msgid "Link to content"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:209
+msgid "Open in new tab"
+msgstr ""
+
+#: ../tcb-bridge/classes/course/class-hooks.php:215
+msgid "No follow"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-abstract-sub-element.php:89
+msgid "Show Icon"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-abstract-sub-element.php:96
+msgid "Show Expand / Collapse Icon"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-abstract-sub-element.php:105
+msgid "Height"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-abstract-sub-element.php:114
+msgid "Icon position"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:38
+msgid "Apprentice Lesson List"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:142
+msgid "Apprentice Elements"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:181
+msgid "Modules"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:185
+msgid "Chapters"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:198
+msgid "Expanded"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/class-tcb-course-element.php:203, ../tcb-bridge/editor-elements/course/sub-elements/chapter/class-chapter-dropzone.php:68, ../tcb-bridge/editor-elements/course/sub-elements/module/class-module-dropzone.php:68
+msgid "Collapsed"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:21, ../tcb-bridge/editor-layouts/elements/checkout.php:69, ../tcb-bridge/editor-layouts/elements/checkout.php:163
+msgid "Username or Email Address"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:22
+msgid "Type your password"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:23
+msgid "John Smith"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:24
+msgid "email@email.com"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:25
+msgid "Retype your password"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:26
+msgid "I have forgotten my password."
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:27
+msgid "Back to Log in"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:59
+msgid "Log in"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:104
+msgid "Full Name"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:131
+msgid "Confirm Password"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:143
+msgid "Create Account"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:172
+msgid "Get New Password"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:198
+msgid "Password Reset"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:201
+msgid "The instructions to reset your password are sent to the email address you provided."
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/checkout.php:202
+msgid "If you did not receive the email, please check your spam folder as well."
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/course.php:15
+msgid "Select a Course"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout.php:19
+msgid "Checkout Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout.php:24
+msgid "Edit Form Elements"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout.php:30
+msgid "You don’t have any payment processors connected, %s to set up a connection"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout.php:38
+msgid "Advanced"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout.php:44
+msgid "Edit error messages"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/checkout_form.php:14
+msgid "Checkout Form Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course-structure-item.php:14
+msgid "Main Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:14
+msgid "Course Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:20
+msgid "Edit Design"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:27
+msgid "Change course"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:33
+msgid "Course display level"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:39
+msgid "Allow the following to be collapsed"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/course.php:46
+msgid "Default state"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/class-course-dropzone.php:30
+msgid "Course Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/chapter/class-chapter-dropzone.php:29
+msgid "Chapter Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/chapter/class-chapter-list.php:29
+msgid "Chapter List"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/lesson/class-lesson-list.php:29
+msgid "Lesson List"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/module/class-module-dropzone.php:29
+msgid "Module Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/course/sub-elements/module/class-module-list.php:30
+msgid "Module List"
+msgstr ""
+
+#: ../templates/comments.php:27
+msgid "Leave a comment"
+msgstr ""
+
+#: ../templates/comments.php:29
+msgid "Enter your comment..."
+msgstr ""
+
+#: ../templates/comments.php:32
+msgid "Comment as a guest:"
+msgstr ""
+
+#: ../templates/comments.php:42
+msgid "E-Mail"
+msgstr ""
+
+#: ../templates/comments.php:51
+msgid "Website"
+msgstr ""
+
+#: ../templates/comments.php:56
+msgid "Submit comment"
+msgstr ""
+
+#: ../templates/default_courses.php:16
+msgid "Learn the most reliable method we've ever found, to increase conversion rates."
+msgstr ""
+
+#: ../templates/default_courses.php:28
+msgid "Learn how to use Scarcity Marketing"
+msgstr ""
+
+#: ../templates/default_courses.php:30
+msgid "In this module, we introduce the concept of scarcity marketing. It is tricky, if you do it right, it’s incredibly powerful. But if you do it wrong, it can cost you dearly and damage your reputation."
+msgstr ""
+
+#: ../templates/default_courses.php:37
+msgid "Scarcity Marketing Secrets"
+msgstr ""
+
+#: ../templates/default_courses.php:45
+msgid "Intro & Proof"
+msgstr ""
+
+#: ../templates/default_courses.php:47
+msgid "To start with, we’ll take a look at some proof. That way, you’ll see that the recipes in this course actually work (and produce some impressive results) in the real world and aren’t just marketing theory."
+msgstr ""
+
+#: ../templates/default_courses.php:56
+msgid "Scarcity Marketing – Good & Bad Examples"
+msgstr ""
+
+#: ../templates/default_courses.php:58
+msgid "In this lesson, we introduce the concept of scarcity marketing. And very importantly: we look at some examples of how not to do it and the principles for doing it right. Scarcity marketing is tricky in this regard. If you do it right, it’s incredibly powerful. But if you do it wrong, it can cost you dearly and damage your reputation."
+msgstr ""
+
+#: ../templates/default_courses.php:71
+msgid "Putting Scarcity Marketing Into Practice"
+msgstr ""
+
+#: ../templates/default_courses.php:73
+msgid "In this module, we get very practical: you’ll see exactly how we apply various countdowns and time limits on a website. No matter what your website and your promotion are about, you can follow along with these steps to create your own campaign."
+msgstr ""
+
+#: ../templates/default_courses.php:80
+msgid "Behind the Scenes: Our Exact Scarcity Marketing Sequence"
+msgstr ""
+
+#: ../templates/default_courses.php:82
+msgid "Continuing the theme of keeping it real, in this video we take a look at the exact scarcity marketing sequence we used on one of our product launches. And by exact, I mean: you’ll see the actual emails we sent, the exact timings of when we sent them and the sales results corresponding to them."
+msgstr ""
+
+#: ../templates/default_courses.php:91
+msgid "Two Scarcity Marketing Recipes"
+msgstr ""
+
+#: ../templates/default_courses.php:93
+msgid "In this short lesson, we introduce two recipes you can apply to your business: the “under the radar” promotion and the classic product launch or sale. You’ll see the exact steps and timings required to make these promotions as effective as possible."
+msgstr ""
+
+#: ../templates/default_courses.php:107
+msgid "How to improve your content marketing so you can stand out from all the rubbish content out there"
+msgstr ""
+
+#: ../templates/default_courses.php:119, ../templates/default_courses.php:168, ../templates/default_courses.php:195, ../templates/default_courses.php:205, ../templates/default_courses.php:231, ../templates/default_courses.php:241
+msgid "Introduction – From Internet Rubbish to Content Marketing Gold"
+msgstr ""
+
+#: ../templates/default_courses.php:121, ../templates/default_courses.php:170, ../templates/default_courses.php:197, ../templates/default_courses.php:207, ../templates/default_courses.php:233, ../templates/default_courses.php:243
+msgid "Why is it so hard to create engaging content? And what is engaging content actually? Discover what you’ll need to learn in order to make your content marketing efficient"
+msgstr ""
+
+#: ../templates/default_courses.php:130
+msgid "Why Most Internet Content Never Sees The Light of Day"
+msgstr ""
+
+#: ../templates/default_courses.php:132
+msgid "Over two million blog articles are written every day. And most of them will never be read. Discover why this happens and how to avoid being part of this junkyard of internet rubbish."
+msgstr ""
+
+#: ../templates/default_courses.php:142
+msgid "Mastering Your Technique and Presentation"
+msgstr ""
+
+#: ../templates/default_courses.php:144
+msgid "Check these 4 things before publishing any content online. If you get one of these wrong, the actual content of your blog will not even matter all that much…"
+msgstr ""
+
+#: ../templates/default_courses.php:155
+msgid "The Cheat Sheet for Turning Your Website Into a More Effective List Building Machine"
+msgstr ""
+
+#: ../templates/default_courses.php:182
+msgid "This course will take you from zero to conversion optimized website in 10 steps."
+msgstr ""
+
+#: ../templates/default_courses.php:218
+msgid "Discover the 4 most powerful methods to put this new list building strategy to use."
+msgstr ""
+
+#: ../templates/email-template.php:3
+msgid "You have a new signup from Thrive Apprentice register page"
+msgstr ""
+
+#: ../templates/email-template.php:5
+msgid "Contact details submitted"
+msgstr ""
+
+#: ../templates/err-no-data.php:20
+msgid "There are no courses matching your criteria: "
+msgstr ""
+
+#: ../templates/err-no-data.php:22
+msgid "Please change or delete the search criteria."
+msgstr ""
+
+#: ../templates/filters.php:44
+msgid "Clear Filters"
+msgstr ""
+
+#: ../templates/template_1/course-list.php:134
+msgid "You haven't set up any courses yet."
+msgstr ""
+
+#: ../templates/template_1/course-list.php:136
+msgid "%s to create your first course"
+msgstr ""
+
+#: ../templates/template_1/errors.php:4
+msgid "Invalid username or password"
+msgstr ""
+
+#: ../templates/template_1/single-module.php:100
+msgid "Module Structure"
+msgstr ""

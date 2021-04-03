@@ -1,0 +1,103 @@
+#tva-course-title {
+  display: inline-block;
+
+  input {
+    font: inherit;
+    width: calc(100vw - 700px);
+    line-height: inherit;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #a3a3a3;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: -1px;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+}
+
+.course-form-header {
+  background-color: #fff;
+  padding: 30px 30px 0;
+
+  .title-box {
+    position: relative;
+    flex: 1 0 auto;
+
+    span {
+      position: absolute;
+      left: auto;
+      top: 8px;
+      margin-left: 5px;
+
+      &:hover svg {
+        fill: #879198;
+      }
+
+      svg {
+        fill: #c0cad1;
+        transition: fill .15s;
+      }
+    }
+  }
+}
+
+.course-form-dropdowns {
+  background-color: #fff;
+  padding: 0 30px;
+}
+
+// tabs styling
+.tva-tabs {
+  ul.tva-tabs-ul {
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    #wpbody & {
+      padding: 30px 30px 0;
+    }
+
+    li {
+      margin: 0;
+      line-height: 40px;
+      padding: 0 25px 0 20px;
+      border-radius: 4px 4px 0 0;
+      border: solid 1px #edf0f3;
+      border-bottom: 0;
+      font-size: 14px;
+      font-weight: normal;
+      color: #879198;
+      transition: background-color .15s, color .15s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      &.tva-tab-selected,
+      &:hover {
+        background-color: $bg-1;
+        color: #50565f;
+      }
+
+      &.tva-tab-selected {
+        font-weight: 500;
+      }
+
+      svg {
+        fill: currentColor;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// END tabs styling

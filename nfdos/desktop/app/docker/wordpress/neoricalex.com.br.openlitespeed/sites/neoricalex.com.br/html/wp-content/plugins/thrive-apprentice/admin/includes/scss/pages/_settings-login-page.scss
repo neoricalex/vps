@@ -1,0 +1,118 @@
+// Login page
+.tva-login-card {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px 20px 60px;
+  color: #50565f;
+
+  &,
+  #wpbody & a,
+  #wpbody & p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+  }
+
+  #wpbody & p {
+    color: #50565f;
+    margin: 0 0 10px;
+  }
+}
+
+.tva-create-new-page,
+.tva-login-create {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+
+.tva-login {
+  &-box {
+    width: 380px;
+    border-radius: 4px;
+    background-color: rgba(#eaefef, .55);
+    padding: 20px 10px 15px;
+  }
+
+  &-box-footer {
+    display: flex;
+    margin-top: 20px;
+    height: 36px;
+
+    button {
+      width: unset;
+      padding: 0 20px;
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: normal;
+
+      &.tva-empty-btn {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-page {
+    max-width: 820px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: rgba(234, 239, 239, 0.56);
+    border-left: 4px solid rgba($color-blue-1, .8);
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 10px;
+
+    .align {
+      margin-left: auto;
+    }
+
+    .tva-page-option {
+      display: inline-flex;
+      align-items: center;
+
+      svg {
+        margin-right: 5px;
+        width: 20px;
+        height: 15px;
+        fill: #50565f;
+      }
+    }
+
+    .tva-page-option:not(:first-of-type) {
+      margin-left: 20px;
+      padding-left: 20px;
+      height: 20px;
+      border-left: 1px solid #dde3e6;
+    }
+  }
+
+  &-delete {
+    width: 800px;
+    min-height: 77px;
+    border-radius: 4px;
+    background-color: $color-red-1;
+    padding: 15px 130px 10px;
+    text-align: center;
+    margin: 0;
+
+    &:not(#_) {
+      p {
+        margin: 0 0 20px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      p, a {
+        color: #fff !important;
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+  }
+}

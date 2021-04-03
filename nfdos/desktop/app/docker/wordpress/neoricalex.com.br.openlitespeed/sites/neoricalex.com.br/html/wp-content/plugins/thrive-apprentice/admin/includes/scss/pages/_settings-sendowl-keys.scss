@@ -1,0 +1,52 @@
+.tva-keys {
+  &-card {
+    display: block;
+    padding: 20px;
+
+    @include sendowl-typography;
+
+    #wpbody & h3 {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0 0 15px;
+    }
+  }
+
+  &-listener {
+    position: relative;
+    align-items: center;
+
+    label {
+      flex: 0 0 110px;
+    }
+  }
+
+  &-linfo {
+    margin: 15px 0 50px 110px;
+  }
+  
+  &-inputs {
+    justify-content: space-between;
+    margin: 5px 0 40px;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        flex: 0 0 calc((100% - 260px) / 2);
+      }
+
+
+      label {
+        flex: 0 0 110px;
+      }
+
+      button {
+        min-width: 220px;
+      }
+    }
+  }
+}

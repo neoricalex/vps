@@ -1,0 +1,364 @@
+@mixin create-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #50565f;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #edf0f3;
+  font-size: 14px;
+  transition: background-color .15s;
+
+  .tvd-modal &:hover {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #e7eaed;
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    margin-left: 20px;
+  }
+
+  svg {
+    margin-right: 5px;
+    fill: currentColor;
+    transform: translateY(-1px);
+  }
+}
+
+// chapter and module styling
+.tva-tab-content-selected {
+  padding: 10px 30px 100px;
+  position: relative;
+
+  > .tva-chapters-list {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px 20px 1px;
+  }
+
+  .tva-chapters-list,
+  > .tva-modules-list {
+    margin-top: 20px;
+  }
+}
+
+.tva_module > .tva-lessons-list:not(:empty) {
+  border-radius: 4px;
+  background-color: #edf0f3;
+  padding: 20px 20px 10px;
+
+  margin-bottom: 20px;
+}
+
+.tva_chapter,
+.tva_module {
+  border-radius: 4px;
+  background-color: #edf0f3;
+  transition: box-shadow .15s;
+  margin-bottom: 20px;
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  }
+
+  .tva-cm-box:not(:hover) .tva-edit-title svg {
+    opacity: 0;
+  }
+}
+
+.tva_chapter {
+  padding: 20px;
+}
+
+.tva_module {
+  padding: 20px 20px 1px;
+  background-color: #fff;
+}
+
+.tva-lessons-list:not(:empty) {
+  margin-top: 20px;
+}
+
+.tva-title-holder {
+  &,
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  > div {
+    height: 24px;
+  }
+
+  .tva-edit-title {
+    &:hover svg {
+      fill: #50565f;
+    }
+
+    svg {
+      transition: all .15s;
+      margin-left: 8px;
+      width: 15px;
+      height: 15px;
+      fill: #c0cad1;
+    }
+  }
+
+  input:not(#_) {
+    border: none;
+    border-bottom: 1px solid #b0b9c1;
+    border-radius: 0;
+    background-color: transparent;
+    height: 24px;
+    padding: 0;
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #50565f;
+  }
+}
+
+.tva-drag-placeholder {
+  background-color: rgba(0, 0, 0, .025);
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  #tva-courses & {
+    margin: 0 0 20px 20px;
+  }
+
+  .tva-lessons-list & {
+    margin-bottom: 10px;
+  }
+}
+
+.tva-box {
+  &:not(.tva-collapsed) > .tva-cm-box .tva-drag-handle {
+    display: none !important;
+  }
+
+  &.tva-collapsed > .tva-cm-box .tva-drag-handle {
+    width: 30px;
+    background-color: #f8f9fa;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0 0 4px;
+    cursor: move;
+
+    svg {
+      width: 12px;
+      height: 30px;
+    }
+  }
+
+  &.tva-collapsed {
+    padding: 0;
+
+    .tva-course-item-buttons,
+    .tva-course-items-wrapper {
+      display: none;
+    }
+
+    .tva-cm-box {
+      padding: 0 20px 0 0;
+    }
+
+    .tva-cm-left {
+      padding: 20px 0;
+    }
+  }
+}
+
+.tva-cm {
+  &-box {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    .tva-cm-inner {
+      margin-bottom: 10px;
+    }
+
+    .tva-title-holder {
+      margin-left: 26px;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-status {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 50%;
+    //background-color: #ffbb30;
+    background-color: $color-red-1;
+
+    &.publish {
+      background-color: $color-green-1;
+
+      .yellow {
+        background-color: $color-yellow-1;
+      }
+    }
+  }
+
+  &-number {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: #b0b9c1;
+    text-transform: uppercase;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    a {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: normal;
+      transition: opacity .15s;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      #wpbody & {
+        color: #879198;
+      }
+    }
+  }
+}
+
+// END chapter and module styling
+
+// content creation
+.tva-add-main-btn {
+  height: 60px;
+  border-radius: 4px;
+  border: dashed 1px #879198;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .025);
+  }
+
+  svg {
+    fill: currentColor;
+    margin-right: 5px;
+  }
+
+  #wpbody & {
+    font-size: 14px;
+    line-height: normal;
+    color: #50565f;
+  }
+}
+
+.tva_module > .tva-course-item-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  div {
+    @include create-btn;
+  }
+}
+
+// END content creation
+
+// modals custom
+
+.tva-modal {
+  &-buttons-sp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 60px;
+
+    a {
+      @include create-btn;
+    }
+  }
+
+  &-opts {
+    #tva-media-options {
+      margin-left: 20px;
+      flex: 2;
+    }
+  }
+
+  &-create {
+    max-height: 80%;
+    overflow: hidden;
+
+    .tva-no-after:after {
+      content: none !important;
+    }
+
+    .ta-flex-250 {
+      flex: 0 0 250px;
+    }
+  }
+
+  &-b-inner {
+    padding: 0 40px;
+    margin: 0 -40px;
+    overflow-y: auto;
+    max-height: calc(100vh - 330px);
+    @include nice-scrollbar;
+  }
+
+  &-footer-outer {
+    padding: 20px 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// END modals custom
+
+.tva-mass-actions:not(#_) {
+  a {
+    font-size: 14px;
+    line-height: 14px;
+    color: #50565f;
+    transition: color .1s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-blue-4;
+      opacity: 1;
+    }
+
+    &.tva-mass-delete:hover {
+      color: $color-red-1;
+    }
+
+    svg {
+      color: inherit;
+      fill: currentColor;
+    }
+  }
+}

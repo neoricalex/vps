@@ -1,0 +1,136 @@
+.tva-so-checkout {
+  @include sendowl-typography;
+
+  &-wh {
+    margin: 0 -35px;
+    padding: 30px 35px 10px;
+    background-color: white;
+  }
+
+  &-opts {
+    display: flex;
+    background-color: #fff;
+    padding: 30px 35px 0;
+    margin: 0 -35px;
+
+    .tva-tab-item {
+      padding: 0 20px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 4px 4px 0 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #879198;
+      cursor: pointer;
+      transition: all .3s;
+      border: solid 1px #eaefef;
+      border-bottom: none;
+      margin-right: 4px;
+      font-weight: 500;
+
+      svg {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
+        fill: currentColor;
+        margin-right: 5px;
+      }
+
+      &.tva-active-tab,
+      &:hover {
+        background-color: #eaefef;
+        color: #334455;
+      }
+    }
+  }
+
+  &-tabs {
+    padding: 30px 0 0;
+  }
+
+  &-reg {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    margin-top: 15px;
+  }
+
+  &-ty {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px;
+
+    .tva-notice-span {
+      color: $color-blue-1;
+      margin: 5px 0 0;
+      display: inline-block;
+    }
+
+    #wpbody & h3:not(.tva-notice-heading) {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0 0 10px;
+    }
+
+    .tva-thankyou-wrapper {
+      border: 10px solid #eaefef;
+      background-color: #fff;
+      padding: 30px 20px 20px;
+      margin-top: 20px;
+    }
+
+    .tva-thankyou-page-multiple {
+      border-top: 10px solid #eaefef;
+      margin: 20px -20px 0;
+      padding: 30px 20px 0;
+    }
+  }
+}
+
+.tva-colored-card {
+  width: 220px;
+  min-height: 140px;
+  border-radius: 5px;
+  border: 3px solid #edf1f0;
+  box-sizing: border-box;
+  margin: 0 20px 0 0;
+  padding: 0 15px;
+  background-color: #ffffff;
+  transition: all .15s;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+
+  svg {
+    fill: $color-blue-4;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 15px;
+    transition: all .15s;
+  }
+
+  &.tva-selected,
+  &:hover {
+    box-shadow: 0 9px 12px -4px rgba(0, 0, 0, 0.35);
+    background-color: $color-blue-5;
+    border-color: $color-blue-6;
+    opacity: .9;
+
+    p {
+      color: white !important;
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

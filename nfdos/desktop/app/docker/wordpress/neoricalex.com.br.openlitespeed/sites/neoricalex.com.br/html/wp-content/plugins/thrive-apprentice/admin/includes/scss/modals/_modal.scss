@@ -1,0 +1,271 @@
+.tvd-lean-overlay {
+  background-color: #50565f;
+}
+
+.tvd-modal {
+  border-radius: 5px;
+  box-shadow: 0 8px 20px 0 rgba(25, 31, 40, 0.25);
+
+  @media only screen and (max-width: 1400px) {
+    max-width: calc(100% - 40px) !important;
+  }
+
+  &-big {
+    max-height: calc(100vh - 80px);
+
+    @media only screen and (max-width: 1400px) {
+      width: 1180px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #50565f;
+    margin: 0 0 20px;
+  }
+
+  a, p a {
+    color: $color-link-1;
+    text-decoration: none;
+    transition: all .15s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  a.tva-btn-blue {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #142fbf;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      opacity: 1;
+    }
+  }
+
+  .tvd-modal-subtitle-text {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #7c7c7d;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tvd-modal-close-x {
+    top: 15px;
+    right: 15px;
+    transition: opacity .15s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    i {
+      font-family: inherit;
+      width: 15px;
+      height: 15px;
+      display: flex;
+
+      &:before {
+        content: '';
+        background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z'/%3E%3C/svg%3E") center / 15px no-repeat;
+        width: 15px;
+        height: 15px;
+        opacity: .375;
+      }
+    }
+  }
+
+  .tvd-modal-content {
+    padding: 30px 40px 0;
+    overflow: hidden;
+
+    .tvd-modal-title {
+      font-size: 22px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-gray-box {
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #f0f3f3;
+    overflow: auto;
+    max-height: calc(100vh - 455px);
+
+    .tva-modal-edit-customer & {
+      max-height: calc(100vh - 297px);
+    }
+  }
+
+  &-access-box {
+    overflow: auto;
+    max-height: calc(100vh - 330px);
+    border-radius: 4px;
+  }
+
+  &-overflow {
+    max-height: calc(100vh - 310px);
+    overflow-y: auto;
+    padding: 0 40px;
+    margin: 0 -40px;
+  }
+
+  &-overflow &-gray-box {
+    max-height: unset;
+  }
+
+  &-input {
+    width: 100%;
+  }
+}
+
+#tva-customer-items {
+  border: solid 1px rgba(176, 185, 193, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &-header {
+    display: flex;
+    background-color: #f4f7f7;
+    padding: 15px 10px 15px 10px;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: #50565f;
+  }
+}
+
+.tva-access-no-items {
+  margin: 0;
+  padding: 45px 89px 0;
+  border-radius: 4px;
+  background-color: #f0f3f3;
+  min-height: 150px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #999eaa;
+}
+
+#tva-add-access-item {
+  position: absolute;
+  right: 0;
+}
+
+.tva-access-item {
+  display: flex;
+  position: relative;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  color: #50565f;
+  align-items: center;
+
+  &:not(:hover) {
+    .tva-item-del {
+      opacity: 0;
+    }
+  }
+
+  .tva-access-icon {
+    background: url(../../../admin/includes/assets/img/access-default@2x.png) left 5px center / 21px no-repeat;
+    padding: 15px 0;
+    text-indent: 35px;
+  }
+
+  .tva-icon-thrivecart {
+    background: url(../../../admin/includes/assets/img/access-tcart@2x.png) left center / 25px no-repeat;
+  }
+
+  .tva-icon-sendowl-product {
+    background: url(../../../admin/includes/assets/img/access-so-product@2x.png) left 3px center / 24px no-repeat;
+  }
+
+  .tva-icon-sendowl-bundle {
+    background: url(../../../admin/includes/assets/img/access-so-bundle@2x.png) left 1px center / 28px no-repeat;
+  }
+
+  .tva-item-del {
+    transition: opacity .15s;
+    color: $color-red-1;
+    font-size: 16px;
+    margin-left: 10px;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba(218, 221, 223, 0.5);
+  }
+
+  .tva-delete-simple {
+    border-radius: 0;
+    padding: 0 125px;
+  }
+}
+
+.tva-items-flex {
+  &-one {
+    flex: 2;
+  }
+
+  &-two {
+    flex: 1.5;
+  }
+
+  &-three {
+    flex: 1;
+  }
+
+  &-four {
+    flex: 1.25;
+  }
+}
+
+.tva-no-access-set {
+  background-color: #f0f3f3;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: normal;
+  color: #999eaa;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tva-modal-new-box {
+  &:not(:empty) {
+    padding: 13px 15px 1px;
+    border-radius: 4px;
+    border: solid 1px rgba(176, 185, 193, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 300px;
+  }
+
+  > * {
+    flex: 0 0 50%;
+    margin: 0 0 15px;
+  }
+}

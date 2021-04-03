@@ -1,0 +1,380 @@
+.tva-topics {
+  .tva-list {
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: #50565f;
+  }
+
+  .tva-topics-box {
+    padding: 30px 20px 1px;
+  }
+
+  .tva-labels-box {
+    padding: 20px 20px 1px;
+  }
+
+  .tva-drop {
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .tva-col-fixed {
+    flex: 0 0 calc((100% - 185px) / 4);
+    max-width: calc((100% - 185px) / 4);
+  }
+
+  .tva-col-color {
+    flex: 0 0 135px;
+  }
+
+  .tva-col-icon {
+    position: relative;
+  }
+
+  .tva-col-actions {
+    flex: 0 0 50px;
+  }
+
+  .tva-col-title-wide {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .tva-col-color-wide {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .tva-col-fill {
+    flex: 1 0 auto;
+    max-width: none;
+  }
+
+  .tva-list-header {
+    padding: 0 30px 12px 20px;
+    display: flex;
+    color: #737d87;
+
+    svg {
+      fill: currentColor;
+      font-size: 13px;
+      transform: translateY(1px);
+      margin-left: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .tva-topic-item {
+    background: #eaefef;
+    transition: all .15s;
+    position: relative;
+    border-radius: 4px;
+    padding: 10px 30px 10px 20px;
+    min-height: 60px;
+
+    &:hover {
+      box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.26);
+
+      .tva-topic-preview {
+        opacity: 1;
+      }
+
+      .tva-topic-edit {
+        visibility: visible;
+      }
+    }
+  }
+
+  .tva-topic-title {
+    max-width: 77%;
+    display: inline-block;
+  }
+
+  .tva-topic-edit {
+    visibility: hidden;
+    color: #c0cad1;
+    display: inline-block;
+
+    &:hover {
+      color: #50565f;
+    }
+
+    svg {
+      fill: currentColor;
+      transition: fill .15s;
+    }
+  }
+
+  .tva-topic-icon-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    border: solid 1px #b0b9c1;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-left: 80px;
+
+    > svg {
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    > svg, .tva-icon-image, .tva-custom-icon {
+      fill: currentColor;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .tva-topic-types {
+    width: 80px;
+    height: 40px;
+    border-radius: 4px 0 0 4px;
+    border: solid 1px #b0b9c1;
+    background-color: #fff;
+    overflow: hidden;
+    transition: height .15s;
+    position: absolute !important;
+    top: 0;
+    z-index: 10;
+
+    &:not(:hover) {
+      @include arrow-down-after();
+
+      &:after {
+        left: unset;
+        right: 10px;
+        top: 14px;
+        transform: none;
+      }
+    }
+
+    &:hover {
+      height: 80px;
+    }
+
+    > span {
+      color: #50565f;
+      font-size: 14px;
+      padding-left: 10px;
+      width: 100%;
+      height: 38px;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: background-color .15s;
+
+      &:hover {
+        background-color: rgba(0,0,0,.02);
+      }
+
+      &:not(.tva-active) {
+        top: 40px
+      }
+    }
+  }
+
+  .tva-color-preview {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    @include arrow-down-after();
+  }
+
+  .spectrum.with-add-on, input.tva-colorpicker, .sp-colorize-container {
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tva-info {
+    &-big {
+      position: relative;
+    }
+
+    &-left .tva-info-tooltip {
+      left: unset;
+      right: calc(100% + 10px);
+      background: #ffffff url(../../../admin/img/tt1.png) top 10px center no-repeat;
+
+      &:after {
+        right: unset;
+        left: calc(100% - 7px);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+        transform: rotate(-45deg);
+      }
+
+      .tva-info-btm svg {
+        fill: #468831;
+        background-color: rgba(234, 239, 239, 0.3);
+        box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &-big:hover .tva-info-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-tooltip {
+      transition: all .15s;
+      transition-delay: .3s;
+      opacity: 0;
+      visibility: hidden;
+      width: 315px;
+      height: 373px;
+      padding: 200px 15px 25px;
+      background: #ffffff url(../../../admin/img/tt2.png) top 5px center no-repeat;
+      border-radius: 1px;
+      box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.07), 0 2px 4px 0 rgba(93, 106, 119, 0.13);
+      position: absolute;
+      left: calc(100% + 18px);
+      top: -60px;
+      z-index: 11;
+
+      hr {
+        margin: 0;
+      }
+
+      &:not(#_) {
+        > p {
+          padding-top: 15px;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 1.5;
+          color: #444648;
+          margin: 0;
+
+          span {
+            color: $color-red-1;
+            font-weight: 500;
+          }
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 60px;
+        right: calc(100% - 7px);
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        box-shadow: -2px 2px 2px rgba(0,0,0,.05);
+        transform: rotate(45deg);
+      }
+    }
+
+    &-btm {
+      display: flex;
+      margin-top: 15px;
+
+      svg {
+        flex: 0 0 40px;
+        height: 40px;
+        margin: 0 10px 0 0;
+        fill: #fff;
+        padding: 10px;
+        box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        background-color: #468831;
+      }
+    }
+  }
+
+  .tva-not-available {
+    font-size: 12px;
+    color: #737d87;
+
+    span {
+      max-width: 30px;
+    }
+
+    .tva-info-icon {
+      cursor: pointer;
+
+      svg {
+        fill: currentColor;
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  .tva-icon-image {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .tva-topic-preview {
+    width: 56px;
+    height: 56px;
+    margin: -8px 0 -8px 40px;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity .15s;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    svg, .tva-icon-image, .tva-custom-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      fill: currentColor;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .tva-col-actions a {
+    font-size: 20px;
+
+    svg {
+      transition: fill .2s ease;
+      fill: #b9c7ce;
+    }
+
+    #wpbody &:hover {
+      opacity: 1;
+
+      svg {
+        fill: $color-red-1;
+      }
+    }
+  }
+}
+
+:not(#_) input.tva-title-events {
+  height: 30px;
+  width: 95%;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  border-bottom: solid 1px #b0b9c1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #50565f;
+}

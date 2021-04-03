@@ -1,0 +1,325 @@
+.tva-general-settings-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+
+  > div {
+    max-width: 530px;
+    align-items: center;
+
+    > input[type="number"] {
+      width: 50px;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      -moz-appearance: textfield;
+
+    }
+  }
+
+  .tva-col {
+    flex: 0 0 400px;
+  }
+
+  .tva-small-col {
+    flex: 0 0 110px;
+
+    input {
+      text-align: right;
+      padding-right: 0;
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  .tva-login-box {
+    width: 100%;
+  }
+
+  .tva-login-delete {
+    width: 100%;
+    padding: 15px 40px 10px;
+  }
+
+  .tva-create-state {
+    #tva-search-base-page {
+      width: 100%;
+    }
+  }
+}
+
+.tva-course-states-container {
+  max-width: 530px;
+
+  .tva-login-page {
+    .tva-page-option {
+      color: #2b43c5;
+    }
+  }
+}
+
+.tva-apprentice-page-elem {
+  width: 530px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: rgba(#eaefef, .56);
+}
+
+#wpbody .settings-p-main {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  color: #879198;
+}
+
+// email template
+.tva-et {
+  &-card {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px 30px 30px;
+    margin-right: 20px;
+    flex: 1 1 700px;
+
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .w-select {
+      flex: 1;
+      margin: 0 30px;
+    }
+
+    .tva-email-template-save {
+      padding: 10px 45px;
+      width: unset;
+      font-size: 14px;
+    }
+  }
+
+  &-info {
+    background-color: #e7eaf9;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+    align-self: flex-start;
+    flex: 0 1 300px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: calc(100% - 8px);
+      transform: rotate(45deg);
+      top: 60px;
+      width: 16px;
+      height: 16px;
+      background-color: #e7eaf9;
+      box-shadow: -1px 1px 1px rgba(0, 0, 0, .1);
+    }
+
+    #wpbody & h3 {
+      font-size: 14px;
+      color: $color-blue-1;
+      margin: 5px 0 25px;
+      font-weight: 600;
+    }
+
+    #wpbody & p {
+      font-weight: normal;
+      font-size: 14px;
+      color: #50565f;
+    }
+  }
+
+  &-textarea {
+    .CodeMirror {
+      border: solid 1px #b0b9c1;
+      border-radius: 4px;
+    }
+
+    .CodeMirror-sizer {
+      padding-right: 5px !important;
+    }
+
+    .CodeMirror-vscrollbar {
+      @include nice-scrollbar;
+    }
+  }
+}
+
+#tva-email-triggers-wrapper {
+  ul {
+    margin: 10px 0 15px 0;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
+// END email template
+
+// api keys
+.tva-api-key {
+  &-card {
+    padding: 0;
+
+    &:not(:last-of-type) {
+      margin: 0 0 10px;
+    }
+
+    &:hover .buttons-box {
+      opacity: 1;
+    }
+  }
+
+  &-details,
+  &-header {
+    .tva-nk {
+      flex: 0 0 calc(40% - 90px);
+    }
+
+    .tva-status {
+      flex: 0 0 20%;
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+
+    .buttons-box {
+      margin-left: auto;
+      opacity: 0;
+      transition: opacity .15s;
+      flex: 0 0 180px;
+    }
+  }
+
+  &-header {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: normal;
+    color: #939ca3;
+  }
+
+  &-delete {
+    background: $color-red-1;
+    color: #ffffff;
+    display: flex;
+    flex: 1;
+    min-height: 60px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+
+    .buttons {
+      span {
+        transition: opacity .15s;
+
+        &:hover {
+          opacity: .85;
+        }
+
+        &:last-child {
+          margin-left: 20px;
+          padding-left: 20px;
+          border-left: 1px solid white;
+        }
+      }
+    }
+  }
+
+  &-empty {
+    text-align: center;
+    min-height: 300px;
+    border-radius: 4px;
+    background: #f6f8f8;
+    padding: 0 0 60px;
+
+    svg {
+      width: 80px;
+      height: 80px;
+      margin: 85px 0 25px;
+    }
+
+    #wpbody & p {
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      color: #50565f;
+    }
+  }
+}
+
+.tva-api-modal {
+  .tva-slide-checkbox {
+    height: 40px;
+  }
+
+  .checkbox-label {
+    width: 90px;
+  }
+
+  .tvd-copy-to-clipboard {
+    display: none;
+  }
+
+  &-row {
+    align-items: center;
+    justify-content: space-between;
+
+    .last {
+      flex: 0 0 calc(100% - 100px);
+      position: relative;
+    }
+  }
+}
+
+// END api keys
+
+.tva-create-state {
+  &:not(#_) {
+    font-weight: normal;
+    line-height: normal;
+    color: #50565f;
+    margin: 0 0 10px;
+
+    a {
+      text-decoration: none;
+    }
+
+    &,
+    p {
+      font-weight: normal;
+      font-size: 14px;
+    }
+  }
+
+  #tva-search-base-page {
+    width: 380px;
+    margin-bottom: 25px;
+
+    &.ui-autocomplete-loading {
+      background-position: right 10px center;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.tva-pagination {
+  color: #50565f;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 30px;
+
+  span, a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #c0cad1;
+    color: #c0cad1;
+    background-color: transparent;
+    margin: 0 0 0 15px;
+
+    &:not(:last-child) {
+      margin: 0 15px 0 0;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  #wpbody & a {
+    color: #50565f;
+    border-color: #b0b9c1;
+    transition: opacity .15s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

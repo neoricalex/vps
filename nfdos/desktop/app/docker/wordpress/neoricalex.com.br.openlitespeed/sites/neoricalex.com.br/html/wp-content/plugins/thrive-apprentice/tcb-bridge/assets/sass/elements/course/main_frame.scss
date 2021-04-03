@@ -1,0 +1,16 @@
+.edit-mode-active.course-edit-mode {
+  /* always hide the scroll behavior component when we're in the course edit mode, it doesn't make sense for the elements to have this functionality */
+  #tve-scroll-component {
+    display: none !important;
+  }
+
+  /* when we're editing any course sub-element, hide some of the components ( will move this to PHP eventually after we have a final form ) */
+  &[data-element^="course-"] {
+    #tve-typography-component,
+    #tve-animation-component,
+    #tve-responsive-component,
+    #tve-styles-templates-component {
+      display: none !important;
+    }
+  }
+}

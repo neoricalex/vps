@@ -1,0 +1,371 @@
+@import "bourbon";
+
+.tva-restrictions {
+  &-exclude {
+    display: flex;
+    align-items: center;
+
+    .tva-info-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px;
+    }
+  }
+
+  &-card {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 12px 20px 20px;
+
+    .tvd-lever {
+      transform: translateX(10px);
+    }
+
+    input[type=number] {
+      width: 50px;
+      height: 28px;
+      border-radius: 4px;
+      padding: 0 0 0 10px;
+      margin: 0 5px;
+      border: solid 1px #cdd3d8;
+    }
+
+    &-state {
+      &[data-state="0"] {
+        border-radius: 4px;
+        background-color: rgba(234, 239, 239, 0.5);
+        color: #50565f;
+
+        > div {
+          height: 440px;
+          flex-direction: column;
+        }
+
+        span {
+          font-size: 14px;
+
+          &:last-child {
+            color: #879198;
+            margin: 0;
+          }
+        }
+
+        svg {
+          height: 70px;
+          width: 88px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &-top {
+    padding: 0;
+    margin-bottom: 15px;
+    min-height: 60px;
+    transform: translateY(-10px);
+
+    &,
+    label {
+      font-size: 16px !important;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+    }
+  }
+
+  &-counter {
+    color: rgba($color-blue-1, .8);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+  }
+
+  &-rule {
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    .tva-rule-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .text {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.tva-rule {
+  &-img {
+    width: 100px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.thrivecart {
+      background-image: url(../../../admin/img/integration-tcart.png);
+    }
+
+    &.wordpress {
+      background-image: url(../../../admin/img/integration-wordpress-h.png);
+    }
+
+    &.sendowl_bundle {
+      background-image: url(../../../admin/img/integration-bundle-h.png);
+    }
+
+    &.sendowl_product {
+      background-image: url(../../../admin/img/integration-product-h.png);
+    }
+
+    &.wishlist {
+      background-image: url(../../../admin/img/integration-wishlist.png);
+    }
+
+    &.memberpress {
+      background-image: url(../../../admin/img/integration-memberpress.png);
+    }
+
+    &.membermouse {
+      background-image: url(../../../admin/img/integration-mm-product.png);
+    }
+
+    &.membermouse_bundle {
+      background-image: url(../../../admin/img/integration-mm-bundle.png);
+    }
+  }
+
+  &-title {
+    color: rgba($color-blue-1, .8) !important;
+
+    span {
+      color: #50565f;
+    }
+  }
+
+  &-status {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: #879198;
+    text-transform: uppercase;
+  }
+
+  &-items {
+    flex: 0 0 calc(100% - 40px);
+    padding: 20px 0;
+    margin: 0 20px 0;
+    box-sizing: border-box;
+
+    label.tcart-toggle {
+      display: flex;
+      align-items: center;
+
+      .tvd-lever {
+        transform: translate(0);
+        margin: 0 15px !important;
+      }
+    }
+
+    &-clear {
+      margin: 0 0 10px auto;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: normal;
+      color: #879198;
+
+      &.disabled,
+      &[disabled] {
+        color: #c0cad1;
+      }
+
+      &:hover {
+        color: $color-red-1;
+      }
+
+      #wpbody & a {
+        color: inherit;
+        transition: color .15s;
+        opacity: 1;
+      }
+
+      svg {
+        margin-right: 5px;
+        fill: currentColor;
+        transition: color .15s;
+      }
+    }
+  }
+
+  &-items-wrapper {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:not(:empty) {
+      border: solid 1px #b0b9c1;
+      padding: 0 10px 10px;
+    }
+
+    .tva-rule-item {
+      flex: 0 0 50%;
+      margin: 10px 0 0;
+    }
+  }
+
+  &-toggle {
+    position: relative;
+    width: 50px;
+    height: 15px;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      content: '';
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'%3E%3Cpath fill='%23444648' d='M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z'/%3E%3C/svg%3E") center / 5px no-repeat;
+      transition: all .15s;
+      transform: rotate(90deg);
+
+      &.i-visible {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+#tva-course-integrations-wrapper {
+  background-color: rgba($color-gray-2, .5);
+  padding: 20px 10px;
+}
+
+.tva-badge {
+  &-container {
+    background-color: rgba($color-gray-2, .5);
+    padding: 30px 10px;
+  }
+
+  &-card {
+    min-height: 70px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+}
+
+#tva-course-label {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+
+  .tva-dropdown {
+    padding-left: 20px;
+    padding-right: 17px;
+    flex-grow: 1;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    --thumb-height: 24px;
+    --shadow-height: calc(var(--thumb-height) / 3);
+
+    .label {
+      display: none;
+    }
+
+    > svg {
+      position: static;
+      order: 2;
+      flex: 0 0 16px;
+    }
+
+    .tva-dropdown-items {
+      flex: 1 0 auto;
+    }
+  }
+
+  .tva-dropdown-thumb {
+    box-sizing: content-box;
+    padding: 0;
+    position: relative;
+    border-radius: 0;
+    height: var(--thumb-height);
+    width: calc(var(--thumb-height) * 1.875);
+    border-bottom: var(--shadow-height) solid white;
+    background-color: var(--thumb-color);
+
+    &:before {
+      @include triangle(var(--shadow-height), var(--thumb-color), up-right);
+      filter: brightness(60%);
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  .tva-dropdown-list {
+    top: calc(100% + 22px);
+    border: 1px solid #cdd3d8;
+    width: 100%;
+    --thumb-height: 18px;
+
+    .tva-list-input {
+      --thumb-color: #58a545;
+
+      .tva-dropdown-thumb {
+        flex: 0 0 calc(var(--thumb-height) * 1.875);
+        display: block;
+        @include arrow-down-after(8px);
+
+        > input:not(#_), .sp-original-input-container {
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          border: 0;
+          visibility: hidden;
+        }
+      }
+
+      input {
+        height: 32px;
+      }
+    }
+  }
+
+  .tva-dropdown-list-item {
+    padding-left: 30px;
+  }
+}
+
+.tva-rule-label {
+  display: flex;
+  align-items: center;
+  color: #50565f;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 auto 10px 0;
+}
+
+.tva-course-integration-label {
+  color: #50565f;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  margin-left: 20px;
+}

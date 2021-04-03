@@ -1,0 +1,43 @@
+<?php
+/**
+ * @var $is_parent_allowed bool
+ * @var $done              string
+ * @var $chapter           WP_Post
+ * @var $allowed
+ */
+$done     = tva_is_chapter_completed( $chapter ) ? 'done' : '';
+$excluded = get_term_meta( $chapter->course_id, 'tva_excluded', true );
+$allowed  = tva_access_manager()->has_access_to_post( $chapter->lessons[0] );
+?>
+<div class="tva-cm-chapter <?php echo $done ?>" id="tva-chapter-<?php echo $chapter->ID ?>">
+
+	<?php if ( false === $allowed && $is_parent_allowed === true ) : ?>
+		<?php $label_id = get_term_meta( $chapter->course_id, 'tva_label', true ); ?>
+		<?php $label = tva_get_labels( array( 'ID' => $label_id ) ); ?>
+		<span class="tva-cm-members-only">
+			<span class="tva-l-inner">
+				<?php echo !empty( $label['title'] ) ? $label['title'] : __( 'Members Only', 'thrive-apprentice' ) ?>
+			</span>
+		</span>
+	<?php endif; ?>
+
+
+	<span class="tva-cm-icon ">
+		<?php echo tva_get_svg_icon( 'sym-dot', '', true ) ?>
+		<?php echo tva_get_svg_icon( 'green-check', '', true ); ?>
+	</span>
+
+	<h2 class="tva_chapter_headline"><?php echo $chapter->post_title; ?>
+		<span class="tva-collapsible-pointer">
+			<?php echo count( $chapter->lessons ) . ' ' . _n( 'Lesson', 'Lessons', count( $chapter->lessons ), 'thrive-apprentice' ); ?>
+			<?php tva_get_svg_icon( 'collapsible-minus' ); ?>
+			<?php tva_get_svg_icon( 'collapsible-plus' ); ?>
+		</span>
+	</h2>
+
+	<div class="tve-lessons-wrapper">
+		<?php foreach ( $chapter->lessons as $lesson ) : ?>
+			<?php echo tva_generate_lesson_html( $lesson, $allowed ); ?>
+		<?php endforeach; ?>
+	</div>
+</div>

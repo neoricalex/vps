@@ -1,0 +1,36 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Welcome to Thrive Apprentice 3.0!', TVA_Const::T ); ?></h3>
+		<p><?php echo __( 'In order to create your online teaching platform, we need to set up a few things really quickly.', TVA_Const::T ); ?></p>
+		<p><?php echo __( 'Choose a page where all your courses will reside. You can always edit the course page by going to ', TVA_Const::T ); ?><b><?php echo __( 'Settings &rarr; General Settings', TVA_Const::T ) ?></b></p>
+		<div class="tva-course-states-container"></div>
+		<a id="tva-dashboard-link" style="display: none;" href="<?php echo admin_url() . '?page=tve_dash_section' ?>"></a>
+		<div class="tva-flex tva-flex-row tva-space-between mt-30">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-back" data-fn="goToThriveDashboard"><?php echo __( 'Back', TVA_Const::T ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="jumpToStep" data-step="1"><?php echo __( 'Continue', TVA_Const::T ); ?></button>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Template Setup', TVA_Const::T ); ?></h3>
+		<p><?php echo __( 'You can choose to personalize the template for your courses or go directly to creating courses by loading the default template.', TVA_Const::T ); ?></p>
+		<p><?php echo __( 'You can always edit the course template by going to', TVA_Const::T ); ?> <strong><?php echo __( 'Design', TVA_Const::T ); ?></strong>.</p>
+
+		<div class="tva-flex tva-flex-row tva-space-between mt-30">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-blue" data-fn="goToRoute" data-route="#design"><?php echo __( 'Personalize Template', TVA_Const::T ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-blue" data-fn="goToRoute" data-route="#courses"><?php echo __( 'Load Default Template', TVA_Const::T ); ?></button>
+		</div>
+	</div>
+</div>

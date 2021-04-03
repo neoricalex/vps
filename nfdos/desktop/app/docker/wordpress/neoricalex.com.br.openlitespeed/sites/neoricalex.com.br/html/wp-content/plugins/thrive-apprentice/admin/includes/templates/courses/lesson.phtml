@@ -1,0 +1,46 @@
+<div class="tva_lesson-status <#= model.get('post_status') #>">&nbsp;</div>
+<div class="tva-drag-handle tvd-tooltipped" data-position="left" data-tooltip="<?php echo __( 'Change the lesson order', TVA_Const::T ); ?>">
+	<?php tva_get_svg_icon( 'dnd' ); ?>
+</div>
+<div class="tva_lesson-left">
+	<div class="tva_lesson-checkbox"><input type="checkbox" class="tva-section-select" data-level="lesson" data-item-id="<#= model.get('ID') #>"></div>
+	<div class="tva-title-holder">
+		<div class="tva-items-tab-title tva-edit-title click" data-fn="editItemTitle">
+			<#= model.get('post_title') #>
+			<?php tva_get_svg_icon( 'pencil-custom' ); ?>
+		</div>
+	</div>
+	<div class="tva_lesson-type"><#= model.get('lesson_type') #> <?php echo __( 'lesson', TVA_Const::T ); ?></div>
+</div>
+<div class="tva_lesson-right">
+	<a class="mr-30 tva_lesson-main tva_lesson-summary click" data-fn="openAddItemModal" data-type="lessons" data-id="<#= model.get('id') #>" data-post-parent="<#= model.get('post_parent') #>" href="javascript:void(0)">
+		<?php tva_get_svg_icon( 'edit-summary' ); ?>
+		<?php echo esc_html__( 'Edit Summary', 'thrive-apprentice' ) ?>
+	</a>
+	<a class="mr-30 tva_lesson-main tva_lesson-content" href="<#= model.get('tcb_edit_url') #>" target="_blank">
+		<?php tva_get_svg_icon( 'tar-icon' ); ?>
+		<#= model.get('has_tcb_content') ?
+		'<?php echo __( 'Edit Content', TVA_Const::T ); ?>' :
+		'<?php echo __( 'Add Content', TVA_Const::T ); ?>' #>
+	</a>
+
+	<a class="tva_lesson-main click" data-id="<#= model.get('id') #>" data-fn="updateItemStatus" data-status="<#= model.get('post_status') === 'publish' ? 'draft' : 'publish' #>" href="javascript:void(0)">
+		<# if(model.get('post_status') === 'publish') { #>
+		<?php tva_get_svg_icon( 'unpublish' ); ?>
+		<?php echo __( 'Unpublish Lesson', TVA_Const::T ); ?>
+		<# } else { #>
+		<?php echo tva_get_svg_icon( 'publish' ); ?>
+		<?php echo __( 'Publish Lesson', TVA_Const::T ); ?>
+		<# } #>
+	</a>
+
+	<div class="tva-options-drop">
+		<span class="tva-options-drop-icon">
+			<?php tva_get_svg_icon( 'drop-dots' ); ?>
+		</span>
+		<ul class="tva-options-drop-ul">
+			<li><a href="<#= model.get('preview_url') #>" target="_blank"><?php echo esc_html__( 'Preview Lesson', 'thrive-apprentice' ) ?></a></li>
+			<li><a class="click" data-fn="deleteItem" data-id="<#= model.get('id') #>" href="javascript:void(0)"><?php echo esc_html__( 'Delete Lesson', 'thrive-apprentice' ) ?></a></li>
+		</ul>
+	</div>
+</div>

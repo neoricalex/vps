@@ -1,0 +1,451 @@
+@media (max-width: 1600px) {
+  .tva-filter-dropdown,
+  .tva-course-card,
+  .tva-course-new {
+    width: 260px;
+  }
+
+  .tva-course-header {
+    clip-path: ellipse(250px 105px at 130px 40px);
+  }
+}
+
+@media (min-width: 1601px) {
+  .tva-filter-dropdown,
+  .tva-course-card,
+  .tva-course-new {
+    width: 280px;
+  }
+
+  .tva-course-header {
+    clip-path: ellipse(250px 105px at 140px 40px);
+  }
+}
+
+#tva-one-published-course-notice {
+  p {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #79848a;
+  }
+}
+
+#tva-courses {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.tva-no-courses {
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 300px;
+  border-radius: 4px;
+  margin: 0 20px;
+  background: #f6f8f8;
+  padding: 0 0 60px;
+
+  a:not(#_) {
+    font-size: 14px;
+    line-height: normal;
+    margin: 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-blue-4;
+
+    svg {
+      fill: currentColor;
+      margin-right: 5px;
+      width: 12px;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    line-height: normal;
+    color: #50565f;
+  }
+
+  .ta-no-courses {
+    margin: 100px 0 40px;
+    width: 65px;
+    height: 75px;
+  }
+}
+
+.tva-course {
+  &-card:hover &-hidden {
+    opacity: 1;
+  }
+
+  &-new {
+    min-height: 310px;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+    border: dashed 1px #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: normal;
+    color: #879198;
+    opacity: .6;
+    padding: 0;
+    margin: 0 0 20px 20px;
+
+    &,
+    &:focus {
+      background-color: transparent;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-card {
+    min-height: 310px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: box-shadow .15s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 20px 20px;
+
+    &.ui-sortable-helper .tva-custom-tooltip {
+      display: none !important;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 12px 0 rgba(23, 28, 33, 0.2);
+    }
+  }
+
+  &-card .tva-delete-course {
+    background: $color-red-1;
+    color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    #wpbody & {
+      p {
+        font-weight: 400;
+        margin: 0;
+        width: 100%;
+      }
+
+      a {
+        color: #fff;
+        transition: opacity .15s;
+        align-self: flex-end;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+
+  &-header {
+    width: 100%;
+    height: 146px;
+    border-radius: 4px 4px 0 0;
+    background-color: #bada55;
+    text-align: center;
+    padding-top: 36px;
+  }
+
+  &-card:hover &-thumbnail:after {
+    opacity: 1;
+  }
+
+  &-thumbnail {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity .15s;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, .5), transparent);
+    }
+  }
+
+  &-hidden {
+    transition: opacity .15s;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 36px;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(15px);
+
+    &,
+    span,
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > span,
+    #wpbody & > a {
+      transition: opacity .15s;
+      color: #fff;
+      position: relative;
+      opacity: 1;
+
+      &:hover {
+        color: rgba(#fff, .8);
+
+        .tva-custom-tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    svg {
+      fill: currentColor;
+      margin: 0 8px;
+      width: 16px;
+      height: 16px;
+      transition: all .15s;
+    }
+  }
+
+  &-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px 0 15px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-topic {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    color: #ffffff;
+    display: inline-block;
+  }
+
+  &-card:hover &-status.published .ta-eye-1,
+  &-card:hover &-status.unpublished .ta-eye-slash {
+    opacity: 1;
+  }
+
+  &-status {
+    flex: 0 0 20px;
+    height: 20px;
+    border: solid 2px #ffffff;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      .tva-custom-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    svg {
+      opacity: 0;
+      transition: opacity .15s;
+      fill: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 3px;
+      box-sizing: border-box;
+    }
+
+    &.published {
+      background-color: #2ecc71;
+
+      &:hover {
+        background-color: #de4545;
+
+        svg {
+          opacity: 0 !important;
+
+          &.ta-eye-slash {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+
+    &.unpublished {
+      background-color: #de4545;
+
+      &:hover {
+        background-color: #2ecc71;
+
+        svg {
+          opacity: 0 !important;
+
+          &.ta-eye-1 {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-icon {
+    width: 50px;
+    height: 50px;
+    border: solid 3px #ffffff;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    overflow: hidden;
+
+    svg {
+      padding: 12px;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &-icon .tva-img {
+    width: 47px;
+    height: 47px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-name {
+    margin: 30px 0 15px;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    color: #50565f;
+    padding: 0 20px;
+
+    #wpbody & a {
+      color: inherit;
+      transition: opacity .15s;
+
+      &:hover {
+        opacity: .85;
+      }
+    }
+  }
+
+  &-counter {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    color: #a4b8c3;
+    margin: auto 0 15px;
+  }
+
+  &-details {
+    height: 40px;
+    border-radius: 0 0 4px 4px;
+    background-color: #f8f8f8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0 10px;
+
+    .access {
+      text-transform: uppercase;
+      color: #a4b8c3;
+    }
+
+    .enrolled {
+      color: #79848a;
+    }
+  }
+
+  &-save {
+    padding: 20px 30px;
+    background-color: rgba(#ffffff, .9);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 460px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 1001;
+
+    body.folded & {
+      left: 336px;
+    }
+  }
+
+  &-handle {
+    cursor: move;
+  }
+}
+
+.tva-item-count {
+  text-transform: none !important;
+  font-weight: 400 !important;
+
+  .tva-empty {
+    text-transform: uppercase;
+    color: #ffbb30;
+  }
+}

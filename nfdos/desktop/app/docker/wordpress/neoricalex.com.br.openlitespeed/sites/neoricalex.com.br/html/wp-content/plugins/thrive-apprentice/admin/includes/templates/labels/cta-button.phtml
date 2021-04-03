@@ -1,0 +1,8 @@
+<div class="tva-context-title"><#=this.contextTitle#></div>
+<div class="tva-cta-label">
+	<# if ( ! this.model.get('editing') ) { #>
+		<span class="tva-cta-preview click tva-flex-mid" type="button" data-fn="editing"><#-this.model.get('title')#></span>
+	<# } else { #>
+		<input id="tva-edit-<#=this.model.cid#>" type="text" value="<#- this.model.get('title') #>" class="tva-title-events">
+	<# } #>
+</div>

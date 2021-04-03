@@ -1,0 +1,48 @@
+/* icons modal */
+.tva-icons-list {
+  height: calc(80vh - 300px);
+  background-color: #f0f3f3;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 15px 15px 0;
+
+  h4 {
+    text-transform: uppercase;
+    color: #818686;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .tva-icon-grid {
+    padding: 0 0 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    .tva-icon-item {
+      width: 40px;
+      height: 40px;
+      background-color: #e2e6e6;
+      border: 2px solid #e2e6e6;
+      font-size: 22px;
+      line-height: 1.5em;
+      color: #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s ease;
+
+      &:hover {
+        border: 2px solid rgba(#64ae50, .4);
+        background-color: #ecf9e8;
+      }
+
+      &.tva-selected {
+        background-color: #ecf9e8;
+        border: 2px solid #64ae50;
+      }
+    }
+  }
+}

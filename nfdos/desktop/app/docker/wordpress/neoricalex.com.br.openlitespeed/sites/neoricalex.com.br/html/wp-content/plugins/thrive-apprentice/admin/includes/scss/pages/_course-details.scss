@@ -1,0 +1,242 @@
+// details tab
+.tva-details {
+  &-card {
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 12px 20px;
+
+    #wpbody & .text {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: normal;
+      color: #879198;
+    }
+  }
+
+  &-title {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: normal;
+    color: #50565f;
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: flex-start;
+
+    .item {
+      flex: 1;
+    }
+  }
+
+  &-video {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 18px 0 25px;
+
+    .tvd-switch {
+      transform: translateY(-2px);
+    }
+
+    &:last-of-type {
+      padding: 20px 0 8px;
+      align-items: flex-start;
+    }
+
+    .contain {
+      max-width: 80%;
+    }
+  }
+
+  &-bio {
+    margin-top: 10px;
+    padding: 18px 0 8px;
+    flex-wrap: wrap;
+  }
+
+  &-thumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    flex-direction: column;
+
+    &,
+    #wpbody & {
+      .tva-text {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0;
+        line-height: normal;
+
+        &.small {
+          font-size: 12px;
+        }
+
+        &.lighter {
+          opacity: .6;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &:hover {
+      &:before,
+      button {
+        opacity: 1 !important;
+      }
+    }
+
+    &:before {
+      content: '';
+      transition: opacity .15s;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-blue-3, .8)
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0 !important;
+      transition: opacity .15s;
+      font-size: 12px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-avatar,
+  &-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: rgba($color-gray-2, .5);
+
+    &:not(.w-img) button.removeImage {
+      display: none;
+    }
+
+    &.w-img button:not(.removeImage) {
+      display: none;
+    }
+  }
+
+  &-avatar {
+    width: 100px;
+    height: 100px;
+
+    p.lighter {
+      display: none !important;
+    }
+
+    button {
+      padding: 0;
+      width: 90px;
+    }
+  }
+
+  &-cover {
+    width: 100%;
+    height: 170px;
+  }
+
+  &-label {
+    div {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      label {
+        height: 36px;
+        border-radius: 4px 0 0 4px;
+        border: solid 1px #b0b9c1;
+        border-right: none;
+        line-height: 36px;
+        padding: 0 3px 0 10px;
+        color: #879198;
+        opacity: 1 !important;
+        flex: 1 0 auto;
+        background-color: rgba($color-gray-2, .5);
+      }
+
+      input {
+        border-radius: 0 4px 4px 0;
+        border-left: none;
+        padding-left: 3px;
+        font-size: 19px;
+        line-height: 36px;
+        height: 36px;
+        font-weight: normal;
+        color: #50565f;
+        opacity: 1 !important;
+        border-color: #b0b9c1 !important;
+      }
+    }
+  }
+
+  &-youtube {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 0 0 50%;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+#tva-course-author-description-wrapper {
+  flex: 0 0 100%;
+}
+
+#tva-course-video-settings {
+  flex: 0 0 100%;
+  margin: 20px 0 0;
+  padding: 30px 20px;
+  border-radius: 4px;
+  background-color: rgba($color-gray-2, 0.5);
+
+  select {
+    width: 210px;
+    background-color: transparent;
+    margin: 0 0 20px;
+  }
+
+  .tva-media-types-wrapper {
+    max-width: 210px;
+    margin: 0 0 20px;
+
+    .select2-container {
+      background-color: transparent;
+    }
+  }
+
+  input[type=text] {
+    background-color: transparent;
+
+    &::placeholder {
+      color: #b0b9c1;
+    }
+  }
+
+  textarea {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,34 @@
+// COLORS
+$bg-1: #eaefef;
+
+$color-blue-1: #142fbf;
+$color-blue-2: #0f214a;
+$color-blue-3: #1e4293;
+$color-blue-4: #2b43c5; // 90% of #142fbf
+$color-blue-5: #4359cc; // 80% of #142fbf
+$color-blue-6: #5a6dd2; // 70% of #142fbf
+
+$color-link-1: #2b43C5; // 90% of #142fbf
+
+$color-green-1: #4bb35e;
+
+$color-yellow-1: yellow;
+$color-yellow-2: #ffbb30;
+
+$color-red-1: #fb5c55;
+
+$heading-color-1: #444648;
+
+$color-gray-2: rgb(234, 239, 239);
+
+// FONT
+$font-default: 'Roboto', sans-serif;
+
+// for margins and padding
+$distances: '0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60';
+$positions: ('top', 't'), ('right', 'r'), ('bottom', 'b'), ('left', 'l');
+
+// for buttons
+$button-colors: ('blue': $color-blue-1, 'red' : $color-red-1, 'green' : $color-green-1);
+
+$arrow-svg-bg: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'%3E%3Cpath fill='%23444648' d='M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z'/%3E%3C/svg%3E");

@@ -1,0 +1,301 @@
+@mixin sendowl-typography {
+  &:not(#_) {
+    p, a {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+
+    p {
+      color: #50565f;
+      margin: 0 0 10px;
+    }
+  }
+}
+
+.tva-sendowl {
+  &-cards {
+    margin-left: -20px;
+    flex-wrap: wrap;
+  }
+
+  &-card {
+    flex-direction: column;
+    padding: 45px 60px 40px;
+    width: 320px;
+    min-height: 300px;
+    margin: 0 0 20px 20px;
+
+    &:first-child:not(#_) {
+      background-color: $color-blue-5;
+      p {
+        color: #9fb9c9;
+      }
+
+      h3 {
+        color: #fff;
+      }
+
+      svg {
+        fill: #fff;
+      }
+
+      button {
+        &,
+        &:hover {
+          background-color: #ffffff;
+          color: $color-blue-4;
+        }
+      }
+    }
+
+    button {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    #wpbody & h3 {
+      font-size: 21px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0;
+    }
+
+    #wpbody & p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.5;
+      color: #879198;
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    svg {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 6px;
+      fill: #c0cad1;
+    }
+  }
+}
+
+.tva-so-guide {
+  &-card {
+    min-height: 85px;
+    border-left: 6px solid $color-blue-5;
+
+    &.tva-quick-start-step-completed {
+      border-color: $color-green-1;
+
+      .tva-sendowl-guide-item-logo:after {
+        background-color: rgba($color-green-1, .25);
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    h3 span {
+      position: absolute;
+      display: block;
+      left: -22px;
+    }
+
+    #wpbody & h3 {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #50565f;
+      margin: 0;
+      position: relative;
+    }
+
+    #wpbody & p {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.5;
+      color: #879198;
+      margin: 0;
+    }
+
+    .tva-sendowl-guide-item-logo {
+      flex: 0 0 86px;
+      height: inherit;
+      align-self: stretch;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 42px;
+
+      > div {
+        margin: 0 0 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .completed {
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        color: $color-green-1;
+
+        svg {
+          margin-right: 5px;
+          fill: currentColor;
+        }
+      }
+    }
+
+    .buttons {
+      margin: 0 30px 0 auto;
+
+      a {
+        width: 310px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-breadcrumbs {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    margin: 0 -35px;
+    padding: 0 35px;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin: 0 18px;
+        font-size: 18px;
+        color: #9fb4bf;
+      }
+    }
+
+    #wpbody &:not(#_) a {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      color: #9fb4bf;
+      transition: opacity .15s;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &.active {
+        color: #334455;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &-create {
+    .ta-w-img {
+      margin-bottom: 10px;
+
+      img {
+        max-width: 100%;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+
+    .tva-so-guide-step {
+      &:nth-child(1),
+      &:nth-child(5),
+      &:nth-child(7) {
+        margin-bottom: 0;
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:nth-child(9) {
+        .ta-number {
+          background-color: $color-green-1;
+
+          svg {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+
+  &-step {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    .ta-step-sp {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .ta-number {
+      flex: 0 0 30px;
+      background-color: $color-blue-5;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+
+      #wpbody & h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 500;
+      }
+    }
+
+    .ta-copy {
+      position: relative;
+      flex: 1;
+      margin: 0 30px 0 20px;
+    }
+
+    .ta-products {
+      #wpbody & {
+        color: #334455;
+        font-weight: 500;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAdCAYAAAAkXAW5AAAAAXNSR0IArs4c6QAABT5JREFUSA21lmtoXEUUx++9u5tNstk8ms3j5ksRq318sAXFEtQPUj8Y7ScRSrFqCaZI1ZKEKFKoaGy1NmJ8gP2gRkG/VKgitD4oFB8BldKqCEWwlb4wu3ltHrub3Wx2x9+5uTe5Sba3mybOMjtzzpzHf845M3d0bXVaidlgvqwZ2tOYu6yUusJ4jfGqoYxreT0/xjzu8/lGs9ns+MzMTGpsbGwaGekzOn8rapFIpCngC7yhdLVT13VfIWMAEPYkPYFMQlPMdS0Jf1JP63tXBKK+vr7ZMIxeDG+1nIsvXctgPADPsHgef8jlWb7D7yHjteRvbGxsw1E3QhFbMA6AV5n/hPEmeh3zOmRq6dXQVdBrbN56xiA9Rk8uG0RdXV0ju+9B+TG6FUkcnKHvi8Viv8DzakHAm8ieBNgmeoL6SC8LBAbuxsPbKDfbnrCnjmGoc3h4eMDLu72WmZ6enikpKSnTwa80lYDOFAvCaGhoeApDBwEgYZY2Ru+ORqNHGdPCkIZciEjtAZzUyW8AfB+AUpRWCwaDYdYqhGCcHB8fv3EkqqqqakpLSw/gfB/dqn6Uz+fz+c7BwcHvZk3P/wOgDeotZIW5w+/3S7keEcJuIcaglUilJZinPSvYjJh3lpWVHcdwhwvAsUwm01IIAFGoJ8Yd4gygMmgCXurIIviDH4JXYtMpYV0XhGmajyu/OoHC/ZaC0pLsfj/h3x2Px6/YRhYMFGY8r/JHcaTQs9bQ+WRoaGjUJVjOcoAugEaEv6QmqmnkrYu15x3ECF+AbsfJSVHyaFlkeijgamQepv8KfYhRbkarYasGu87ml4JAeROS7yK0zdaR4SsUOzH2j4vnNc0Rrf2VlZVHJiYmpCCzi4Tl3rDCZGjGsKzNRQIAj3Js3qRg1tpKUvGHCGcvAJI2r9ghDwB3Cub0qK9KIdiY3DKzkQiHw5Hy8vJ2wEkK5BYTgUt29X8p9Go1CvQ2bLXY9hQ+rKPrD4VCrwBgr8vRqVwu9wzF9LeLt+KpWW8+ogwlR/VW21gKv//K3OAyeYdjdc5ekCjk4A069EpHvrJhju5Bzad9hlMHwGXstpLms2Lfl0qlRriMzvKtfwi6EsF1zJsSicQ30DkRutlWW1u7MRAIfEgdtGIjIHbY5GnSsBsApyHlKwo+GkAGqIvzCG+HLAXIZtKkJZPJ72X9Jpou4Tf8xqfYusvWl098LxfdsyMjIwvuGQuECOHwYkVFxSBKD0LKqWkGSAy+FTKRKaZJ+GmHdZ/+GrYits4l6qyN3b+XTqczi+3MgZAFUvA7QMIo30P30e+D/hN+UUVK+DcQ/j4iugtzTvi/JQKtXPM/Lnbu0AtACBOH/TheC4DNkJKae/l+/EDKoo5SoZHi20ktfYy8E/5pcn+YCLRz0q4W0nF4sxe8Q9kjt90aauRzDG4TFjs5x4nZXujNUFNTU8U1/xJizyHv7P4C8xcHBgaO2yY9hyWREGmKZ4rd/2zoxgPcavJEM9nlOh4jX09NTc3llMtnC7wPWN9Ft2wB+AS7f4L893t6di0WBCHrhH8UIH9gvIUehrWBt0GEdMlHTHHNP0nu+1jbIvK0KQC8DoBOwu+Zulnx+f+C6Zhftl5KO8QZvHJ5j/E7wPNeQHW5dn+R+QuE/wu3brHzG4IQQ7wtOnDeQ2p87FbeCnN6dvhl90WdoELArpsOtzApOMOJkU/wVr608kaVYk3qSu8mNF0cv2WF321b5kWBQE5xtfeTlvUA2UhU/oK3JxqLfsRltvi9IHb/v8ZdcAsF2cetePtqevkPw1NNCKh5opkAAAAASUVORK5CYII=') center left no-repeat;
+        padding: 6px 0 6px 42px;
+        margin-left: 5px;
+      }
+    }
+
+    #wpbody & p {
+      font-size: 19px;
+      font-weight: normal;
+      line-height: normal;
+      color: #334455;
+      margin: 0;
+    }
+  }
+}
