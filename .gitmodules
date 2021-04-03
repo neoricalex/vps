@@ -1,4 +1,7 @@
 [submodule "nfdos/desktop/app/backend"]
 	path = nfdos/desktop/app/backend
 	url = https://github.com/neoricalex/backend.git
+[submodule "nfdos/desktop/ansible"]
+	path = nfdos/desktop/ansible
+	url = https://github.com/neoricalex/ansible.git
 
